@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jianying Zhou — Professor of Cybersecurity, SUTD</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+
+/* ─────────────────────────────────────────────────────
+   TOKENS
+───────────────────────────────────────────────────── */
+:root {
+  /* palette */
+  --paper:      #faf9f7;
+  --paper-2:    #f2f0ec;
+  --paper-3:    #e8e5df;
+  --ink:        #1c1c1c;
+  --ink-2:      #3d3d3d;
+  --ink-3:      #797979;
+  --ink-4:      #b0aca5;
+  --accent:     #1a3560;        /* deep navy */
+  --accent-lt:  #e8edf5;        /* navy tint */
+  --red:        #b5302a;        /* award red */
+  --green:      #276936;        /* active/new */
+
+  /* layout */
+  --sidebar:    256px;
+  --gap:        52px;
+  --page:       1060px;
+  --r:          6px;            /* border-radius */
+
+  /* type */
+  --serif:      'Lora', Georgia, serif;
+  --sans:       'Inter', system-ui, sans-serif;
+}
+
+/* ─────────────────────────────────────────────────────
+   RESET & BASE
+───────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: opacity .15s, color .15s;
+}
+a:hover { opacity: .75; }
+
+strong { font-weight: 500; }
+
+/* ─────────────────────────────────────────────────────
+   TOP STRIPE
+───────────────────────────────────────────────────── */
+.top-stripe {
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent) 0%, #3a6bbf 100%);
+}
+
+/* ─────────────────────────────────────────────────────
+   PAGE WRAPPER
+───────────────────────────────────────────────────── */
+.page {
+  max-width: var(--page);
+  margin: 0 auto;
+  padding: 0 44px;
+}
+
+/* ─────────────────────────────────────────────────────
+   HEADER
+───────────────────────────────────────────────────── */
+header {
+  padding: 52px 0 48px;
+}
+
+.header-grid {
+  display: grid;
+  grid-template-columns: 172px 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* Photo */
+.photo-wrap {
+  position: relative;
+  width: 152px;
+  height: 152px;
+}
+.photo-wrap::after {
+  content: '';
+  position: absolute;
+  inset: -5px;
+  border-radius: 50%;
+  border: 1.5px solid var(--paper-3);
+  pointer-events: none;
+}
+.photo-circle {
+  width: 152px;
+  height: 152px;
+  border-radius: 50%;
+  background: var(--paper-2);
+  border: 1px solid var(--paper-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.photo-initials {
+  font-family: var(--serif);
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: var(--ink-4);
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .4s ease;
+}
+.photo-img:hover {
+  transform: scale(1.04);
+}
+
+/* Name & meta */
+.header-name {
+  font-family: var(--serif);
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: var(--ink);
+  letter-spacing: -.4px;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+.header-role {
+  font-size: .9rem;
+  color: var(--ink-2);
+  font-weight: 400;
+  margin-bottom: 2px;
+  line-height: 1.5;
+}
+.header-affil {
+  font-size: .83rem;
+  color: var(--ink-3);
+  margin-bottom: 18px;
+}
+
+.header-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  font-size: .8rem;
+  color: var(--ink-3);
+  margin-bottom: 18px;
+}
+.header-contact a {
+  color: var(--ink-3);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.header-contact a:hover { color: var(--accent); opacity: 1; }
+.contact-icon { width: 12px; height: 12px; flex-shrink: 0; opacity: .55; }
+
+.header-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.badge {
+  font-family: var(--sans);
+  font-size: .68rem;
+  font-weight: 500;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 100px;
+  line-height: 1.4;
+}
+.badge-navy { background: var(--accent-lt); color: var(--accent); }
+.badge-red  { background: #f8edec; color: var(--red); }
+.badge-sage { background: #eaf1ec; color: var(--green); }
+
+/* ─────────────────────────────────────────────────────
+   DIVIDER
+───────────────────────────────────────────────────── */
+.rule { height: 1px; background: var(--paper-3); }
+
+/* ─────────────────────────────────────────────────────
+   BODY LAYOUT
+───────────────────────────────────────────────────── */
+.body-grid {
+  display: grid;
+  grid-template-columns: var(--sidebar) 1fr;
+  gap: var(--gap);
+  padding: 48px 0 88px;
+  align-items: start;
+}
+
+/* ─────────────────────────────────────────────────────
+   SIDEBAR
+───────────────────────────────────────────────────── */
+.sidebar { position: sticky; top: 36px; }
+
+/* Nav */
+.nav-label {
+  font-size: .65rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--ink-4);
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--paper-3);
+}
+.sidebar-nav {
+  list-style: none;
+  margin-bottom: 36px;
+}
+.sidebar-nav li a {
+  display: block;
+  font-size: .82rem;
+  font-weight: 300;
+  color: var(--ink-3);
+  padding: 4px 0;
+  border-bottom: none;
+  transition: color .15s, padding-left .15s;
+  line-height: 1.5;
+}
+.sidebar-nav li a:hover { color: var(--ink-2); padding-left: 3px; opacity: 1; }
+.sidebar-nav li a.active { color: var(--accent); font-weight: 500; }
+
+/* Stats */
+.sidebar-stats {
+  padding: 20px 0;
+  border-top: 1px solid var(--paper-3);
+  border-bottom: 1px solid var(--paper-3);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 8px;
+  margin-bottom: 28px;
+}
+.stat-val {
+  display: block;
+  font-family: var(--serif);
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: var(--accent);
+  line-height: 1.1;
+}
+.stat-lbl {
+  font-size: .7rem;
+  color: var(--ink-4);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+/* Profile links */
+.sidebar-links { display: flex; flex-direction: column; gap: 8px; }
+.sidebar-links a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: .8rem;
+  color: var(--ink-3);
+  border: none;
+  transition: color .15s;
+}
+.sidebar-links a:hover { color: var(--accent); opacity: 1; }
+.sl-icon { width: 14px; height: 14px; flex-shrink: 0; opacity: .45; }
+
+/* ─────────────────────────────────────────────────────
+   CONTENT
+───────────────────────────────────────────────────── */
+.content { min-width: 0; }
+
+/* Recruitment notice */
+.notice {
+  margin-bottom: 40px;
+  padding: 14px 18px;
+  background: var(--accent-lt);
+  border-radius: var(--r);
+  border-left: 3px solid var(--accent);
+  font-size: .84rem;
+  color: var(--ink-2);
+  line-height: 1.6;
+}
+.notice strong { color: var(--accent); font-weight: 600; }
+
+/* Section */
+.sec { margin-bottom: 52px; }
+.sec:last-child { margin-bottom: 0; }
+
+.sec-title {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -.1px;
+  margin-bottom: 20px;
+  padding-bottom: 11px;
+  border-bottom: 1px solid var(--paper-3);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.sec-title::before {
+  content: '';
+  display: block;
+  width: 3px;
+  height: 16px;
+  background: var(--accent);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* ── Bio ───────────────────────────────────── */
+.bio p {
+  font-size: .9rem;
+  color: var(--ink-2);
+  margin-bottom: 12px;
+  line-height: 1.8;
+}
+.bio p:last-child { margin-bottom: 0; }
+
+/* ── Research ──────────────────────────────── */
+.area-list { margin-bottom: 24px; display: flex; flex-direction: column; gap: 7px; }
+.area-row {
+  display: flex; align-items: baseline; gap: 10px;
+  font-size: .88rem; color: var(--ink-2);
+}
+.area-pip {
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--accent); flex-shrink: 0; margin-bottom: 1px; opacity: .7;
+}
+
+.edu-list { display: flex; flex-direction: column; gap: 12px; }
+.edu-row { font-size: .87rem; }
+.edu-degree { color: var(--ink); font-weight: 400; }
+.edu-sub { color: var(--ink-3); font-size: .82rem; margin-top: 1px; }
+
+/* ── Publications ──────────────────────────── */
+.pub-note { font-size: .8rem; color: var(--ink-4); margin-bottom: 16px; }
+.pub-note a { color: var(--ink-3); }
+
+.pub-list { display: flex; flex-direction: column; }
+
+.pub-row {
+  display: grid;
+  grid-template-columns: 10px 1fr;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--paper-3);
+  transition: background .15s;
+}
+.pub-row:first-child { padding-top: 0; }
+.pub-row:last-child { border-bottom: none; }
+.pub-dot {
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--paper-3); margin-top: 7px; flex-shrink: 0;
+}
+.pub-title {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: .97rem;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.45;
+  margin-bottom: 3px;
+}
+.pub-authors { font-size: .78rem; color: var(--ink-3); margin-bottom: 2px; }
+.pub-where { font-size: .8rem; color: var(--ink-2); }
+.pub-where em { font-family: var(--serif); font-style: italic; }
+.pub-chips { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 6px; }
+.chip {
+  font-size: .65rem; font-weight: 500; text-transform: uppercase;
+  letter-spacing: .05em; padding: 2px 7px; border-radius: 100px;
+}
+.chip-award  { background: #f8edec; color: var(--red); }
+.chip-std    { background: var(--accent-lt); color: var(--accent); }
+.chip-new    { background: #eaf1ec; color: var(--green); }
+
+.pub-more {
+  padding-top: 16px; font-size: .8rem; color: var(--ink-4);
+}
+.pub-more a { color: var(--ink-3); }
+
+/* ── Activities ────────────────────────────── */
+.act-note { font-size: .8rem; color: var(--ink-4); margin-bottom: 16px; }
+.act-note a { color: var(--ink-3); }
+.act-list { display: flex; flex-direction: column; }
+.act-row {
+  display: grid;
+  grid-template-columns: 86px 1fr;
+  gap: 16px;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--paper-3);
+}
+.act-row:first-child { padding-top: 0; }
+.act-row:last-child { border-bottom: none; }
+.act-key {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: .9rem;
+  color: var(--accent);
+  padding-top: 1px;
+  line-height: 1.4;
+}
+.act-name { font-size: .84rem; color: var(--ink); font-weight: 400; margin-bottom: 4px; }
+.act-detail { font-size: .79rem; color: var(--ink-3); line-height: 1.6; }
+
+/* ── Awards ────────────────────────────────── */
+.award-list { display: flex; flex-direction: column; }
+.award-row {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 14px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--paper-3);
+  align-items: baseline;
+}
+.award-row:first-child { padding-top: 0; }
+.award-row:last-child { border-bottom: none; }
+.award-yr { font-size: .79rem; color: var(--ink-4); }
+.award-name { font-size: .87rem; color: var(--ink); }
+.award-name a { color: var(--ink); border: none; }
+.award-name a:hover { color: var(--accent); opacity: 1; }
+
+/* ── Grants ────────────────────────────────── */
+.grant-list { display: flex; flex-direction: column; }
+.grant-row {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 14px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--paper-3);
+}
+.grant-row:first-child { padding-top: 0; }
+.grant-row:last-child { border-bottom: none; }
+.grant-yrs { font-size: .77rem; color: var(--ink-4); padding-top: 2px; }
+.grant-id { font-family: var(--serif); font-size: .78rem; color: var(--ink-4); margin-bottom: 2px; }
+.grant-desc { font-size: .84rem; color: var(--ink-2); }
+
+/* ── Students ──────────────────────────────── */
+.students-note { font-size: .8rem; color: var(--ink-4); margin-bottom: 14px; }
+.students-note a { color: var(--ink-3); }
+.students-grid { display: grid; grid-template-columns: 1fr 1fr; }
+.student-row {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--paper-3);
+  padding-right: 10px;
+}
+.student-row:nth-child(even) { padding-right: 0; padding-left: 10px; }
+.student-name { font-size: .87rem; color: var(--ink); }
+.student-name a { color: var(--ink); border: none; }
+.student-name a:hover { color: var(--accent); opacity: 1; }
+.student-yrs { font-size: .75rem; color: var(--ink-4); margin-top: 1px; }
+.student-yrs.active { color: var(--green); }
+
+/* ── Teaching ──────────────────────────────── */
+.course-list { display: flex; flex-direction: column; }
+.course-row {
+  display: grid;
+  grid-template-columns: 58px 1fr auto;
+  gap: 14px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--paper-3);
+  align-items: baseline;
+}
+.course-row:first-child { padding-top: 0; }
+.course-row:last-child { border-bottom: none; }
+.course-code { font-family: var(--serif); font-size: .78rem; color: var(--ink-4); }
+.course-name { font-size: .87rem; color: var(--ink); }
+.course-name a { color: var(--ink); border: none; }
+.course-name a:hover { color: var(--accent); opacity: 1; }
+.course-meta { font-size: .74rem; color: var(--ink-4); text-align: right; white-space: nowrap; }
+
+/* ── Highlights ────────────────────────────── */
+.hl-list { display: flex; flex-direction: column; }
+.hl-row {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 14px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--paper-3);
+}
+.hl-row:first-child { padding-top: 0; }
+.hl-row:last-child { border-bottom: none; }
+.hl-date { font-size: .76rem; color: var(--ink-4); padding-top: 2px; white-space: nowrap; }
+.hl-body { font-size: .85rem; color: var(--ink-2); line-height: 1.55; }
+.hl-body a { color: var(--ink); border: none; }
+.hl-body a:hover { color: var(--accent); opacity: 1; }
+
+/* ── Media ─────────────────────────────────── */
+.media-list { display: flex; flex-direction: column; }
+.media-row {
+  display: grid;
+  grid-template-columns: 76px 116px 1fr;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--paper-3);
+  align-items: baseline;
+}
+.media-row:first-child { padding-top: 0; }
+.media-row:last-child { border-bottom: none; }
+.med-date { font-size: .76rem; color: var(--ink-4); }
+.med-src  { font-family: var(--serif); font-style: italic; font-size: .8rem; color: var(--ink-3); }
+.med-title { font-size: .84rem; color: var(--ink-2); }
+.med-title a { color: var(--ink); border: none; }
+.med-title a:hover { color: var(--accent); opacity: 1; }
+
+/* ── Misc ──────────────────────────────────── */
+.misc-list { display: flex; flex-direction: column; gap: 11px; }
+.misc-item {
+  display: flex; gap: 12px;
+  font-size: .87rem; color: var(--ink-2);
+  align-items: baseline;
+}
+.misc-item::before { content: '—'; color: var(--ink-4); flex-shrink: 0; }
+
+/* new tag inline */
+.ntag {
+  font-size: .62rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: .07em; color: var(--green); margin-left: 4px;
+  vertical-align: middle;
+}
+
+/* ─────────────────────────────────────────────────────
+   FOOTER
+───────────────────────────────────────────────────── */
+footer {
+  border-top: 1px solid var(--paper-3);
+  padding: 24px 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: .77rem;
+  color: var(--ink-4);
+}
+footer a { color: var(--ink-4); border: none; }
+footer a:hover { color: var(--ink-3); opacity: 1; }
+
+/* ─────────────────────────────────────────────────────
+   ANIMATIONS
+───────────────────────────────────────────────────── */
+@keyframes up {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+header { animation: up .5s ease both; }
+.body-grid { animation: up .5s .08s ease both; }
+
+/* ─────────────────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────────────────── */
+@media (max-width: 860px) {
+  :root { --sidebar: 200px; --gap: 36px; }
+}
+@media (max-width: 680px) {
+  .page { padding: 0 20px; }
+  .header-grid { grid-template-columns: 1fr; gap: 20px; }
+  .body-grid { grid-template-columns: 1fr; padding-top: 32px; }
+  .sidebar { position: static; }
+  .sidebar-nav { display: flex; flex-wrap: wrap; gap: 4px 14px; margin-bottom: 20px; }
+  .nav-label { display: none; }
+  .sidebar-nav li a { padding: 2px 0; }
+  .sidebar-stats { grid-template-columns: repeat(4,1fr); margin-bottom: 16px; }
+  .act-row { grid-template-columns: 1fr; gap: 3px; }
+  .media-row { grid-template-columns: 76px 1fr; }
+  .med-src { display: none; }
+  .students-grid { grid-template-columns: 1fr; }
+  .student-row:nth-child(even) { padding-left: 0; }
+  .course-row { grid-template-columns: 58px 1fr; }
+  .course-meta { display: none; }
+}
+</style>
+</head>
+<body>
+
+<div class="top-stripe"></div>
+
+<div class="page">
+
+<!-- ═══ HEADER ═══════════════════════════════════════ -->
+<header>
+  <div class="header-grid">
+
+    <div class="photo-wrap">
+      <div class="photo-circle">
+        <img src="assets/jianying_zhou.jpg" alt="Jianying Zhou" class="photo-img">
+      </div>
+    </div>
+
+    <div>
+      <h1 class="header-name">Jianying Zhou</h1>
+      <p class="header-role">Professor of Cybersecurity &nbsp;·&nbsp; Center Director, <a href="https://itrust.sutd.edu.sg/leadership/" target="_blank">iTrust</a></p>
+      <p class="header-affil">Singapore University of Technology and Design (SUTD)</p>
+
+      <div class="header-contact">
+        <a href="mailto:jianying_zhou@sutd.edu.sg">
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          jianying_zhou@sutd.edu.sg
+        </a>
+        <a href="http://jianying.space" target="_blank">
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          jianying.space
+        </a>
+        <a href="https://sg.linkedin.com/in/jianying-zhou-15b811" target="_blank">
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+      </div>
+
+      <div class="header-badges">
+        <span class="badge badge-navy">IEEE Fellow 2026</span>
+        <span class="badge badge-navy">ACM Distinguished Member</span>
+        <span class="badge badge-red">ESORICS Outstanding Contribution Award</span>
+        <span class="badge badge-sage">Class of 2026</span>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<div class="rule"></div>
+
+<!-- ═══ BODY ══════════════════════════════════════════ -->
+<div class="body-grid">
+
+  <!-- ── SIDEBAR ──────────────────────────────────── -->
+  <aside class="sidebar">
+
+    <div class="nav-label">Navigation</div>
+    <ul class="sidebar-nav">
+      <li><a href="#bio">Biography</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#activities">Activities</a></li>
+      <li><a href="#awards">Awards</a></li>
+      <li><a href="#grants">Grants</a></li>
+      <li><a href="#students">Students</a></li>
+      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="#highlights">Highlights</a></li>
+      <li><a href="#media">Media</a></li>
+      <li><a href="#misc">Misc</a></li>
+    </ul>
+
+    <div class="sidebar-stats">
+      <div>
+        <span class="stat-val">300+</span>
+        <span class="stat-lbl">Papers</span>
+      </div>
+      <div>
+        <span class="stat-val">200+</span>
+        <span class="stat-lbl">Conf. roles</span>
+      </div>
+      <div>
+        <span class="stat-val">10+</span>
+        <span class="stat-lbl">Patents</span>
+      </div>
+      <div>
+        <span class="stat-val">2</span>
+        <span class="stat-lbl">ISO/IEC stds</span>
+      </div>
+    </div>
+
+    <div class="sidebar-links">
+      <a href="https://scholar.google.com/citations?user=T-Uf3dYAAAAJ" target="_blank">
+        <svg class="sl-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        Google Scholar
+      </a>
+      <a href="http://dblp.org/pers/hd/z/Zhou_0001:Jianying" target="_blank">
+        <svg class="sl-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        DBLP Bibliography
+      </a>
+      <a href="https://orcid.org/0000-0003-0594-0432" target="_blank">
+        <svg class="sl-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
+        ORCID
+      </a>
+      <a href="https://www.sutd.edu.sg/profile/zhou-jianying/" target="_blank">
+        <svg class="sl-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        SUTD Profile
+      </a>
+      <a href="http://jianying.space/conference-ranking.html" target="_blank">
+        <svg class="sl-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        Conference Ranking
+      </a>
+    </div>
+
+  </aside>
+
+  <!-- ── MAIN CONTENT ──────────────────────────────── -->
+  <main class="content">
+
+    <!-- Recruitment notice -->
+    <div class="notice">
+      <strong>Open Positions —</strong>
+      I am looking for PhD students, PhD interns &amp; Postdocs with interest or expertise in cybersecurity.
+      <a href="http://jianying.space/recruitment.pdf" target="_blank">View details →</a>
+      &nbsp; <a href="https://itrust.sutd.edu.sg/itrust-labs_overview/" target="_blank">iTrust CPS testbeds</a> available as a service (TaaS) with remote access.
+    </div>
+
+    <!-- Biography -->
+    <section class="sec" id="bio">
+      <h2 class="sec-title">Biography</h2>
+      <div class="bio">
+        <p>Jianying Zhou is a professor and center director for <a href="https://itrust.sutd.edu.sg/leadership/" target="_blank">iTrust</a> at Singapore University of Technology and Design (<a href="https://www.sutd.edu.sg/profile/zhou-jianying" target="_blank">SUTD</a>). Before joining SUTD, he was a principal scientist and head of Infocomm Security Department at Institute for Infocomm Research, A*STAR. He also worked at the headquarters of Oracle as a security consultant.</p>
+        <p>Prof. Zhou received his PhD in Information Security from <a href="http://www.rhul.ac.uk/" target="_blank">Royal Holloway, University of London</a>. His research interests are in applied cryptography and network security, cyber-physical system security, and mobile and wireless security. He has published <a href="http://dblp.org/pers/hd/z/Zhou_0001:Jianying" target="_blank">300+ referred papers</a> at top venues including IEEE S&amp;P, ACM CCS, USENIX Security, NDSS, IEEE TIFS, and IEEE TDSC. He received the ESORICS'15 Best Paper Award and the ACSAC'23 Distinguished Paper Award. He has 2 technologies standardized in ISO/IEC 29192-4 and ISO/IEC 20009-4, and holds 10+ patents.</p>
+        <p>Prof. Zhou is a co-founder and steering committee co-chair of <a href="http://jianying.space/acns/" target="_blank">ACNS</a>, and steering committee chair of <a href="http://jianying.space/asiaccs/" target="_blank">ACM AsiaCCS</a>. He serves as Associate Editor-in-Chief of <a href="https://www.computer.org/csdl/magazine/sp" target="_blank">IEEE Security &amp; Privacy</a>. He is an <a href="https://www.computer.org/press-room/2026-class-fellows" target="_blank">IEEE Fellow</a> (Class of 2026) and an <a href="https://awards.acm.org/award_winners/zhou_2774367" target="_blank">ACM Distinguished Member</a>. He received the <a href="https://conf.laas.fr/esorics/" target="_blank">ESORICS Outstanding Contribution Award</a> in 2020.</p>
+      </div>
+    </section>
+
+    <!-- Research -->
+    <section class="sec" id="research">
+      <h2 class="sec-title">Research Interests &amp; Education</h2>
+      <div class="area-list">
+        <div class="area-row"><div class="area-pip"></div>Applied Cryptography and Network Security (<a href="http://jianying.space/acns/" target="_blank">ACNS</a>)</div>
+        <div class="area-row"><div class="area-pip"></div>Cyber-Physical System Security (<a href="http://jianying.space/cpss/" target="_blank">CPSS</a>)</div>
+        <div class="area-row"><div class="area-pip"></div>Mobile and Wireless Security</div>
+        <div class="area-row"><div class="area-pip"></div>Blockchain and Privacy-Preserving Technologies</div>
+      </div>
+      <div class="edu-list">
+        <div class="edu-row">
+          <div class="edu-degree">PhD, Information Security — <a href="http://www.rhul.ac.uk/" target="_blank">Royal Holloway, University of London</a></div>
+          <div class="edu-sub">Information Security Group</div>
+        </div>
+        <div class="edu-row">
+          <div class="edu-degree">MSc, Computer Science — Chinese Academy of Sciences</div>
+        </div>
+        <div class="edu-row">
+          <div class="edu-degree">BSc, Computer Science — University of Science and Technology of China</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section class="sec" id="publications">
+      <h2 class="sec-title">Selected Publications</h2>
+      <p class="pub-note">
+        Full list: <a href="http://jianying.space/publications.html" target="_blank">jianying.space/publications.html</a> &nbsp;·&nbsp;
+        <a href="https://scholar.google.com/citations?user=T-Uf3dYAAAAJ" target="_blank">Google Scholar</a> &nbsp;·&nbsp;
+        <a href="http://dblp.org/pers/hd/z/Zhou_0001:Jianying" target="_blank">DBLP</a>
+      </p>
+      <div class="pub-list">
+
+        <div class="pub-row">
+          <div class="pub-dot"></div>
+          <div>
+            <div class="pub-title">PACS: Privacy-Preserving Attribute-Driven Community Search over Attributed Graphs</div>
+            <div class="pub-authors">Fangyuan Sun, Yaxi Yang, Jia Yu, and Jianying Zhou</div>
+            <div class="pub-where"><em>NDSS 2026</em> — San Diego, USA</div>
+            <div class="pub-chips"><span class="chip chip-new">2026</span></div>
+          </div>
+        </div>
+
+        <div class="pub-row">
+          <div class="pub-dot"></div>
+          <div>
+            <div class="pub-title">SNI5GECT: A Practical Approach to Inject aNRchy into 5G NR</div>
+            <div class="pub-authors">Shijie Luo, Matheus Garbelini, Sudipta Chattopadhyay, and Jianying Zhou</div>
+            <div class="pub-where"><em>USENIX Security 2025</em> — Seattle, USA</div>
+            <div class="pub-chips"><span class="chip chip-new">Press Coverage</span><span class="chip chip-std">CVD-2024-0096</span></div>
+          </div>
+        </div>
+
+        <div class="pub-row">
+          <div class="pub-dot"></div>
+          <div>
+            <div class="pub-title">Boosting Gradient Leakage Attacks: Data Reconstruction in Realistic FL Settings</div>
+            <div class="pub-authors">Mingyuan Fan, Fuyi Wang, Cen Chen, and Jianying Zhou</div>
+            <div class="pub-where"><em>USENIX Security 2025</em> — Seattle, USA</div>
+          </div>
+        </div>
+
+        <div class="pub-row">
+          <div class="pub-dot"></div>
+          <div>
+            <div class="pub-title">SePanner: Analyzing Semantics of Controller Variables in Industrial Control Systems based on Network Traffic</div>
+            <div class="pub-authors">Jie Meng, Zeyu Yang, Zhenyong Zhang, Yangyang Geng, Ruilong Deng, Peng Cheng, Jiming Chen, and Jianying Zhou</div>
+            <div class="pub-where"><em>ACSAC 2023</em> — Austin, USA</div>
+            <div class="pub-chips"><span class="chip chip-award">Distinguished Paper Award</span></div>
+          </div>
+        </div>
+
+        <div class="pub-row">
+          <div class="pub-dot"></div>
+          <div>
+            <div class="pub-title">TAP: Transparent and Privacy-Preserving Data Services</div>
+            <div class="pub-authors">Daniel Reijsbergen, Aung Maw, Zheng Yang, Tien Tuan Anh Dinh, and Jianying Zhou</div>
+            <div class="pub-where"><em>USENIX Security 2023</em> — Anaheim, USA</div>
+          </div>
+        </div>
+
+        <div class="pub-row">
+          <div class="pub-dot"></div>
+          <div>
+            <div class="pub-title">LaKSA: A Probabilistic Proof-of-Stake Protocol</div>
+            <div class="pub-authors">Daniel Reijsbergen, Pawel Szalachowski, Junming Ke, Zengpeng Li, and Jianying Zhou</div>
+            <div class="pub-where"><em>NDSS 2021</em> — San Diego, USA</div>
+          </div>
+        </div>
+
+        <div class="pub-row">
+          <div class="pub-dot"></div>
+          <div>
+            <div class="pub-title">PLCrypto: A Symmetric Cryptographic Library for Programmable Logic Controllers</div>
+            <div class="pub-authors">Zheng Yang, Zhiting Bao, Chenglu Jin, Zhe Liu, and Jianying Zhou</div>
+            <div class="pub-where"><em>FSE 2022</em> — Athens, Greece</div>
+          </div>
+        </div>
+
+        <div class="pub-row">
+          <div class="pub-dot"></div>
+          <div>
+            <div class="pub-title">NoisePrint: Attack Detection Using Sensor and Process Noise Fingerprint in Cyber Physical Systems</div>
+            <div class="pub-authors">Chuadhry Mujeeb Ahmed, Martin Ochoa, Jianying Zhou, Aditya Mathur, et al.</div>
+            <div class="pub-where"><em>ACM AsiaCCS 2018</em> — Incheon, Korea</div>
+          </div>
+        </div>
+
+        <div class="pub-row">
+          <div class="pub-dot"></div>
+          <div>
+            <div class="pub-title">Extended Proxy-Assisted Approach: Achieving Revocable Fine-Grained Encryption of Cloud Data</div>
+            <div class="pub-authors">Yanjiang Yang, Joseph Liu, Kaitai Liang, Raymond Choo, and Jianying Zhou</div>
+            <div class="pub-where"><em>ESORICS 2015</em> — Vienna, Austria</div>
+            <div class="pub-chips"><span class="chip chip-award">Best Paper Award</span></div>
+          </div>
+        </div>
+
+        <div class="pub-row">
+          <div class="pub-dot"></div>
+          <div>
+            <div class="pub-title">Scalable Two-factor Authentication using Historical Data</div>
+            <div class="pub-authors">Aldar Chan, Jun-Wen Wong, Jianying Zhou, and Joseph Teo</div>
+            <div class="pub-where"><em>ESORICS 2016</em> — Heraklion, Greece</div>
+            <div class="pub-chips"><span class="chip chip-std">US Patent 10230532</span></div>
+          </div>
+        </div>
+
+        <div class="pub-row">
+          <div class="pub-dot"></div>
+          <div>
+            <div class="pub-title">Key-Aggregate Cryptosystem for Scalable Data Sharing in Cloud Storage</div>
+            <div class="pub-authors">Cheng-Kang Chu, Sherman Chow, Wen-Guey Tzeng, Jianying Zhou, and Robert Deng</div>
+            <div class="pub-where"><em>IEEE Transactions on Parallel and Distributed Systems</em> — February 2014</div>
+          </div>
+        </div>
+
+        <div class="pub-row">
+          <div class="pub-dot"></div>
+          <div>
+            <div class="pub-title">On the Features and Challenges of Security &amp; Privacy in Distributed Internet of Things</div>
+            <div class="pub-authors">Rodrigo Roman, Jianying Zhou, and Javier Lopez</div>
+            <div class="pub-where"><em>Computer Networks</em> — July 2013</div>
+          </div>
+        </div>
+
+        <div class="pub-row">
+          <div class="pub-dot"></div>
+          <div>
+            <div class="pub-title">Efficient Online/Offline Identity-Based Signature for Wireless Sensor Network</div>
+            <div class="pub-authors">Joseph Liu, Joonsang Baek, Jianying Zhou, Yanjiang Yang, and Jun-Wen Wong</div>
+            <div class="pub-where"><em>International Journal of Information Security</em> — August 2010</div>
+            <div class="pub-chips"><span class="chip chip-std">ISO/IEC 29192-4</span></div>
+          </div>
+        </div>
+
+        <div class="pub-row">
+          <div class="pub-dot"></div>
+          <div>
+            <div class="pub-title">Towards Practical Anonymous Password Authentication</div>
+            <div class="pub-authors">Yanjiang Yang, Jianying Zhou, Jun-Wen Wong, and Feng Bao</div>
+            <div class="pub-where"><em>ACSAC 2010</em> — Austin, USA</div>
+            <div class="pub-chips"><span class="chip chip-std">ISO/IEC 20009-4</span></div>
+          </div>
+        </div>
+
+        <div class="pub-row">
+          <div class="pub-dot"></div>
+          <div>
+            <div class="pub-title">Defending against Redirect Attacks in Mobile IP</div>
+            <div class="pub-authors">Robert Deng, Jianying Zhou, and Feng Bao</div>
+            <div class="pub-where"><em>ACM CCS 2002</em> — Washington DC, USA</div>
+            <div class="pub-chips"><span class="chip chip-std">US Patent 7233782</span></div>
+          </div>
+        </div>
+
+        <div class="pub-row">
+          <div class="pub-dot"></div>
+          <div>
+            <div class="pub-title">An Intensive Survey of Fair Non-repudiation Protocols</div>
+            <div class="pub-authors">Steve Kremer, Olivier Markowitch, and Jianying Zhou</div>
+            <div class="pub-where"><em>Computer Communications</em> — November 2002</div>
+          </div>
+        </div>
+
+        <div class="pub-row">
+          <div class="pub-dot"></div>
+          <div>
+            <div class="pub-title">Non-repudiation in Electronic Commerce</div>
+            <div class="pub-authors">Jianying Zhou</div>
+            <div class="pub-where">Artech House, 2001 — Monograph</div>
+          </div>
+        </div>
+
+        <div class="pub-row">
+          <div class="pub-dot"></div>
+          <div>
+            <div class="pub-title">A Fair Non-repudiation Protocol</div>
+            <div class="pub-authors">Jianying Zhou and Dieter Gollmann</div>
+            <div class="pub-where"><em>IEEE S&amp;P 1996</em> — Oakland, USA — Seminal work</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Activities -->
+    <section class="sec" id="activities">
+      <h2 class="sec-title">Professional Activities</h2>
+      <p class="act-note">Served 200+ times in international cybersecurity conference committees as general chair, program chair, and PC member. Full list: <a href="http://jianying.space/professional.html" target="_blank">jianying.space/professional.html</a></p>
+      <div class="act-list">
+
+        <div class="act-row">
+          <div class="act-key">ACNS</div>
+          <div>
+            <div class="act-name">International Conference on Applied Cryptography and Network Security</div>
+            <div class="act-detail">Co-founder &amp; Steering Committee Co-chair (2003–present)<br>General Chair: ACNS'04, '12 &nbsp;·&nbsp; Program Chair: ACNS'03, '06, '10, '20<br>Next: <a href="https://acns2026.github.io/" target="_blank">ACNS'26</a> — New York, USA, June 2026 <span class="ntag">New</span></div>
+          </div>
+        </div>
+
+        <div class="act-row">
+          <div class="act-key">AsiaCCS</div>
+          <div>
+            <div class="act-name">ACM Asia Conference on Computer and Communications Security</div>
+            <div class="act-detail">Steering Committee Chair (2017–present) &nbsp;·&nbsp; General Chair: AsiaCCS'24 &nbsp;·&nbsp; Program Chair: AsiaCCS'15<br>Next: <a href="https://asiaccs2026.cse.iitkgp.ac.in/" target="_blank">AsiaCCS'26</a> — Bangalore, India, June 2026 <span class="ntag">New</span></div>
+          </div>
+        </div>
+
+        <div class="act-row">
+          <div class="act-key">CPSS</div>
+          <div>
+            <div class="act-name">ACM Cyber-Physical System Security Workshop</div>
+            <div class="act-detail">Founder &amp; Steering Committee Chair (2015–present) &nbsp;·&nbsp; Program Chair: CPSS'15–'19, '24<br>Next: <a href="https://cpss26.github.io/" target="_blank">CPSS'26</a> — Bangalore, India, June 2026 <span class="ntag">New</span></div>
+          </div>
+        </div>
+
+        <div class="act-row">
+          <div class="act-key">ESORICS</div>
+          <div>
+            <div class="act-name">European Symposium on Research in Computer Security</div>
+            <div class="act-detail">Program Chair: ESORICS'18 &nbsp;·&nbsp; Workshop Chair: ESORICS'22 &nbsp;·&nbsp; Outstanding Contribution Award (2020)</div>
+          </div>
+        </div>
+
+        <div class="act-row">
+          <div class="act-key">ICICS</div>
+          <div>
+            <div class="act-name">International Conference on Information and Communications Security</div>
+            <div class="act-detail">Steering Committee Chair (2019–present) &nbsp;·&nbsp; General Chair: ICICS'20 &nbsp;·&nbsp; Program Chair: ICICS'13, '19</div>
+          </div>
+        </div>
+
+        <div class="act-row">
+          <div class="act-key">IEEE S&amp;P</div>
+          <div>
+            <div class="act-name">IEEE Security &amp; Privacy Magazine</div>
+            <div class="act-detail">Associate Editor-in-Chief (2023–present) &nbsp;·&nbsp; Editor (2018–2023)</div>
+          </div>
+        </div>
+
+        <div class="act-row">
+          <div class="act-key">Journals</div>
+          <div>
+            <div class="act-name">Editorial Boards</div>
+            <div class="act-detail">IEEE TDSC (2018–2023) &nbsp;·&nbsp; IEEE TIFS (2013–2016) &nbsp;·&nbsp; IEEE TR (2022–2025) &nbsp;·&nbsp; Computers &amp; Security (2011–2015)</div>
+          </div>
+        </div>
+
+        <div class="act-row">
+          <div class="act-key">Asiacrypt</div>
+          <div>
+            <div class="act-name">IACR International Conference on the Theory and Application of Cryptology</div>
+            <div class="act-detail">Steering Committee Member (2008–present)</div>
+          </div>
+        </div>
+
+        <div class="act-row">
+          <div class="act-key">ISC</div>
+          <div>
+            <div class="act-name">Information Security Conference</div>
+            <div class="act-detail">Steering Committee Member (2017–present) &nbsp;·&nbsp; Program Chair: ISC'05, '11, '17</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Awards -->
+    <section class="sec" id="awards">
+      <h2 class="sec-title">Awards &amp; Honours</h2>
+      <div class="award-list">
+        <div class="award-row"><div class="award-yr">2026</div><div class="award-name"><a href="https://www.computer.org/press-room/2026-class-fellows" target="_blank">IEEE Fellow</a> — for contributions to applied cryptography and cyber-physical system security</div></div>
+        <div class="award-row"><div class="award-yr">2025</div><div class="award-name">IFIP WG 11.3 Outstanding Contribution Award</div></div>
+        <div class="award-row"><div class="award-yr">2023</div><div class="award-name">ACSAC Distinguished Paper Award</div></div>
+        <div class="award-row"><div class="award-yr">2023</div><div class="award-name">ACM CPSS Best Paper Award</div></div>
+        <div class="award-row"><div class="award-yr">2022</div><div class="award-name"><a href="https://awards.acm.org/award_winners/zhou_2774367" target="_blank">ACM Distinguished Member</a></div></div>
+        <div class="award-row"><div class="award-yr">2022</div><div class="award-name">IFIP DBSEC Best Student Paper Award</div></div>
+        <div class="award-row"><div class="award-yr">2021</div><div class="award-name">IEEE DAPPS Best Paper Award</div></div>
+        <div class="award-row"><div class="award-yr">2021, '22</div><div class="award-name">IEEE DSC Best Student Paper Award</div></div>
+        <div class="award-row"><div class="award-yr">2020</div><div class="award-name"><a href="https://conf.laas.fr/esorics/" target="_blank">ESORICS Outstanding Contribution Award</a></div></div>
+        <div class="award-row"><div class="award-yr">2015</div><div class="award-name">ESORICS Best Paper Award</div></div>
+      </div>
+    </section>
+
+    <!-- Grants -->
+    <section class="sec" id="grants">
+      <h2 class="sec-title">Selected Research Grants</h2>
+      <div class="grant-list">
+        <div class="grant-row"><div class="grant-yrs">2025–2027</div><div><div class="grant-id">DSO-PO62512946</div><div class="grant-desc">DSO funded project</div></div></div>
+        <div class="grant-row"><div class="grant-yrs">2023–2026</div><div><div class="grant-id">DeST-SCI-NCR25-NSoE005</div><div class="grant-desc"><a href="https://itrust.sutd.edu.sg/nsoe-destsci/" target="_blank">NRF funded National Satellite of Excellence program — Phase 2</a></div></div></div>
+        <div class="grant-row"><div class="grant-yrs">2022–2027</div><div><div class="grant-id">DTC-T2FI-CFP-0002</div><div class="grant-desc"><a href="https://www.ntu.edu.sg/dtc" target="_blank">IMDA funded project</a></div></div></div>
+        <div class="grant-row"><div class="grant-yrs">2022–2024</div><div><div class="grant-id">MariOT-SMI-2022-MTP-05</div><div class="grant-desc"><a href="https://itrust.sutd.edu.sg/news-events/news/sutd-charts-a-new-course-in-maritime-cyber-security-rd/" target="_blank">MPA/SMI funded maritime cybersecurity — MariOT testbed</a></div></div></div>
+        <div class="grant-row"><div class="grant-yrs">2019–2022</div><div><div class="grant-id">DeST-SCI-NRF2018NCR-NSoE005</div><div class="grant-desc"><a href="https://itrust.sutd.edu.sg/nsoe-destsci/" target="_blank">NRF funded National Satellite of Excellence program — Phase 1</a></div></div></div>
+        <div class="grant-row"><div class="grant-yrs">2019–2021</div><div><div class="grant-id">MOE2018-T2-1-111</div><div class="grant-desc">MOE funded project</div></div></div>
+        <div class="grant-row"><div class="grant-yrs">2017–2020</div><div><div class="grant-id">SRG-ISTD-2017-124</div><div class="grant-desc">SUTD start-up research project</div></div></div>
+        <div class="grant-row"><div class="grant-yrs">2015–2018</div><div><div class="grant-id">SecUTS-NRF2014NCR</div><div class="grant-desc">NRF funded cybersecurity project</div></div></div>
+        <div class="grant-row"><div class="grant-yrs">2013–2015</div><div><div class="grant-id">SPARK-1224104047</div><div class="grant-desc">A*STAR funded project</div></div></div>
+        <div class="grant-row"><div class="grant-yrs">2010–2013</div><div><div class="grant-id">SecSG-EPD090005</div><div class="grant-desc">EMA funded smart energy security project</div></div></div>
+        <div class="grant-row"><div class="grant-yrs">2006–2009</div><div><div class="grant-id">SMEPP-033563</div><div class="grant-desc">EU funded project</div></div></div>
+      </div>
+    </section>
+
+    <!-- Students -->
+    <section class="sec" id="students">
+      <h2 class="sec-title">PhD Students</h2>
+      <p class="students-note">Extended list: <a href="http://jianying.space/professional.html#Supervisor" target="_blank">jianying.space/professional.html#Supervisor</a></p>
+      <div class="students-grid">
+        <div class="student-row"><div class="student-name"><a href="https://mujeebch.github.io/" target="_blank">Chuadhry Mujeeb Ahmed</a></div><div class="student-yrs">2015–2019</div></div>
+        <div class="student-row"><div class="student-name">Hamid Ghaeini</div><div class="student-yrs">2015–2019</div></div>
+        <div class="student-row"><div class="student-name">John Castellanos</div><div class="student-yrs">2016–2021</div></div>
+        <div class="student-row"><div class="student-name"><a href="https://flaviotoffalini.info/" target="_blank">Flavio Toffalini</a></div><div class="student-yrs">2017–2021</div></div>
+        <div class="student-row"><div class="student-name"><a href="https://www.silencelaboratories.com/team" target="_blank">Andrei Bytes</a></div><div class="student-yrs">2017–2022</div></div>
+        <div class="student-row"><div class="student-name">Bowen Liu</div><div class="student-yrs">2018–2022</div></div>
+        <div class="student-row"><div class="student-name"><a href="https://www.pqcee.com/about" target="_blank">Teik Guan Tan</a></div><div class="student-yrs">2019–2022</div></div>
+        <div class="student-row"><div class="student-name">Shijie Luo</div><div class="student-yrs active">2023–present</div></div>
+        <div class="student-row"><div class="student-name">Geovani Benita</div><div class="student-yrs active">2023–present</div></div>
+        <div class="student-row"><div class="student-name">Anthony Yeo</div><div class="student-yrs active">2023–present</div></div>
+        <div class="student-row"><div class="student-name">Tom Yang</div><div class="student-yrs active">2024–present</div></div>
+        <div class="student-row"><div class="student-name">Xuna Zhan</div><div class="student-yrs active">2024–present</div></div>
+      </div>
+    </section>
+
+    <!-- Teaching -->
+    <section class="sec" id="teaching">
+      <h2 class="sec-title">Teaching</h2>
+      <div class="course-list">
+        <div class="course-row">
+          <div class="course-code">50.002</div>
+          <div class="course-name"><a href="https://www.sutd.edu.sg/course/50-002-computation-structures" target="_blank">Computation Structures</a></div>
+          <div class="course-meta">UG — 2017</div>
+        </div>
+        <div class="course-row">
+          <div class="course-code">51.505</div>
+          <div class="course-name"><a href="https://www.sutd.edu.sg/course/51-505-foundations-of-cybersecurity/" target="_blank">Foundations of Cybersecurity</a></div>
+          <div class="course-meta">MSSD + MTD + PhD — 2018–2025</div>
+        </div>
+        <div class="course-row">
+          <div class="course-code">51.508</div>
+          <div class="course-name"><a href="https://www.sutd.edu.sg/course/51-508-secure-cyber-physical-systems/" target="_blank">Secure Cyber Physical Systems</a></div>
+          <div class="course-meta">MSSD + PhD — 2018–2026</div>
+        </div>
+        <div class="course-row">
+          <div class="course-code">51.702</div>
+          <div class="course-name"><a href="https://www.sutd.edu.sg/programme-listing/mtd-cybersecurity/programme-schedule/" target="_blank">Security by Design Project</a></div>
+          <div class="course-meta">MTD — 2024–2025</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Highlights -->
+    <section class="sec" id="highlights">
+      <h2 class="sec-title">Research Highlights</h2>
+      <div class="hl-list">
+        <div class="hl-row"><div class="hl-date">Sep 2025</div><div class="hl-body"><a href="https://www.computer.org/csdl/magazine/sp/2025/04/11163526/29Xd4dSH4cw" target="_blank">Maritime cybersecurity: A big change ahead</a> — <em>IEEE Security &amp; Privacy</em> <span class="ntag">New</span></div></div>
+        <div class="hl-row"><div class="hl-date">Sep 2025</div><div class="hl-body"><a href="https://www.kaspersky.com/blog/5g-attack-downgrade-sni5gect/54258/" target="_blank">Attacks on 5G networks: The arms race continues</a> — Kaspersky Daily <span class="ntag">New</span></div></div>
+        <div class="hl-row"><div class="hl-date">Sep 2025</div><div class="hl-body"><a href="https://techxplore.com/news/2025-09-reshapes-bitcoin.html" target="_blank">A new attack reshapes the rules of Bitcoin mining</a> — TechXplore</div></div>
+        <div class="hl-row"><div class="hl-date">Aug 2024</div><div class="hl-body"><a href="https://www.csa.gov.sg/Tips-Resource/publications/2024/operational-technology-cybersecurity-masterplan-2024" target="_blank">Singapore's Operational Technology Cybersecurity Masterplan 2024</a></div></div>
+        <div class="hl-row"><div class="hl-date">Jul 2024</div><div class="hl-body"><a href="https://www.computer.org/csdl/magazine/sp/2024/04/10621969/1Z5lK0ZMLgk" target="_blank">The need of testbeds for cyber-physical system security</a> — <em>IEEE Security &amp; Privacy</em></div></div>
+        <div class="hl-row"><div class="hl-date">Jan 2024</div><div class="hl-body"><a href="https://itrust.sutd.edu.sg/news-events/news/guidelines-for-cyber-risk-management-in-autonomous-shipping/" target="_blank">Guidelines for cyber risk management in autonomous shipping</a></div></div>
+        <div class="hl-row"><div class="hl-date">Jan 2022</div><div class="hl-body"><a href="https://itrust.sutd.edu.sg/news-events/news/guidelines-for-cyber-risk-management-for-shipboard-ot-systems/" target="_blank">Guidelines for cyber risk management in shipboard OT systems</a> — IMO</div></div>
+        <div class="hl-row"><div class="hl-date">Jan 2021</div><div class="hl-body"><a href="https://www.sutd.edu.sg/stories-listing/securing-critical-infrastructure-against-cyber-attacks/" target="_blank">Securing critical infrastructure against cyber attacks</a> — SUTD</div></div>
+        <div class="hl-row"><div class="hl-date">May 2017</div><div class="hl-body"><a href="https://research.a-star.edu.sg/articles/highlights/historical-data-helps-internet-of-things-resist-hacks/" target="_blank">Historical data helps Internet of Things resist hacks</a> — A*STAR Research</div></div>
+        <div class="hl-row"><div class="hl-date">Jul 2016</div><div class="hl-body"><a href="https://research.a-star.edu.sg/articles/highlights/taking-control-back-from-the-cloud/" target="_blank">Taking control back from the cloud</a> — A*STAR Research</div></div>
+        <div class="hl-row"><div class="hl-date">Feb 2015</div><div class="hl-body"><a href="https://research.a-star.edu.sg/articles/highlights/security-for-both-real-and-cyber-worlds/" target="_blank">Security for both real and cyber worlds</a> — A*STAR Research</div></div>
+      </div>
+    </section>
+
+    <!-- Media -->
+    <section class="sec" id="media">
+      <h2 class="sec-title">In Media</h2>
+      <div class="media-list">
+        <div class="media-row"><div class="med-date">2025.08.26</div><div class="med-src">The Hacker News</div><div class="med-title"><a href="https://thehackernews.com/2025/08/new-sni5gect-attack-crashes-phones-and.html" target="_blank">New Sni5Gect attack crashes phones and downgrades 5G to 4G without rogue base station</a> <span class="ntag">New</span></div></div>
+        <div class="media-row"><div class="med-date">2025.08.18</div><div class="med-src">Hackaday</div><div class="med-title"><a href="https://hackaday.com/2025/08/18/sniffing-5g-with-software-defined-radio/" target="_blank">Sniffing 5G with software-defined radio</a></div></div>
+        <div class="media-row"><div class="med-date">2025.08.18</div><div class="med-src">The Register</div><div class="med-title"><a href="https://www.theregister.com/2025/08/18/sni5gect/" target="_blank">Boffins say tool can sniff 5G traffic without rogue base stations</a></div></div>
+        <div class="media-row"><div class="med-date">2025.08.18</div><div class="med-src">Security Week</div><div class="med-title"><a href="https://www.securityweek.com/novel-5g-attack-bypasses-need-for-malicious-base-station/" target="_blank">Novel 5G attack bypasses need for malicious base station</a></div></div>
+        <div class="media-row"><div class="med-date">2025.03.25</div><div class="med-src">Channel News Asia</div><div class="med-title"><a href="https://www.channelnewsasia.com/watch/singapore-launches-maritime-training-facility-shore-up-defence-against-potential-threats-5023166" target="_blank">Launch of MariOT testbed</a></div></div>
+        <div class="media-row"><div class="med-date">2024.04.16</div><div class="med-src">Zao Bao</div><div class="med-title"><a href="https://www.zaobao.com.sg/news/singapore/story20240416-3454430" target="_blank">Interview on maritime cybersecurity</a></div></div>
+        <div class="media-row"><div class="med-date">2023.05.04</div><div class="med-src">Channel News Asia</div><div class="med-title"><a href="https://www.channelnewsasia.com/business/google-passkeys-account-users-end-passwords-3463226" target="_blank">Interview on security of passkeys</a></div></div>
+        <div class="media-row"><div class="med-date">2022.01.11</div><div class="med-src">Channel 8</div><div class="med-title">Interview on phishing scam</div></div>
+        <div class="media-row"><div class="med-date">2020.04.16</div><div class="med-src">Channel 8</div><div class="med-title"><a href="https://www.youtube.com/watch?v=eHd72FP13q0" target="_blank">Interview on security of video conferencing</a></div></div>
+        <div class="media-row"><div class="med-date">2018.03.25</div><div class="med-src">Channel 8</div><div class="med-title">Interview on Facebook personal information leakage</div></div>
+        <div class="media-row"><div class="med-date">2017.05.29</div><div class="med-src">Science Daily</div><div class="med-title"><a href="https://www.sciencedaily.com/releases/2017/05/170529142439.htm" target="_blank">Taking control back from the cloud</a></div></div>
+        <div class="media-row"><div class="med-date">2016.04.22</div><div class="med-src">Straits Times</div><div class="med-title">Smart inventions — Two-factor authentication for IoT devices</div></div>
+        <div class="media-row"><div class="med-date">2015.02.04</div><div class="med-src">Science Daily</div><div class="med-title"><a href="http://www.sciencedaily.com/releases/2015/02/150204090103.htm" target="_blank">Protecting customers charging electric vehicles on smart electricity grids</a></div></div>
+        <div class="media-row"><div class="med-date">2013.10.02</div><div class="med-src">Straits Times</div><div class="med-title"><a href="http://www.straitstimes.com/singapore/apple-fixes-ios-7-after-singapore-researchers-identify-flaws" target="_blank">Apple fixes iOS 7 after Singapore researchers identify flaws</a></div></div>
+        <div class="media-row"><div class="med-date">2009.03.12</div><div class="med-src">Nikkei (Japan)</div><div class="med-title">Future University and I2R do joint research on mobile device security</div></div>
+      </div>
+    </section>
+
+    <!-- Misc -->
+    <section class="sec" id="misc">
+      <h2 class="sec-title">Miscellaneous</h2>
+      <div class="misc-list">
+        <div class="misc-item">Recipient of the <a href="http://www.kcwef.org/" target="_blank">K C Wong Scholarship</a> and <a href="https://en.wikipedia.org/wiki/Overseas_Research_Scholarship" target="_blank">ORS Award</a> for PhD study at Royal Holloway.</div>
+        <div class="misc-item">Alumnus of the <a href="http://isg.rhul.ac.uk/alumni/" target="_blank">Information Security Group</a> at Royal Holloway, University of London.</div>
+        <div class="misc-item">Maintains the <a href="http://jianying.space/conference-ranking.html" target="_blank">CIF-based Top Cyber Security Conferences Ranking</a>. 2025 ranking released. <span class="ntag">New</span></div>
+        <div class="misc-item">SUTD: <a href="https://www.sutd.edu.sg/programme-listing/sutd-phd-programme/" target="_blank">PhD with scholarship</a> &nbsp;·&nbsp; <a href="https://www.sutd.edu.sg/programme-listing/mssd/" target="_blank">MSSD</a> with <a href="https://itrust.sutd.edu.sg/capability-development/cims/" target="_blank">CiMS scholarship</a> — welcome to apply.</div>
+      </div>
+    </section>
+
+  </main>
+</div><!-- /body-grid -->
+
+<footer>
+  <span>Jianying Zhou &nbsp;·&nbsp; <a href="https://itrust.sutd.edu.sg/" target="_blank">iTrust</a>, <a href="https://www.sutd.edu.sg/" target="_blank">SUTD</a> &nbsp;·&nbsp; Singapore</span>
+  <span>Last updated: March 2026 &nbsp;·&nbsp; <a href="http://jianying.space/" target="_blank">jianying.space</a></span>
+</footer>
+
+</div><!-- /page -->
+
+<script>
+const links   = document.querySelectorAll('.sidebar-nav a[href^="#"]');
+const secs    = [...document.querySelectorAll('section[id]')];
+const onScroll = () => {
+  const y = window.scrollY + 110;
+  let cur = secs[0];
+  for (const s of secs) { if (s.offsetTop <= y) cur = s; }
+  links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + cur.id));
+};
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+</script>
+</body>
+</html>
