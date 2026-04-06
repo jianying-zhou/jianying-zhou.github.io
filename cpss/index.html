@@ -1,0 +1,994 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=windows-1252">
+  <meta name="Generator" content="Microsoft Word 15 (filtered)">
+  <base target="_blank">
+  <title>CPSS - ACM Cyber-Physical System Security Workshop</title>
+  <style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"\@SimSun";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:.5in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-size:10.0pt;}
+.MsoPapDefault
+	{margin-bottom:10.0pt;
+	line-height:115%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+  </style>
+</head>
+<body style="" lang="EN-US" link="blue" vlink="purple">
+<div class="WordSection1">
+<p class="MsoNormal"
+ style="margin-bottom: 0in; text-align: center; line-height: normal;"
+ align="center"><img src="cpss-logo.jpg" align="left" height="166"
+ width="160"><b>&nbsp;</b></p>
+<p class="MsoNormal"
+ style="margin-bottom: 6pt; text-align: center; line-height: normal;"
+ align="center"><b><span style="font-size: 20pt; color: blue;">ACM
+Cyber-Physical System Security Workshop (CPSS)</span></b></p>
+<p class="MsoNormal"
+ style="margin-bottom: 6pt; text-align: center; line-height: normal;"
+ align="center">&nbsp;</p>
+<p class="MsoNormal"
+ style="margin: 0in 0in 0in 148.85pt; text-align: justify; line-height: normal;"><span
+ lang="EN-SG">Cyber-Physical
+Systems (CPS) consist of large-scale interconnected systems of
+heterogeneous
+components interacting with their physical environments. There exist a
+multitude of CPS devices and applications deployed to serve critical
+functions
+in our lives thus making security an important non-functional attribute
+of such
+systems. This workshop will provide a platform for professionals from
+academia,
+government, and industry to discuss novel ways to address the
+ever-present
+security challenges in CPS. ACM CPSS is held in conjunction with ACM <a
+ href="http://jianying.space/asiaccs/">AsiaCCS</a>.&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: 0in; line-height: normal;"><b>&nbsp;</b></p>
+<p class="MsoNormal" style="margin-bottom: 0in; line-height: normal;"><b>&nbsp;</b></p>
+<p class="MsoNormal" style="margin-bottom: 6pt; line-height: normal;"><b>Steering
+Committee</b></p>
+<p class="MsoListParagraph"
+ style="margin-bottom: 0in; text-indent: -0.25in; line-height: normal;"><span
+ style="font-family: Symbol;">·</span><span
+ style="font-size: 7pt; font-family: &quot;Times New Roman&quot;,serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Dieter Gollmann (Hamburg University of Technology, Germany)</p>
+<p class="MsoListParagraph"
+ style="margin-bottom: 0in; text-indent: -0.25in; line-height: normal;"><span
+ style="font-family: Symbol;">·</span><span
+ style="font-size: 7pt; font-family: &quot;Times New Roman&quot;,serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Ravishankar Iyer (UIUC, USA) </p>
+<p class="MsoListParagraph"
+ style="margin-bottom: 0in; text-indent: -0.25in; line-height: normal;"><span
+ style="font-family: Symbol;">·</span><span
+ style="font-size: 7pt; font-family: &quot;Times New Roman&quot;,serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><a name="_Hlk22923948">Douglas Jones </a>(UIUC, USA)</p>
+<p class="MsoListParagraph"
+ style="margin-bottom: 0in; text-indent: -0.25in; line-height: normal;"><span
+ style="font-family: Symbol;">·</span><span
+ style="font-size: 7pt; font-family: &quot;Times New Roman&quot;,serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Javier Lopez (University of Malaga, Spain)</p>
+<p class="MsoListParagraph"
+ style="margin-bottom: 0in; text-indent: -0.25in; line-height: normal;"><span
+ style="font-family: Symbol;">·</span><span
+ style="font-size: 7pt; font-family: &quot;Times New Roman&quot;,serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span lang="EN-SG"><a href="http://jianying.space/"><span
+ lang="EN-US">Jianying
+Zhou</span></a></span> (SUTD, Singapore) – <b>Chair</b></p>
+<p class="MsoNormal" style="margin-bottom: 0in; line-height: normal;">&nbsp;</p>
+<p class="MsoNormal" style="margin-bottom: 6pt; line-height: normal;"><b>Workshop
+Series</b></p>
+<p class="MsoListParagraph"
+ style="margin-bottom: 0in; text-indent: -0.25in; line-height: normal;"><span
+ style="font-family: Symbol;">·<span
+ style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang="EN-SG"><a
+ href="http://jianying.space/cpss/CPSS2015/" target="_blank"><span
+ lang="EN-US">CPSS’15</span></a></span> –&nbsp;Singapore, April
+14, 2015&nbsp; [<span lang="EN-SG"><a
+ href="https://dl.acm.org/doi/proceedings/10.1145/2732198"
+ target="_blank"><span
+ style="font-size: 9pt; font-family: &quot;Verdana&quot;,sans-serif;">proceedings</span></a></span><span
+ style="font-size: 9pt; font-family: &quot;Verdana&quot;,sans-serif; color: black;"
+ lang="EN-SG">]
+– AR = 35%</span></p>
+<p class="MsoListParagraph"
+ style="margin-bottom: 0in; line-height: normal;"><span
+ style="font-size: 9pt; font-family: &quot;Verdana&quot;,sans-serif; color: black;"
+ lang="EN-SG">Program
+Chairs:&nbsp; Jianying Zhou, Douglas Jones</span></p>
+<p class="MsoListParagraph"
+ style="margin-bottom: 0in; line-height: normal;">&nbsp;</p>
+<p class="MsoListParagraph"
+ style="margin-bottom: 0in; text-indent: -0.25in; line-height: normal;"><span
+ style="font-family: Symbol;">·<span
+ style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang="EN-SG"><a
+ href="http://jianying.space/cpss/CPSS2016/"><span lang="EN-US">CPSS’16</span></a></span>&nbsp;–
+Xi’an, China, May 30, 2016 &nbsp;[<span lang="EN-SG"><a
+ href="https://dl.acm.org/doi/proceedings/10.1145/2899015"
+ target="_blank"><span lang="EN-US">proceedings</span></a></span>] – AR
+= 30%</p>
+<p class="MsoListParagraph"
+ style="margin-bottom: 0in; line-height: normal;">Program
+Chairs: &nbsp;Jianying Zhou, Javier Lopez</p>
+<p class="MsoListParagraph"
+ style="margin-bottom: 0in; line-height: normal;">&nbsp;</p>
+<p class="MsoListParagraph"
+ style="margin-bottom: 0in; text-indent: -0.25in; line-height: normal;"><span
+ style="font-family: Symbol;">·<span
+ style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang="EN-SG"><a
+ href="http://jianying.space/cpss/CPSS2017/"><span lang="EN-US">CPSS'17</span></a></span>
+– Abu Dhabi, UAE, April 2, 2017 &nbsp;[<span lang="EN-SG"><a
+ href="https://dl.acm.org/doi/proceedings/10.1145/3055186"><span
+ lang="EN-US">proceedings</span></a></span>] <a name="_Hlk515528242">–
+AR = 29%</a></p>
+<p class="MsoListParagraph"
+ style="margin-bottom: 0in; line-height: normal;">Program
+Chairs:&nbsp; Jianying Zhou, Ernesto Damiani</p>
+<p class="MsoListParagraph"
+ style="margin-bottom: 0in; line-height: normal;">&nbsp;</p>
+<p class="MsoListParagraph"
+ style="margin-bottom: 0in; text-indent: -0.25in; line-height: normal;"><a
+ name="_Hlk526798746"><span style="font-family: Symbol;">·<span
+ style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></a><a href="http://jianying.space/cpss/CPSS2018/">CPSS’18</a>
+– Incheon, Korea, June
+4, 2018 &nbsp;[<a
+ href="https://dl.acm.org/doi/proceedings/10.1145/3198458">proceedings</a>]
+– AR = 25%</p>
+<p class="MsoListParagraph"
+ style="margin-bottom: 0in; line-height: normal;">Program
+Chairs:&nbsp; Dieter Gollmann, Jianying Zhou</p>
+<p class="MsoListParagraph"
+ style="margin-bottom: 0in; line-height: normal;">&nbsp;</p>
+<p class="MsoListParagraph"
+ style="margin-bottom: 0in; text-indent: -0.25in; line-height: normal;"><span
+ style="font-family: Symbol;">·<span
+ style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang="EN-SG"><a
+ href="http://jianying.space/cpss/CPSS2019/"><span lang="EN-US">CPSS’19</span></a></span>
+– Auckland, New Zealand, July 8, 2019 &nbsp;[<span lang="EN-SG"><a
+ href="https://dl.acm.org/doi/proceedings/10.1145/3327961"><span
+ lang="EN-US">proceedings</span></a></span>] – AR = 36%</p>
+<p class="MsoListParagraph"
+ style="margin-bottom: 0in; line-height: normal;">Program
+Chairs:&nbsp; Aditya Mathur, Jianying Zhou</p>
+<p class="MsoListParagraph"
+ style="margin-bottom: 0in; line-height: normal;">&nbsp;</p>
+<p class="MsoListParagraph"
+ style="margin-bottom: 0in; text-indent: -0.25in; line-height: normal;"><span
+ style="font-family: Symbol;">·<span
+ style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang="EN-SG"><a
+ href="https://www.nics.uma.es/pub/CPSS2020/"><span lang="EN-US">CPSS’20</span></a></span>
+– Taipei, Taiwan, October 6, 2020&nbsp; [<span lang="EN-SG"><a
+ href="https://dl.acm.org/doi/proceedings/10.1145/3384941"><span
+ lang="EN-US">proceedings</span></a></span>] – AR = 35%&nbsp; <span
+ style="color: red;">(virtual)</span></p>
+<p class="MsoNormal"
+ style="margin: 0in 0in 0in 0.5in; line-height: normal;">Program
+Chairs:&nbsp; Sokratis Katsikas, Cristina
+Alcaraz</p>
+<p class="MsoNormal"
+ style="margin: 0in 0in 0in 0.5in; line-height: normal;">&nbsp;</p>
+<p class="MsoListParagraph"
+ style="margin-bottom: 0in; text-indent: -0.25in; line-height: normal;"><span
+ style="font-family: Symbol;">·<span
+ style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang="EN-SG"><a
+ href="https://spritz.math.unipd.it/events/2021/CPSS/"><span
+ lang="EN-US">CPSS’21</span></a></span>
+– Hong Kong, China, June 7, 2021&nbsp; [<span lang="EN-SG"><a
+ href="https://dl.acm.org/doi/proceedings/10.1145/3457339"><span
+ lang="EN-US">proceedings</span></a></span>]
+– AR = 37.5%&nbsp; <span style="color: red;">(virtual)</span></p>
+<p class="MsoNormal"
+ style="margin: 0in 0in 0in 0.5in; line-height: normal;">Program
+Chairs:&nbsp; Mauro Conti, Nils Ole
+Tippenhauer</p>
+<p class="MsoNormal"
+ style="margin: 0in 0in 0in 0.5in; line-height: normal;">&nbsp;</p>
+<p class="MsoListParagraph"
+ style="margin-bottom: 0in; text-indent: -0.25in; line-height: normal;"><span
+ style="font-family: Symbol;">·<span
+ style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang="EN-SG"><a
+ href="https://illinois.adsc.com.sg/CPSS2022/"><span lang="EN-US">CPSS’22</span></a></span>
+– Nagasaki, Japan, May 30, 2022&nbsp; [<span lang="EN-SG"><a
+ href="https://dl.acm.org/doi/proceedings/10.1145/3494107"><span
+ lang="EN-US">proceedings</span></a></span>] – AR = 42%&nbsp; <span
+ style="color: red;">(hybrid)</span></p>
+<p class="MsoNormal"
+ style="margin: 0in 0in 0in 0.5in; line-height: normal;">Program
+Chairs:&nbsp; Alvaro Cardenas, Daisuke
+Mashima</p>
+<p class="MsoNormal"
+ style="margin: 0in 0in 0in 0.5in; line-height: normal;">&nbsp;</p>
+<p class="MsoListParagraph"
+ style="margin-bottom: 0in; text-indent: -0.25in; line-height: normal;"><span
+ style="font-family: Symbol;">·<span
+ style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang="EN-SG"><a
+ href="https://www.nics.uma.es/CPSS2023/"><span lang="EN-US">CPSS’23</span></a></span>
+– Melbourne, Australia, July 10, 2023&nbsp; [<span lang="EN-SG"><a
+ href="https://dl.acm.org/doi/proceedings/10.1145/3592538"><span
+ lang="EN-US">proceedings</span></a></span>] – AR = 37.5% &nbsp;<span
+ style="color: red;">(hybrid)</span></p>
+<p class="MsoNormal"
+ style="margin: 0in 0in 0in 0.5in; line-height: normal;">Program
+Chairs:&nbsp; Rodrigo Roman, Mujeeb
+Ahmed</p>
+<p class="MsoNormal"
+ style="margin: 0in 0in 0in 0.5in; line-height: normal;">&nbsp;</p>
+<p class="MsoListParagraph"
+ style="margin-bottom: 0in; text-indent: -0.25in; line-height: normal;"><a
+ name="_Hlk182055134"><span style="font-family: Symbol;">·<span
+ style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></a><a href="https://asiaccs2024.sutd.edu.sg/cpss2024/">CPSS’24</a>
+– Singapore, July 2,
+2024 &nbsp;[<a href="https://dl.acm.org/doi/proceedings/10.1145/3626205">proceedings</a>]
+– AR = 45% </p>
+<p class="MsoNormal"
+ style="margin: 0in 0in 0in 0.5in; line-height: normal;">Program
+Chairs:&nbsp; Jianying Zhou, Sudipta
+Chattopadhyay</p>
+<p class="MsoListParagraph"
+ style="margin-bottom: 0in; line-height: normal;">&nbsp;</p>
+<p class="MsoListParagraph"
+ style="margin-bottom: 0in; text-indent: -0.25in; line-height: normal;"><span
+ style="font-family: Symbol;">·<span
+ style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang="EN-SG"><a
+ href="http://jianying.space/cpss/CPSS2025/"><span lang="EN-US">CPSS’25</span></a></span>
+– Hanoi, Vietnam, 26 August 2025 &nbsp;[<span lang="EN-SG"><a
+ href="https://dl.acm.org/doi/proceedings/10.1145/3709017"><span
+ lang="EN-US">proceedings</span></a></span>] – AR = 40%</p>
+<p class="MsoNormal"
+ style="margin: 0in 0in 0in 0.5in; line-height: normal;">Program
+Chairs:&nbsp; Awais Yousaf, Eyasu
+Getahun Chekole</p>
+<p class="MsoNormal"
+ style="margin: 0in 0in 0in 18.2pt; line-height: normal;">&nbsp;</p>
+<p class="MsoNormal" style="line-height: normal;"><b>Keynote Speeches</b></p>
+<table class="MsoNormalTable"
+ style="border: medium none ; width: 97.18%; margin-left: 17.7pt; border-collapse: collapse;"
+ border="1" cellpadding="0" cellspacing="0" width="97%">
+  <tbody>
+    <tr style="height: 28.6pt;">
+      <td rowspan="3"
+ style="border: 1pt solid windowtext; padding: 0in 5.4pt; width: 7.72%; height: 28.6pt;"
+ valign="top" width="7%">
+      <p class="MsoNormal"
+ style="margin-bottom: 6pt; line-height: normal;"><span lang="EN-SG">2015</span></p>
+      </td>
+      <td
+ style="border-style: solid solid solid none; border-color: windowtext windowtext windowtext -moz-use-text-color; border-width: 1pt 1pt 1pt medium; padding: 0in 5.4pt; width: 44.98%; height: 28.6pt;"
+ valign="top" width="44%">
+      <p class="MsoNormal"
+ style="margin-bottom: 6pt; line-height: normal;"><span lang="EN-SG">Cyber-Physical
+Systems Security – Experimental Analysis of a Vinyl Acetate Monomer
+Plant</span></p>
+      </td>
+      <td
+ style="border-style: solid solid solid none; border-color: windowtext windowtext windowtext -moz-use-text-color; border-width: 1pt 1pt 1pt medium; padding: 0in 5.4pt; width: 47.3%; height: 28.6pt;"
+ valign="top" width="47%">
+      <p class="MsoNormal"
+ style="margin-bottom: 6pt; line-height: normal;"><span lang="EN-SG">Dieter
+Gollmann (Hamburg University of Technology, Germany)</span></p>
+      </td>
+    </tr>
+    <tr style="height: 6.45pt;">
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 44.98%; height: 6.45pt;"
+ valign="top" width="44%">
+      <p class="MsoNormal"
+ style="margin-bottom: 6pt; line-height: normal;"><span lang="EN-SG">Resilience
+of Medical Devices and Systems</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 47.3%; height: 6.45pt;"
+ valign="top" width="47%">
+      <p class="MsoNormal"
+ style="margin-bottom: 6pt; line-height: normal;"><span lang="EN-SG">Ravishankar
+Iyer (UIUC, USA)</span></p>
+      </td>
+    </tr>
+    <tr style="height: 6.45pt;">
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 44.98%; height: 6.45pt;"
+ valign="top" width="44%">
+      <p class="MsoNormal"
+ style="margin-bottom: 6pt; line-height: normal;"><span lang="EN-SG">Cyber
+Security in SCADA Networks</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 47.3%; height: 6.45pt;"
+ valign="top" width="47%">
+      <p class="MsoNormal"
+ style="margin-bottom: 6pt; line-height: normal;"><span lang="EN-SG">Ganesh
+Narayanan (Thales, Singapore)</span></p>
+      </td>
+    </tr>
+    <tr style="height: 6.45pt;">
+      <td rowspan="2"
+ style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 7.72%; height: 6.45pt;"
+ valign="top" width="7%">
+      <p class="MsoNormal"
+ style="margin-bottom: 6pt; line-height: normal;"><span lang="EN-SG">2016</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 44.98%; height: 6.45pt;"
+ valign="top" width="44%">
+      <p class="MsoNormal"
+ style="margin-bottom: 6pt; line-height: normal;"><span lang="EN-SG">Risk
+Assessment of Cyber Access to Physical Infrastructure in Cyber-Physical
+Systems</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 47.3%; height: 6.45pt;"
+ valign="top" width="47%">
+      <p class="MsoNormal"
+ style="margin-bottom: 6pt; line-height: normal;"><span lang="EN-SG">David
+M. Nicol (UIUC, USA)</span></p>
+      </td>
+    </tr>
+    <tr style="height: 6.45pt;">
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 44.98%; height: 6.45pt;"
+ valign="top" width="44%">
+      <p class="MsoNormal"
+ style="margin-bottom: 6pt; line-height: normal;"><span lang="EN-SG">N-Version
+Obfuscation</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 47.3%; height: 6.45pt;"
+ valign="top" width="47%">
+      <p class="MsoNormal"
+ style="margin-bottom: 6pt; line-height: normal;"><span lang="EN-SG">Michael
+R. Lyu (Chinese University of Hong Kong, China)</span></p>
+      </td>
+    </tr>
+    <tr style="height: 6.45pt;">
+      <td rowspan="2"
+ style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 7.72%; height: 6.45pt;"
+ valign="top" width="7%">
+      <p class="MsoNormal"
+ style="margin-bottom: 6pt; line-height: normal;"><span lang="EN-SG">2017</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 44.98%; height: 6.45pt;"
+ valign="top" width="44%">
+      <p class="MsoNormal"
+ style="margin-bottom: 6pt; line-height: normal;"><span lang="EN-SG">On
+the Disappearing Boundary between Digital, Physical, and Social Spaces
+– Who, what, where and when?</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 47.3%; height: 6.45pt;"
+ valign="top" width="47%">
+      <p class="MsoNormal"
+ style="margin-bottom: 6pt; line-height: normal;"><span lang="EN-SG">Bashar
+Nuseibeh (The Open University, UK &amp; Lero, Ireland)</span></p>
+      </td>
+    </tr>
+    <tr style="height: 6.45pt;">
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 44.98%; height: 6.45pt;"
+ valign="top" width="44%">
+      <p class="MsoNormal"
+ style="margin-bottom: 6pt; line-height: normal;"><span lang="EN-SG">Cyber
+Security of the Autonomous Ship</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 47.3%; height: 6.45pt;"
+ valign="top" width="47%">
+      <p class="MsoNormal"
+ style="margin-bottom: 6pt; line-height: normal;"><span lang="EN-SG">Sokratis
+Katsikas (NTNU, Norway)</span></p>
+      </td>
+    </tr>
+    <tr style="height: 6.45pt;">
+      <td rowspan="3"
+ style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.75pt; height: 6.45pt;"
+ valign="top">
+      <p class="MsoNormal"
+ style="margin-bottom: 6pt; line-height: normal;"><span lang="EN-SG">2018</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 44.98%; height: 6.45pt;"
+ valign="top" width="44%">
+      <p class="MsoNormal"
+ style="margin-bottom: 6pt; line-height: normal;"><span lang="EN-SG">On
+the Limits of Detecting Process Anomaly in Critical Infrastructure</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 47.3%; height: 6.45pt;"
+ valign="top" width="47%">
+      <p class="MsoNormal"
+ style="margin-bottom: 6pt; line-height: normal;"><span lang="EN-SG">Aditya
+Mathur (SUTD, Singapore &amp; Purdue University, USA)</span></p>
+      </td>
+    </tr>
+    <tr style="height: 6.45pt;">
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 44.98%; height: 6.45pt;"
+ valign="top" width="44%">
+      <p class="MsoNormal"
+ style="margin-bottom: 6pt; line-height: normal;"><span lang="EN-SG">Leaky
+CPS: Inferring Cyber Information from Physical Properties (and the
+other way around)</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 47.3%; height: 6.45pt;"
+ valign="top" width="47%">
+      <p class="MsoNormal"
+ style="margin-bottom: 6pt; line-height: normal;"><span lang="EN-SG">Mauro
+Conti (University of Padua, Italy)</span></p>
+      </td>
+    </tr>
+    <tr style="height: 6.45pt;">
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 44.98%; height: 6.45pt;"
+ valign="top" width="44%">
+      <p class="MsoNormal"
+ style="margin-bottom: 6pt; line-height: normal;"><span lang="EN-SG">Control
+Theory for Practical Cyber-Physical Security</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 47.3%; height: 6.45pt;"
+ valign="top" width="47%">
+      <p class="MsoNormal"
+ style="margin-bottom: 6pt; line-height: normal;"><span lang="EN-SG">Henrik
+Sandberg (KTH, Sweden)</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="2"
+ style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 7.72%;"
+ valign="top" width="7%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">2019</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 44.98%;"
+ valign="top" width="44%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">From
+Control Model to Control Program: A Cross-Layer Approach to Robotic
+Vehicle Security</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 47.3%;"
+ valign="top" width="47%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">Dongyan
+Xu (Purdue University, USA)</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 44.98%;"
+ valign="top" width="44%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">Access
+Control for Internet of Things Applications</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 47.3%;"
+ valign="top" width="47%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">Indrakshi
+Ray (Colorado State University, USA)</span></p>
+      </td>
+    </tr>
+    <tr style="height: 16.8pt;">
+      <td
+ style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 7.72%; height: 16.8pt;"
+ valign="top" width="7%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">2020</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 44.98%; height: 16.8pt;"
+ valign="top" width="44%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">Trust,
+but Verify? Perspectives on Industrial Device Security</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 47.3%; height: 16.8pt;"
+ valign="top" width="47%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">Nils
+Ole Tippenhauer (CISPA, Germany)</span></p>
+      </td>
+    </tr>
+    <tr style="height: 26.05pt;">
+      <td rowspan="2"
+ style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 7.72%; height: 26.05pt;"
+ valign="top" width="7%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">2021</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 44.98%; height: 26.05pt;"
+ valign="top" width="44%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">Towards
+Secure and Robust Autonomy Software in Autonomous Driving and Smart
+Transportation</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 47.3%; height: 26.05pt;"
+ valign="top" width="47%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">Qi
+Alfred Chen (University of California, Irvine, USA)</span></p>
+      </td>
+    </tr>
+    <tr style="height: 26.05pt;">
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 44.98%; height: 26.05pt;"
+ valign="top" width="44%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">High
+We Fly: Wireless Witnessing and Crowdsourcing for Air-Traffic
+Communication Security</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 47.3%; height: 26.05pt;"
+ valign="top" width="47%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">Christina
+Pöpper (New York University Abu Dhabi, UAE)</span></p>
+      </td>
+    </tr>
+    <tr style="height: 20.3pt;">
+      <td rowspan="2"
+ style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 7.72%; height: 20.3pt;"
+ valign="top" width="7%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">2022</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 44.98%; height: 20.3pt;"
+ valign="top" width="44%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">The
+Use of Differential Privacy for Energy Data</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 47.3%; height: 20.3pt;"
+ valign="top" width="47%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">Anna
+Scaglione (Cornell Tech, Cornell University, USA)</span></p>
+      </td>
+    </tr>
+    <tr style="height: 26.05pt;">
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 44.98%; height: 26.05pt;"
+ valign="top" width="44%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">Fighting
+IoT Cyberattacks: Device Discovery, Attack Observation and Security
+Notification</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 47.3%; height: 26.05pt;"
+ valign="top" width="47%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">Katsunari
+Yoshioka (Yokohama National University, Japan)</span></p>
+      </td>
+    </tr>
+    <tr style="height: 16.2pt;">
+      <td rowspan="2"
+ style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 7.72%; height: 16.2pt;"
+ valign="top" width="7%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">2023</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 44.98%; height: 16.2pt;"
+ valign="top" width="44%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">Data
+Security &amp; Privacy Protection in IoT MGC Systems</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 47.3%; height: 16.2pt;"
+ valign="top" width="47%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">Robert
+Deng (Singapore Management University, Singapore)</span></p>
+      </td>
+    </tr>
+    <tr style="height: 17.25pt;">
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 44.98%; height: 17.25pt;"
+ valign="top" width="44%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">Digital
+Twins: Double Insecurity for Industrial Scenarios</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 47.3%; height: 17.25pt;"
+ valign="top" width="47%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">Cristina
+Alcaraz (University of Malaga, Spain)</span></p>
+      </td>
+    </tr>
+    <tr style="height: 17.25pt;">
+      <td rowspan="2"
+ style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 7.72%; height: 17.25pt;"
+ valign="top" width="7%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">2024</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 44.98%; height: 17.25pt;"
+ valign="top" width="44%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">A
+Tale of Two Industroyers: It was the Season of Darkness</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 47.3%; height: 17.25pt;"
+ valign="top" width="47%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">Alvaro
+Cardenas (University of California, Santa Cruz, USA)</span></p>
+      </td>
+    </tr>
+    <tr style="height: 17.25pt;">
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 44.98%; height: 17.25pt;"
+ valign="top" width="44%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">Dissecting
+the Software Supply Chain of Modern Industrial Control Systems</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 47.3%; height: 17.25pt;"
+ valign="top" width="47%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">Michail
+Maniatakos (New York University, Abu Dhabi, UAE)</span></p>
+      </td>
+    </tr>
+    <tr style="height: 17.25pt;">
+      <td rowspan="2"
+ style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 7.72%; height: 17.25pt;"
+ valign="top" width="7%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">2025</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 44.98%; height: 17.25pt;"
+ valign="top" width="44%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">Efficient
+Security and Privacy Protocols for IoT Networks and Applications</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 47.3%; height: 17.25pt;"
+ valign="top" width="47%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">Robert
+Deng (Singapore Management University, Singapore)</span></p>
+      </td>
+    </tr>
+    <tr style="height: 17.25pt;">
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 44.98%; height: 17.25pt;"
+ valign="top" width="44%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">Collaboratively
+Building a Resilient Semiconductor Supply Chain</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 47.3%; height: 17.25pt;"
+ valign="top" width="47%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">Shiuhpyng
+Shieh (National Yang Ming Chiao Tung University, Taiwan)</span></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="MsoNormal" style="margin-bottom: 6pt; line-height: normal;"><span
+ lang="EN-SG">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: 6pt; line-height: normal;"><b>Best
+Paper
+Awards</b></p>
+<table class="MsoNormalTable"
+ style="border: medium none ; width: 97.18%; margin-left: 17.7pt; border-collapse: collapse;"
+ border="1" cellpadding="0" cellspacing="0" width="97%">
+  <tbody>
+    <tr>
+      <td
+ style="border: 1pt solid windowtext; padding: 0in 5.4pt; width: 7.56%;"
+ valign="top" width="7%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">2015</span></p>
+      </td>
+      <td
+ style="border-style: solid solid solid none; border-color: windowtext windowtext windowtext -moz-use-text-color; border-width: 1pt 1pt 1pt medium; padding: 0in 5.4pt; width: 45.08%;"
+ valign="top" width="45%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">Lightweight
+Location Verification in Air Traffic Surveillance Networks</span></p>
+      </td>
+      <td
+ style="border-style: solid solid solid none; border-color: windowtext windowtext windowtext -moz-use-text-color; border-width: 1pt 1pt 1pt medium; padding: 0in 5.4pt; width: 47.36%;"
+ valign="top" width="47%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">Martin
+Strohmeier, Vincent Lenders, Ivan Martinovic</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td
+ style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 7.56%;"
+ valign="top" width="7%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">2016</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 45.08%;"
+ valign="top" width="45%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">A
+Risk Assessment Framework for Automotive Embedded Systems</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 47.36%;"
+ valign="top" width="47%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">Mafijul
+Islam, Aljoscha Lautenbach, Christian Sandberg, Tomas Olovsson</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td
+ style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 7.56%;"
+ valign="top" width="7%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">2017</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 45.08%;"
+ valign="top" width="45%">
+      <p class="MsoNormal"
+ style="margin-bottom: 6pt; line-height: normal;"><span lang="EN-SG">SIPHON:
+Towards Scalable High-Interaction Physical Honeypots</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 47.36%;"
+ valign="top" width="47%">
+      <p class="MsoNormal"
+ style="margin-bottom: 6pt; line-height: normal;"><span lang="EN-SG">Juan
+Guarnizo, Amit Tambe, Suman Sankar Bhunia, Martín Ochoa, Nils
+Tippenhauer, Asaf Shabtai, Yuval Elovici</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td
+ style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 7.56%;"
+ valign="top" width="7%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">2020</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 45.08%;"
+ valign="top" width="45%">
+      <p class="MsoNormal"
+ style="margin-bottom: 6pt; line-height: normal;"><span lang="EN-SG">Challenges
+in Machine Learning based Approaches for Real-Time Anomaly Detection in
+Industrial Control Systems</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 47.36%;"
+ valign="top" width="47%">
+      <p class="MsoNormal"
+ style="margin-bottom: 6pt; line-height: normal;"><span lang="EN-SG">Chuadhry
+Mujeeb Ahmed, Gauthama Raman Mani, Aditya Mathur</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td
+ style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 7.56%;"
+ valign="top" width="7%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">2021</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 45.08%;"
+ valign="top" width="45%">
+      <p class="MsoNormal"
+ style="margin-bottom: 6pt; line-height: normal;"><span lang="EN-SG">You
+talkin' to me? Exploring Practical Attacks on Controller Pilot Data
+Link Communications</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 47.36%;"
+ valign="top" width="47%">
+      <p class="MsoNormal"
+ style="margin-bottom: 6pt; line-height: normal;"><span lang="EN-SG">Joshua
+Smailes, Daniel Moser, Matthew Smith, Martin Strohmeier, Vincent
+Lenders, Ivan Martinovic</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td
+ style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 7.56%;"
+ valign="top" width="7%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">2022</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 45.08%;"
+ valign="top" width="45%">
+      <p class="MsoNormal"
+ style="margin-bottom: 6pt; line-height: normal;"><span lang="EN-SG">3D-Mold'ed
+In-Security: Mapping out Security of Indirect Additive Manufacturing</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 47.36%;"
+ valign="top" width="47%">
+      <p class="MsoNormal"
+ style="margin-bottom: 6pt; line-height: normal;"><span lang="EN-SG">Grant
+Parker, Eric MacDonald, Theo Zinner, Mark Yampolskiy</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td
+ style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 7.56%;"
+ valign="top" width="7%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">2023</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 45.08%;"
+ valign="top" width="45%">
+      <p class="MsoNormal"
+ style="margin-bottom: 6pt; line-height: normal;"><span lang="EN-SG">PAID:
+Perturbed Image Attacks Analysis and Intrusion Detection Mechanism for
+Autonomous Driving Systems</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 47.36%;"
+ valign="top" width="47%">
+      <p class="MsoNormal"
+ style="margin-bottom: 6pt; line-height: normal;"><span lang="EN-SG">Zheng-Teng
+Ko, Trupil Limbasiya, Federico Turrin, Yan Lin Aung, Sudipta
+Chattopadhyay, Jianying Zhou, Mauro Conti</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td
+ style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 7.56%;"
+ valign="top" width="7%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">2024</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 45.08%;"
+ valign="top" width="45%">
+      <p class="MsoNormal"
+ style="margin-bottom: 6pt; line-height: normal;"><span lang="EN-SG">WaXAI:
+Explainable Anomaly Detection in Industrial Control Systems and Water
+Systems</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 47.36%;"
+ valign="top" width="47%">
+      <p class="MsoNormal"
+ style="margin-bottom: 6pt; line-height: normal;"><span lang="EN-SG">Kornkamon
+Mathuros, Sarad Venugopalan, Sridhar Adepu</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td
+ style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 7.56%;"
+ valign="top" width="7%">
+      <p class="MsoListParagraph"
+ style="margin: 0in 0in 6pt; line-height: normal;"><span lang="EN-SG">2025</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 45.08%;"
+ valign="top" width="45%">
+      <p class="MsoNormal"
+ style="margin-bottom: 6pt; line-height: normal;"><span lang="EN-SG">SimProcess:
+High Fidelity Simulation of Noisy ICS Physical Processes</span></p>
+      </td>
+      <td
+ style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 47.36%;"
+ valign="top" width="47%">
+      <p class="MsoNormal"
+ style="margin-bottom: 6pt; line-height: normal;"><span lang="EN-SG">Denis
+Donadel, Gabriele Crestanello, Giulio Morandini, Daniele Antonioli,
+Mauro Conti, Massimo Merro</span></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="MsoNormal" style="margin-bottom: 6pt; line-height: normal;"><span
+ lang="EN-SG">&nbsp;</span></p>
+<div
+ style="border-style: none none solid; border-color: -moz-use-text-color -moz-use-text-color windowtext; border-width: medium medium 1pt; padding: 0in 0in 1pt;">
+<p class="MsoNormal"
+ style="margin-bottom: 6pt; text-align: justify; line-height: normal;"><span
+ lang="EN-SG"><a href="https://www.linkedin.com/groups/7028174"><b>CPSS
+Forum</b></a></span></p>
+<p class="MsoNormal"
+ style="margin-bottom: 6pt; text-align: justify; line-height: normal;">&nbsp;</p>
+</div>
+<p class="MsoNormal"
+ style="margin-bottom: 6pt; text-align: justify; line-height: normal;"><span
+ lang="EN-SG">Maintained by <a href="http://jianying.space/"><span
+ lang="EN-US">Jianying Zhou</span></a></span></p>
+<p class="MsoNormal"
+ style="margin-bottom: 6pt; text-align: justify; line-height: normal;"><span
+ lang="EN-SG">Last updated in September 2025</span></p>
+<p class="MsoNormal"
+ style="margin-bottom: 6pt; text-align: justify; line-height: normal;"><span
+ lang="EN-SG">&nbsp;</span></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,525 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="Author" content="Jianying Zhou">
+  <meta name="GENERATOR"
+ content="Mozilla/4.76 [en] (WinNT; U) [Netscape]">
+  <title>ACNS - Applied Cryptography and Network Security</title>
+</head>
+<body style="color: rgb(0, 0, 0);" alink="#0000ee" link="#0000ee"
+ vlink="#551a8b">
+<div align="center">
+<table border="0" cellpadding="2" cellspacing="2" width="100%">
+  <tbody>
+    <tr>
+      <td valign="top" width="25%"><a href="acns-logo_L.jpg"><b><font
+ color="#ff0000" face="Helvetica, Arial, sans-serif"><big><big><small><big><big><big><img
+ style="border: 0px solid ; height: 173px; width: 200px;"
+ src="acns-logo.jpg" title="" alt=""> </big></big></big></small></big></big></font></b></a>
+      </td>
+      <td align="center" valign="top"><font color="#339999"><big><big><small><small><b><big><big><big><font
+ face="Helvetica, Arial, sans-serif"><small><font color="#ff0000">&nbsp;</font></small></font></big></big></big></b></small></small><b><big><font
+ face="Helvetica, Arial, sans-serif"><small><font color="#ff0000"><br>
+      </font></small></font></big></b></big></big></font><big><font
+ style="font-family: helvetica,arial,sans-serif;" color="#339999"
+ size="+3"><big><b><font color="#ff0000"><small>&nbsp;<strong> </strong></small><acronym><font
+ face="Helvetica, Arial, sans-serif"><small>A</small></font></acronym></font><acronym><font
+ face="Helvetica, Arial, sans-serif"><small><font color="#ff0000">CNS</font></small></font></acronym></b></big></font></big>
+      <center>
+      <div align="center"><font color="#339999"><big><big><small><font
+ face="Helvetica, Arial, sans-serif">&nbsp;</font><b><big><font
+ face="Helvetica, Arial, sans-serif"><br>
+      <span style="color: rgb(0, 0, 153);">International Conference on</span></font></big></b></small></big></big></font></div>
+      </center>
+      <div style="color: rgb(0, 0, 153);" align="center"><big><big><b><big><font
+ face="Helvetica, Arial, sans-serif"><small><span
+ style="color: rgb(255, 0, 0);">A</span>pplied <span
+ style="color: rgb(255, 0, 0);">C</span>ryptography and <span
+ style="color: rgb(255, 0, 0);">N</span>etwork <span
+ style="color: rgb(255, 0, 0);">S</span>ecurity</small></font></big></b></big></big></div>
+      </td>
+      <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<center></center>
+<center> </center>
+<center></center>
+</div>
+<center> </center>
+<div align="justify"><small><font face="Helvetica, Arial, sans-serif"><br>
+</font></small>
+<div style="text-align: justify;"><small><font
+ face="Helvetica, Arial, sans-serif">ACNS is </font><font
+ face="Helvetica, Arial, sans-serif">an annual
+conference</font></small><small><font
+ face="Helvetica, Arial, sans-serif"> focusing on current
+developments that advance the areas of applied cryptography,
+cybersecurity (including network &amp; computer security) and privacy.
+The
+goal is to represent
+both academic research works as well as developments in industrial and
+technical frontiers. ACNS receives strong support in the communities of
+cryptography and
+security, which is reflected from its <a target="_blank"
+ href="acns-history.html">organizers</a>,
+<a target="_blank" href="acns-pc.html">program committee</a>, and very
+competitive <a target="_blank" href="acns-statistics.html">paper
+acceptance rate</a><span style="color: rgb(255, 0, 0);"></span>. </font></small><small><font
+ face="Helvetica, Arial, sans-serif">ACNS also organizes satellite <a
+ style="font-family: helvetica,arial,sans-serif;" target="_blank"
+ href="acns-workshops.html">workshops</a><span
+ style="font-family: helvetica,arial,sans-serif;"></span></font></small><span
+ style="display: inline ! important; float: none; background-color: transparent; color: rgb(37, 37, 37); font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; font-family: helvetica,arial,sans-serif;"><small>.
+Each workshop provides a forum to address a specific topic
+at
+the forefront of cybersecurity research.<br>
+<br>
+</small></span><small><font face="Helvetica, Arial, sans-serif">ACNS
+gives
+the <a target="_blank" href="acns-award.html">Best Student Paper Award</a>
+(</font></small><span
+ style="display: inline ! important; float: none; background-color: transparent; color: rgb(37, 37, 37); font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; font-family: helvetica,arial,sans-serif;"><small>w<span
+ style="color: rgb(0, 0, 0);">it</span><span
+ style="color: rgb(255, 0, 0);"><span style="color: rgb(0, 0, 0);">h </span>1500
+EUR </span>prize sponsored by Springer</small></span><small><font
+ face="Helvetica, Arial, sans-serif">), to
+encourage promising students to publish their best results at this
+promising conference.</font></small><span
+ style="display: inline ! important; float: none; background-color: transparent; color: rgb(37, 37, 37); font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; font-family: helvetica,arial,sans-serif;"><small>
+ACNS also gives the <a target="_blank" href="acns-workshops.html#award">Best
+Workshop Paper Award</a> (with <span style="color: rgb(255, 0, 0);">500
+EUR</span> prize sponsored by Springer), to be selected from all the
+satellite workshops, and the <a target="_blank" href="acns-poster.html">Best
+Poster Award</a> to be voted by all the participants. </small></span><span
+ style="display: inline ! important; float: none; background-color: transparent; color: rgb(37, 37, 37); font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; font-family: helvetica,arial,sans-serif;"><small>ACNS
+gave the inaugural <a target="_blank" href="acns-tot.html">Test-of-Time
+Award</a> in 2025 to recognize papers that have had a lasting impact on
+the field.</small></span><br>
+</div>
+<span
+ style="display: inline ! important; float: none; background-color: transparent; color: rgb(37, 37, 37); font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; font-family: helvetica,arial,sans-serif;"><small><br>
+</small></span>
+<ul style="font-family: helvetica,arial,sans-serif;">
+  <li><small style="font-weight: bold;"><a target="_blank"
+ href="https://acns2027.isg.rhul.ac.uk/">ACNS 2027</a>&nbsp;
+&#8211;</small>&nbsp; <small
+ style="font-weight: bold; font-family: helvetica,arial,sans-serif;">RHUL,
+UK, June 28 - July 1, 2027 </small><img alt="" src="new.gif"
+ style="width: 23px; height: 12px;"><small style="font-weight: bold;"><span
+ style="font-family: helvetica,arial,sans-serif;"></span></small><br>
+  </li>
+</ul>
+<div style="margin-top: -10px; margin-left: 40px;"><small
+ style="font-weight: bold;"><span
+ style="font-family: helvetica,arial,sans-serif;">General Chairs</span></small><small><span
+ style="font-family: helvetica,arial,sans-serif;"></span></small><small><span
+ style="font-family: helvetica,arial,sans-serif;"></span></small><br>
+<small><span style="font-family: helvetica,arial,sans-serif;">Elizabeth
+Quaglia (Royal Holloway, University of London, UK)</span></small><br>
+<small><span style="font-family: helvetica,arial,sans-serif;"></span></small><small><span
+ style="font-family: helvetica,arial,sans-serif;">Christian Weinert
+(Royal Holloway, University of London, UK)</span></small><br
+ style="font-family: helvetica,arial,sans-serif;">
+<small><small><small><small><small><small>&nbsp;</small></small></small></small></small></small><br
+ style="font-family: helvetica,arial,sans-serif;">
+<small style="font-weight: bold;"><span
+ style="font-family: helvetica,arial,sans-serif;">Program Chairs</span></small><br
+ style="font-family: helvetica,arial,sans-serif;">
+<small><span style="font-family: helvetica,arial,sans-serif;">Aggelos
+Kiayias (University of Edinburgh, UK)</span></small><br>
+<small><span style="font-family: helvetica,arial,sans-serif;">Liqun
+Chen (University of Surrey, UK)</span></small><small
+ style="font-weight: bold;"><span
+ style="font-family: helvetica,arial,sans-serif;"></span></small><br>
+<small style="font-weight: bold;"><span
+ style="font-family: helvetica,arial,sans-serif;"></span></small></div>
+<ul style="font-family: helvetica,arial,sans-serif;">
+</ul>
+<span style="font-size: 11pt; font-family: &quot;Calibri&quot;,sans-serif;"><small><span
+ style="color: rgb(255, 0, 0); font-weight: normal; font-family: helvetica,arial,sans-serif;"><span
+ style="color: rgb(0, 0, 0);"><span style="color: rgb(255, 0, 0);"></span></span></span></small></span>
+<ul style="font-family: helvetica,arial,sans-serif;">
+  <li><small style="font-weight: bold;"><a target="_blank"
+ href="https://acns2026.github.io/">ACNS 2026</a>&nbsp;
+&#8211;</small>&nbsp; <small
+ style="font-weight: bold; font-family: helvetica,arial,sans-serif;">New
+York, USA, June 22-25, 2026</small><small style="font-weight: bold;"><span
+ style="font-family: helvetica,arial,sans-serif;"></span></small><br>
+  </li>
+</ul>
+<div style="margin-top: -10px; margin-left: 40px;"><small
+ style="font-weight: bold;"><span
+ style="font-family: helvetica,arial,sans-serif;">General Chairs</span></small><small><span
+ style="font-family: helvetica,arial,sans-serif;"></span></small><small><span
+ style="font-family: helvetica,arial,sans-serif;"><br>
+Omar Chowdhury (Stony Brook University, USA)<br>
+</span></small><small><span
+ style="font-family: helvetica,arial,sans-serif;">Nick Nikiforakis
+(Stony Brook University, USA)</span></small><br
+ style="font-family: helvetica,arial,sans-serif;">
+<small><small><small><small><small><small>&nbsp;</small></small></small></small></small></small><br
+ style="font-family: helvetica,arial,sans-serif;">
+<small style="font-weight: bold;"><span
+ style="font-family: helvetica,arial,sans-serif;">Program Chairs</span></small><br
+ style="font-family: helvetica,arial,sans-serif;">
+<small><span style="font-family: helvetica,arial,sans-serif;">Aniket
+Kate (Purdue University, USA)<br>
+Kangkook Jee (UT Dallas, USA)</span></small><small><span
+ style="font-family: helvetica,arial,sans-serif;"></span></small><br>
+<small><span style="font-family: helvetica,arial,sans-serif;"></span></small><span
+ style="font-size: 11pt; font-family: &quot;Calibri&quot;,sans-serif;"><small><span
+ style="color: rgb(255, 0, 0); font-weight: normal; font-family: helvetica,arial,sans-serif;"><span
+ style="color: rgb(0, 0, 0);"><small><small><small>&nbsp;</small></small></small></span></span></small></span><br>
+<span style="font-size: 11pt; font-family: &quot;Calibri&quot;,sans-serif;"><small><span
+ style="color: rgb(255, 0, 0); font-weight: normal; font-family: helvetica,arial,sans-serif;"><span
+ style="color: rgb(0, 0, 0);">1st submission
+deadline:&nbsp;&nbsp;&nbsp;<span style="color: rgb(0, 0, 0);">&nbsp;<span
+ style="color: rgb(0, 0, 0);"> Sept
+26, 2025 (AoE)</span></span></span></span></small></span><br>
+<span style="font-size: 11pt; font-family: &quot;Calibri&quot;,sans-serif;"><small><span
+ style="color: rgb(255, 0, 0); font-weight: normal; font-family: helvetica,arial,sans-serif;"><span
+ style="color: rgb(0, 0, 0);"><span style="color: rgb(255, 0, 0);"></span></span></span></small></span><span
+ style="font-size: 11pt; font-family: &quot;Calibri&quot;,sans-serif;"><small><span
+ style="color: rgb(255, 0, 0); font-weight: normal; font-family: helvetica,arial,sans-serif;"><span
+ style="color: rgb(0, 0, 0);">
+2nd submission deadline:&nbsp;&nbsp; <span
+ style="color: rgb(255, 0, 0);">Jan
+23, 2026 (AoE)</span></span></span></small></span><br>
+<span style="font-size: 11pt; font-family: &quot;Calibri&quot;,sans-serif;"><small><span
+ style="color: rgb(255, 0, 0); font-weight: normal; font-family: helvetica,arial,sans-serif;"><span
+ style="color: rgb(0, 0, 0);">Paper submission: &nbsp; &nbsp;&nbsp;
+&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; <a target="_blank"
+ href="https://acns26-cycle2.hotcrp.com/">https://acns26-cycle2.hotcrp.com/</a><span
+ style="text-decoration: underline;"><br>
+</span></span></span></small></span></div>
+<span style="font-size: 11pt; font-family: &quot;Calibri&quot;,sans-serif;"><small><span
+ style="color: rgb(255, 0, 0); font-weight: normal; font-family: helvetica,arial,sans-serif;"><span
+ style="color: rgb(0, 0, 0);">
+</span></span></small></span>
+<ul style="font-family: helvetica,arial,sans-serif;">
+  <li style="font-weight: bold;"><small>Steering Committee</small></li>
+</ul>
+<div
+ style="margin-top: -10px; font-family: helvetica,arial,sans-serif; margin-left: 40px;"><small>Moti
+Yung (Google, USA)<br>
+Jianying Zhou (SUTD, Singapore)</small></div>
+<ul style="font-family: helvetica,arial,sans-serif;">
+</ul>
+<div style="margin-left: 40px;"><small style="font-weight: bold;"><span
+ style="font-family: helvetica,arial,sans-serif;"></span></small></div>
+<font face="Helvetica, Arial, sans-serif"><small>
+</small></font><small> </small>
+<ul>
+  <li><small><span
+ style="font-family: helvetica,arial,sans-serif; font-weight: bold;"><a
+ target="_blank" href="acns-history.html">History (2003 - 2025)</a></span></small></li>
+</ul>
+<div style="margin-top: -10px; margin-left: 40px;"><font
+ face="Helvetica, Arial, sans-serif"><small>Average acceptance rate =
+<span style="font-weight: bold;">19.6%</span><br>
+Average number of attendees = <span
+ style="background-color: rgb(255, 255, 255);">143<span
+ style="color: rgb(255, 0, 0);"></span></span><br>
+</small></font><font face="Helvetica, Arial, sans-serif"><small><span
+ style="font-weight: bold;">Venues:</span>&nbsp;
+</small></font><small style="font-family: helvetica,arial,sans-serif;">Belgium
+<small>[2018]</small>, </small><font
+ face="Helvetica, Arial, sans-serif"><small>Canada
+<small>[2013]</small>,
+China <small>[2003, 2004, 2007, 2010]</small>,
+Colombia <small>[2019]</small>, France <small>[2009]</small>, Germany
+<small>[2025]</small>, Japan <small>[2017,
+2021, 2023]</small>,
+</small></font><font face="Helvetica, Arial, sans-serif"><small>Italy <small>[2020,
+2022]</small>,
+</small></font><font face="Helvetica, Arial, sans-serif"><small>Singapore
+<small>[2006,
+2012]</small>, Spain <small>[2011]</small>,
+Switzerland <small>[2014]</small>,</small></font><font
+ face="Helvetica, Arial, sans-serif"><small> UAE
+<small>[2024]</small>,</small></font><font
+ face="Helvetica, Arial, sans-serif"><small> UK
+<small>[2016, 2027]</small>, USA <small>[2005, 2008, 2015, 2026]</small></small></font><br>
+</div>
+<ul>
+  <li><small><span
+ style="font-family: helvetica,arial,sans-serif; font-weight: bold;"><a
+ target="_blank" href="acns-sponsor.html">Organizers/Sponsors (2003 -
+2025)</a></span></small></li>
+</ul>
+<small><span
+ style="font-family: helvetica,arial,sans-serif; font-weight: bold;"></span></small>
+<ul>
+  <li><small><font face="Helvetica, Arial, sans-serif"><b><small><font
+ size="+1"><small><small><a target="_blank" href="acns-pc.html">PC
+Members
+(2003 - 2025)</a></small></small></font></small></b></font></small></li>
+</ul>
+<div style="margin-top: -10px; margin-left: 40px;"><small
+ style="font-family: helvetica,arial,sans-serif;"><small><font size="+1"><small><small><span
+ style="font-weight: bold;">Program
+Chairs:</span>&nbsp; </small></small></font></small></small><small
+ style="font-family: helvetica,arial,sans-serif;">Michel Abdalla, <span
+ style="color: rgb(0, 0, 0);">Giuseppe Ateniese, </span></small><font
+ style="font-family: helvetica,arial,sans-serif;"
+ face="Helvetica, Arial, sans-serif"><small>Feng Bao, <span
+ style="font-family: helvetica,arial,sans-serif; color: rgb(0, 0, 0);">Lejla
+Batina</span><span style="font-family: helvetica,arial,sans-serif;">,
+Steven Bellovin,
+</span><span
+ style="color: rgb(0, 0, 0); font-family: helvetica,arial,sans-serif;"><span
+ style="color: rgb(0, 0, 0);"><span style="color: rgb(255, 0, 0);">Liqun
+Chen (2027)</span>, Mauro
+Conti</span>, Robert Deng</span><span
+ style="font-family: helvetica,arial,sans-serif;"><span
+ style="color: rgb(0, 0, 0);">, Marc Fischlin</span>, Rosario
+Gennaro, </span></small></font><small
+ style="font-family: helvetica,arial,sans-serif;"><span
+ style="color: rgb(0, 0, 0);">Dieter Gollmann</span>, Markus
+Jakobsson, <span style="color: rgb(255, 0, 0);">Kangkook Jee (2026)</span>,
+<span style="color: rgb(255, 0, 0);">Aniket Kate (2026)</span>, </small><font
+ style="font-family: helvetica,arial,sans-serif;"
+ face="Helvetica, Arial, sans-serif"><small>Jonathan Katz, </small></font><small
+ style="font-family: helvetica,arial,sans-serif;">Angelos Keromytis,
+<span style="color: rgb(0, 0, 0);"><span style="color: rgb(255, 0, 0);">Aggelos
+Kiayias (2027)</span>, Michael Locasto</span>, </small><small
+ style="font-family: helvetica,arial,sans-serif;">Javier Lopez, <span
+ style="color: rgb(0, 0, 0);">Tal Malkin</span>, </small><small
+ style="font-family: helvetica,arial,sans-serif;"><span
+ style="color: rgb(0, 0, 0);"><span style="color: rgb(0, 0, 0);">Mark
+Manulis</span>, <span style="color: rgb(0, 0, 0);">Atsuko Miyaji</span>,
+<span style="color: rgb(0, 0, 0);">Veelasha Moonsamy</span>,
+Philippe Owezarski</span>, David
+Pointcheval,</small><small
+ style="font-family: helvetica,arial,sans-serif; color: rgb(0, 0, 0);">
+</small><span style="font-family: helvetica,arial,sans-serif;"><small><span
+ style="color: rgb(0, 0, 0);"><span style="color: rgb(0, 0, 0);"><span
+ style="color: rgb(0, 0, 0);"><span style="color: rgb(0, 0, 0);">Christina
+Popper</span>, Bart Preneel</span>, Ahmad-Reza
+Sadeghi</span>, Rei
+Safavi-Naini, </span></small></span><span
+ style="font-size: 11pt; color: rgb(0, 0, 0); font-family: helvetica,arial,sans-serif;">Kazue
+Sako, </span><span style="font-family: helvetica,arial,sans-serif;"><small>Pierangela
+Samarati, <span style="color: rgb(0, 0, 0);">Mehdi Tibouchi,
+</span></small></span><span
+ style="font-size: 11pt; color: rgb(0, 0, 0); font-family: helvetica,arial,sans-serif;">Nils
+Ole Tippenhauer, </span><span
+ style="font-family: helvetica,arial,sans-serif;"><small>Gene Tsudik, </small></span><small
+ style="font-family: helvetica,arial,sans-serif;"><span
+ style="color: rgb(0, 0, 0);">Serge Vaudenay</span>, <span
+ style="color: rgb(0, 0, 0);">Daniele Venturi, Frederik Vercauteren,
+Xiaofeng Wang, Moti
+Yung</span>, </small><small><span
+ style="color: rgb(0, 0, 0); font-family: helvetica,arial,sans-serif;">Jianying
+Zhou</span><br>
+</small></div>
+<ul>
+  <li><small><font face="Helvetica, Arial, sans-serif"><b><small><font
+ size="+1"><small><small><a target="_blank" href="acns-speaker.html">Invited/Keynote
+Speakers (2003 - 2025)</a></small></small></font></small></b></font></small></li>
+</ul>
+<ul>
+  <li><small><font face="Helvetica, Arial, sans-serif"><b><small><font
+ size="+1"><small><small><a target="_blank" href="acns-preface.html">Prefaces
+(2003 - 2023)</a><br>
+    </small></small></font></small></b></font></small></li>
+</ul>
+<ul>
+  <li
+ style="font-family: helvetica,arial,sans-serif; font-weight: bold;"><a
+ target="_blank" href="acns-paper.html"><small>Accepted Papers (2003 -
+2020)</small></a></li>
+</ul>
+<div style="margin-top: -10px; margin-left: 40px;">
+<small><span style="font-family: helvetica,arial,sans-serif;"><span
+ style="font-weight: bold;">Proceedings:</span>&nbsp; </span></small><a
+ target="_blank" href="https://link.springer.com/conference/acns"><small><span
+ style="font-family: helvetica,arial,sans-serif;">Springer Link</span></small></a><br>
+</div>
+<ul>
+  <li style="font-weight: bold;"><small
+ style="font-family: helvetica,arial,sans-serif;"><a target="_blank"
+ href="acns-tot.html">Test-of-Time Award (2025 - )</a> </small><img
+ alt="" src="new.gif" style="width: 23px; height: 12px;"></li>
+</ul>
+<ul>
+  <li><small><font face="Helvetica, Arial, sans-serif"><b><small><font
+ size="+1"><small><small><a target="_blank" href="acns-award.html">Best
+Student Papers (2003 - 2025)</a></small></small></font></small></b></font></small></li>
+</ul>
+<div style="margin-top: -10px; margin-left: 40px;"><font
+ face="Helvetica, Arial, sans-serif"><small>USA <small>[8.5]</small>, </small></font><font
+ face="Helvetica, Arial, sans-serif"><small>France <small>[8]</small>,
+</small></font><font face="Helvetica, Arial, sans-serif"><small>Germany
+<small>[3]</small>, </small></font><font
+ face="Helvetica, Arial, sans-serif"><small>China <small>[2]</small>,
+</small></font><font face="Helvetica, Arial, sans-serif"><small>Switzerland
+<small>[2]<big>, </big></small></small></font><font
+ face="Helvetica, Arial, sans-serif"><small>Austria
+<small>[1]</small>,
+</small></font><font face="Helvetica, Arial, sans-serif"><small>Belgium</small></font><font
+ face="Helvetica, Arial, sans-serif"><small><small> [1]</small>,</small></font><font
+ face="Helvetica, Arial, sans-serif"><small> Denmark
+<small>[1]</small>,&nbsp;</small></font><font
+ face="Helvetica, Arial, sans-serif"><small>Israel
+<small>[1]</small>, </small></font><font
+ face="Helvetica, Arial, sans-serif"><small>Italy
+<small>[1]</small>, </small></font><font
+ face="Helvetica, Arial, sans-serif"><small>Netherlands <small>[1]</small>,
+</small></font><font face="Helvetica, Arial, sans-serif"><small><small><big>Taiwan
+<small>[0.5]</small></big></small></small></font><font
+ face="Helvetica, Arial, sans-serif"><small>
+</small></font></div>
+<ul style="font-family: helvetica,arial,sans-serif;">
+</ul>
+<ul>
+  <li><a target="_blank" href="acns-citation.html"><small
+ style="font-family: helvetica,arial,sans-serif; font-weight: bold;">Most
+Cited Papers (2003 - 2013)</small></a><br>
+  </li>
+</ul>
+<div style="margin-top: -10px; margin-left: 40px;"><small><span
+ style="font-family: helvetica,arial,sans-serif;">
+<a target="_blank"
+ href="https://scholar.google.com/citations?hl=en&amp;view_op=list_hcore&amp;venue=uX6tRrNG0lQJ.2018">Google
+Citation (2018)</a>:&nbsp; h5-index = 22,&nbsp; h5-median = 35</span></small><br>
+<small><span style="font-family: helvetica,arial,sans-serif;"><a
+ target="_blank"
+ href="https://scholar.google.com/citations?hl=en&amp;view_op=list_hcore&amp;venue=uX6tRrNG0lQJ.2019">Google
+Citation (2019)</a>:&nbsp; h5-index = 20,&nbsp; h5-median = 27<br>
+</span></small><small><span
+ style="font-family: helvetica,arial,sans-serif;"><a target="_blank"
+ href="https://scholar.google.com/citations?hl=en&amp;view_op=list_hcore&amp;venue=uX6tRrNG0lQJ.2020">Google
+Citation (2020)</a>:&nbsp; h5-index = 21,&nbsp; h5-median = 28<br>
+<a target="_blank"
+ href="https://scholar.google.com/citations?hl=en&amp;view_op=list_hcore&amp;venue=uX6tRrNG0lQJ.2021">Google
+Citation (2021)</a>:&nbsp; h5-index = 24,&nbsp; h5-median = 32<br>
+</span></small><small><span
+ style="font-family: helvetica,arial,sans-serif;"><a target="_blank"
+ href="https://scholar.google.com/citations?hl=en&amp;view_op=list_hcore&amp;venue=uX6tRrNG0lQJ.2022">Google
+Citation (2022)</a>:&nbsp; h5-index = 26,&nbsp; h5-median = 36<br>
+</span></small><small><span
+ style="font-family: helvetica,arial,sans-serif;"><a target="_blank"
+ href="https://scholar.google.com/citations?hl=en&amp;view_op=list_hcore&amp;venue=uX6tRrNG0lQJ.2023">Google
+Citation (2023)</a>:&nbsp; h5-index = 27,&nbsp; h5-median = 41<br>
+</span></small><small><span
+ style="font-family: helvetica,arial,sans-serif;"><a target="_blank"
+ href="https://scholar.google.com/citations?hl=en&amp;view_op=list_hcore&amp;venue=uX6tRrNG0lQJ.2024">Google
+Citation (2024)</a>:&nbsp; h5-index = 28,&nbsp; h5-median = 49<br>
+</span></small><small><span
+ style="font-family: helvetica,arial,sans-serif;"><a target="_blank"
+ href="https://scholar.google.com/citations?hl=en&amp;view_op=list_hcore&amp;venue=uX6tRrNG0lQJ.2025">Google
+Citation (2025)</a>:&nbsp; h5-index = 28,&nbsp; h5-median = 46</span></small><br>
+</div>
+<ul>
+  <li><small
+ style="font-family: helvetica,arial,sans-serif; font-weight: bold;"><a
+ target="_blank" href="acns-media.html">Papers Highlighted in Media
+(2013 - 2015)</a><br>
+    </small></li>
+</ul>
+<ul>
+  <li><a target="_blank" href="acns-statistics.html"><small><b><font
+ face="Helvetica, Arial, sans-serif">Statistics of Accepted Papers</font></b></small><small><font
+ face="Helvetica, Arial, sans-serif"><b><small><font size="+1"><small><small>
+(2003 - 2025)</small></small></font></small></b></font></small></a></li>
+</ul>
+<div style="margin-top: -10px; margin-left: 40px;"><font
+ face="Helvetica, Arial, sans-serif"><small>USA <small>[171]</small>,
+China <small>[92]</small>, </small></font><font
+ face="Helvetica, Arial, sans-serif"><small>Germany
+<small>[79]</small>, </small></font><font
+ face="Helvetica, Arial, sans-serif"><small>Japan <small>[73]</small>,
+</small></font><font face="Helvetica, Arial, sans-serif"><small>France <small>[64]</small>,&nbsp;</small></font><font
+ face="Helvetica, Arial, sans-serif"><small>Australia
+<small>[35]</small>,</small></font><small
+ style="font-family: helvetica,arial,sans-serif;"> </small><font
+ face="Helvetica, Arial, sans-serif"><small>UK <small>[33]</small></small></font><font
+ face="Helvetica, Arial, sans-serif"><small>, </small></font><font
+ face="Helvetica, Arial, sans-serif"><small>Singapore
+<small>[32]</small>, </small></font><small
+ style="font-family: helvetica,arial,sans-serif;">Switzerland
+<small>[29]</small></small><font face="Helvetica, Arial, sans-serif"><small>,
+</small></font><font face="Helvetica, Arial, sans-serif"><small>Korea <small>[24]</small>,
+</small></font><font face="Helvetica, Arial, sans-serif"><small>Austria
+<small>[21]</small>, </small></font><font
+ face="Helvetica, Arial, sans-serif"><small>Canada
+<small>[21]</small>,</small></font><font
+ face="Helvetica, Arial, sans-serif"><small>
+....<br>
+</small></font></div>
+<ul>
+  <li><a target="_blank"
+ href="http://jianying.space/conference-ranking.html"><small><b><font
+ face="Helvetica, Arial, sans-serif">Top Cyber Security
+Conferences
+Ranking (2025)</font></b></small></a><small><font
+ face="Helvetica, Arial, sans-serif"><b><small><font size="+1"><small><small><a
+ href="acns-statistics.html"><br>
+    </a></small></small></font></small></b></font></small></li>
+</ul>
+<div style="margin-top: -10px; margin-left: 40px;"><font
+ face="Helvetica, Arial, sans-serif"><small>1. IEEE S&amp;P&nbsp;</small></font><font
+ face="Helvetica, Arial, sans-serif"><small> </small></font><font
+ face="Helvetica, Arial, sans-serif"><small>2.
+Eurocrypt&nbsp; 3. NDSS&nbsp; </small></font><font
+ face="Helvetica, Arial, sans-serif"><small>4.
+</small></font><font face="Helvetica, Arial, sans-serif"><small>ACM
+CCS&nbsp; </small></font><font face="Helvetica, Arial, sans-serif"><small>5.
+</small></font><font face="Helvetica, Arial, sans-serif"><small>Crypto&nbsp;
+</small></font><font face="Helvetica, Arial, sans-serif"><small>6.
+USENIX Security</small></font><font face="Helvetica, Arial, sans-serif"><small>&nbsp;
+</small></font><font face="Helvetica, Arial, sans-serif"><small>7.
+CHES&nbsp; 8. FC&nbsp; 9. IEEE EuroS&amp;P&nbsp;</small></font><font
+ face="Helvetica, Arial, sans-serif"><small> </small></font><font
+ face="Helvetica, Arial, sans-serif"><small><span
+ style="color: rgb(255, 0, 0);">10.
+ACNS</span>&nbsp; </small></font><font
+ face="Helvetica, Arial, sans-serif"><small>11. ACSAC&nbsp; 12.
+ACM AsiaCCS&nbsp; 13. PETS&nbsp; 14. Asiacrypt&nbsp; </small></font><font
+ face="Helvetica, Arial, sans-serif"><small>15. PKC&nbsp; 16. ESORICS
+...<br>
+</small></font></div>
+<ul style="font-family: helvetica,arial,sans-serif;">
+  <small> </small><li style="font-weight: bold;"><small><a
+ target="_blank" href="acns-workshops.html">ACNS Workshops (2019 - 2026)</a></small></li>
+</ul>
+<ul>
+  <li><a target="_blank" href="https://www.linkedin.com/groups/4290836"><small><b><font
+ face="Helvetica, Arial, sans-serif">ACNS Forum @ LinkedIn</font></b></small></a></li>
+</ul>
+<ul>
+  <li><small><b><font face="Helvetica, Arial, sans-serif"><a
+ target="_blank" href="https://twitter.com/acns_2003">ACNS News @
+Twitter</a><br>
+    </font></b></small></li>
+</ul>
+<div style="margin-top: -10px; margin-left: 40px;"><small><span
+ style="font-family: helvetica,arial,sans-serif;"><br>
+</span></small></div>
+</div>
+<small><font face="Helvetica, Arial, sans-serif"><small> </small></font></small>
+<ul>
+  <small> </small>
+</ul>
+<ul>
+</ul>
+<div style="margin-left: 40px;"> </div>
+<hr width="100%">
+<center></center>
+<font face="Helvetica, Arial, sans-serif"><small><br>
+</small></font><font face="Helvetica, Arial, sans-serif"><small>Maintained
+by <a target="_blank" href="http://jianying.space/">Jianying
+Zhou</a></small></font><br>
+<font face="Helvetica, Arial, sans-serif"><small> Last updated in March
+2026<br>
+<br>
+</small></font>
+</body>
+</html>
