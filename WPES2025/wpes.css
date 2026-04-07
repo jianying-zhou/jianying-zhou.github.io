@@ -1,0 +1,53 @@
+header {
+	background-color: #990000;
+}
+
+	header h1, header h2 {
+		color: white;
+	}
+
+nav {
+	background-color: #990000;
+}
+
+BODY
+{
+ MARGIN: 0px 30px;
+}
+
+main h2, main h3 {
+	color: #990000;
+}
+
+main h2 {
+	font-weight: bold;
+}
+
+dl.committee dt {
+	font-weight: normal; 
+	font-style: italic;
+}
+
+footer {
+	border-top: solid 2px #990000;
+}
+
+a, a:hover {
+	color: #990000;
+}
+
+ul.program li {
+	margin-bottom: 15px;
+}
+
+
+@media (max-width: 576px) { 
+
+	header h1 {
+		font-size: 1.75rem;
+	}
+	
+	header h2 {
+		font-size: 1.5rem;
+	}
+}

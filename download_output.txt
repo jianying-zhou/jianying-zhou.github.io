@@ -1,0 +1,24 @@
+Attempting to download http://jianying.space/cool.gif -> /Users/naga-itrust/Downloads/jianying-zhou.github.io-main/cool.gif
+ -> SUCCESS
+Attempting to download http://jianying.space/acns/ACNS2003/ACNS03-tutorial2.pdf -> /Users/naga-itrust/Downloads/jianying-zhou.github.io-main/acns/ACNS2003/ACNS03-tutorial2.pdf
+ -> FAILED: HTTP Error 404: Not Found
+Attempting to download http://jianying.space/other.html -> /Users/naga-itrust/Downloads/jianying-zhou.github.io-main/other.html
+ -> FAILED: HTTP Error 404: Not Found
+Attempting to download http://jianying.space/search -> /Users/naga-itrust/Downloads/jianying-zhou.github.io-main/search
+ -> FAILED: HTTP Error 404: Not Found
+Attempting to download http://jianying.space/cfp_JCS_2010.pdf -> /Users/naga-itrust/Downloads/jianying-zhou.github.io-main/cfp_JCS_2010.pdf
+ -> FAILED: HTTP Error 404: Not Found
+Attempting to download http://jianying.space/academic.html -> /Users/naga-itrust/Downloads/jianying-zhou.github.io-main/academic.html
+ -> FAILED: HTTP Error 404: Not Found
+Attempting to download http://jianying.space/cfp_IJIS_2012.pdf -> /Users/naga-itrust/Downloads/jianying-zhou.github.io-main/cfp_IJIS_2012.pdf
+ -> FAILED: HTTP Error 404: Not Found
+Attempting to download http://jianying.space/search// -> /Users/naga-itrust/Downloads/jianying-zhou.github.io-main/search/index.html
+ -> FAILED: HTTP Error 404: Not Found
+Attempting to download http://jianying.space/acns/new.gif -> /Users/naga-itrust/Downloads/jianying-zhou.github.io-main/acns/new.gif
+ -> SUCCESS
+Attempting to download http://jianying.space/acns/ACNS2003/ACNS03-tutorial1.pdf -> /Users/naga-itrust/Downloads/jianying-zhou.github.io-main/acns/ACNS2003/ACNS03-tutorial1.pdf
+ -> FAILED: HTTP Error 404: Not Found
+Attempting to download http://jianying.space/cfp_SCN_2012.pdf -> /Users/naga-itrust/Downloads/jianying-zhou.github.io-main/cfp_SCN_2012.pdf
+ -> FAILED: HTTP Error 404: Not Found
+Attempting to download http://jianying.space/biography.html -> /Users/naga-itrust/Downloads/jianying-zhou.github.io-main/biography.html
+ -> SUCCESS
