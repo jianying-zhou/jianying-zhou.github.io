@@ -7,6 +7,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script>
+  (function() {
+    var savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  })();
+</script>
 </head>
 <body>
 
@@ -523,7 +533,7 @@ ISBN 3-540-42880-1, Springer, November 2001. <br><br>
 <A HREF="https://us.artechhouse.com/Non-repudiation-in-Electronic-Commerce-P483.aspx">
 "<i>Non-repudiation in Electronic Commerce</i>"</A>.
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=Non-repudiation+in+Electronic+Commerce&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 ISBN 1-58053-247-0,
 <A HREF="http://www.esecurity.ch/serieseditor.html">Computer Security Series</A>,
 Artech House, 2001. <br><br>
@@ -563,7 +573,7 @@ Lancaster, UK, July 2026, Springer. <br><br>
 
 <li>Geovani Benita, Matheus Garbelini, Sudipta Chattopadhyay, and Jianying Zhou.
 "<i>ORANClaw: Shredding E2 Nodes in O-RAN via Structure-aware MiTM Fuzzing</i>". <b>(WiSec'26)</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="https://wisec26.events.cispa.de/">
 2026 ACM Conference on Security and Privacy in Wireless and Mobile Networks</A>,
@@ -578,7 +588,7 @@ New York, USA, June 2026, Springer. <br><br>
 
 <li>Ye Dong, Yan Lin Aung, Sudipta Chattopadhyay, and Jianying Zhou.
 "<i>ChatIoT: Large Language Model-based Security Assistant for Internet of Things with RAG</i>". <b>(ACNS'26)</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Lecture Notes in Computer Science, Proceedings of
 <A HREF="https://acns2026.github.io/">
 2026 International Conference on Applied Cryptography and Network Security</A>,
@@ -586,7 +596,7 @@ New York, USA, June 2026, Springer. <br><br>
 
 <li>Xuelian Cao, Zheng Yang, Daniel Reijsbergen, Jianting Ning, Junming Ke, Zhiqiang Ma, and Jianying Zhou.
 "<i>HHGS: Forward-secure Dynamic Group Signatures from Symmetric Primitives</i>". <b>(CT-RSA'26)</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Lecture Notes in Computer Science, Proceedings of
 <A HREF="https://conference.wsu.edu/ct-rsa-2026/">
 2026 Cryptographers' Track at the RSA Conference</A>,
@@ -594,7 +604,7 @@ San Francisco, USA, March 2026, Springer. <br><br>
 
 <li>Fangyuan Sun, Yaxi Yang, Jia Yu, and Jianying Zhou.
 "<i>PACS: Privacy-Preserving Attribute-Driven Community Search over Attributed Graphs</i>". <b>(NDSS'26)</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="https://www.ndss-symposium.org/ndss2026/">
 2026 Network and Distributed System Security Symposium</A>,
@@ -606,7 +616,7 @@ San Diego, USA, February 2026, Internet Society Press. <br><br>
 
 <li>Fuyi Wang, Fangyuan Sun, Mingyuan Fan, Jianying Zhou, Jin Ma, Chao Chen, Jiangang Shu, and Leo Yu Zhang.
  "<i>FLAME: Flexible and Lightweight Biometric Authentication Scheme in Malicious Environments</i>". <b>(ACSAC'25)</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="https://www.acsac.org/2025/">
 2025 Annual Computer Security Applications Conference</A>,
@@ -621,7 +631,7 @@ Taipei, Taiwan, October 2025, IEEE Reliability Society Press. <br><br>
 
 <li>Howard Halim, Eyasu Getahun Chekole, Daniel Reijsbergen, and Jianying Zhou.
 "<i>BlowPrint: Blow-Based Multi-Factor Biometrics for Smartphone User Authentication</i>". <b>(ESORICS'25)</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Lecture Notes in Computer Science 16056, Proceedings of
 <A HREF="https://esorics2025.sciencesconf.org/">
 2025 European Symposium on Research in Computer Security</A>, 
@@ -630,7 +640,7 @@ pages 169--189, Toulouse, France, September 2025, Springer. <br><br>
 <li>Xuelian Cao, Zheng Yang, Tao Xiang, Jianting Ning, Yuhan Liu, Zhiming Liu, and Jianying Zhou.
 "<i>Infiltrated Selfish Mining: Think Win-Win to Escape Dilemmas</i>". <b>(AsiaCCS'25)</b>
 <b>[<A HREF="https://techxplore.com/news/2025-09-reshapes-bitcoin.html">TechXplore</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="https://asiaccs2025.hust.edu.vn/">
 2025 ACM Asia Conference on Computer and Communications Security</A>,
@@ -659,7 +669,7 @@ pages 19--30, Hanoi, Vietnam, August 2025, ACM Press. <br><br>
 <b>[<A HREF="https://hackaday.com/2025/08/18/sniffing-5g-with-software-defined-radio/">Hackaday</A>]</b>
 <b>[<A HREF="https://thehackernews.com/2025/08/new-sni5gect-attack-crashes-phones-and.html">The Hacker News</A>]</b>
 <b>[<A HREF="https://www.kaspersky.com/blog/5g-attack-downgrade-sni5gect/54258/">Kaspersky Daily</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="https://www.usenix.org/conference/usenixsecurity25">
 2025 USENIX Security Symposium</A>,
@@ -667,7 +677,7 @@ pages 5385--5404, Seattle, USA, August 2025, USENIX Association. <br><br>
 
 <li>Mingyuan Fan, Fuyi Wang, Cen Chen, and Jianying Zhou.
 "<i>Boosting Gradient Leakage Attacks: Data Reconstruction in Realistic FL Settings</i>". <b>(Security'25)</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="https://www.usenix.org/conference/usenixsecurity25">
 2025 USENIX Security Symposium</A>,
@@ -675,7 +685,7 @@ pages 2985--3004, Seattle, USA, August 2025, USENIX Association. <br><br>
 
 <li>Yaxi Yang, Xiaojian Liang, Xiangfu Song, Ye Dong, Linting Huang, Hongyu Ren, Changyu Dong, and Jianying Zhou.
 "<i>Maliciously Secure Circuit Private Set Intersection via SPDZ-Compatible Oblivious PRF</i>". <b>(PETS'25)</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="https://petsymposium.org/2025/">
 2025 Privacy Enhancing Technologies Symposium</A>,
 Washington DC, USA, July 2025.
@@ -697,7 +707,7 @@ pages 204--221, Munich, Germany, June 2025, Springer. <br><br>
 
 <li>Fuyi Wang, Jinzhi Ouyang, Leo Yu Zhang, Lei Pan, Shengshan Hu, Robin Doss, and Jianying Zhou.
 "<i>SEBioID: Secure and Efficient Biometric Identification with Two-Party Computation</i>". <b>(ACNS'25)</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Lecture Notes in Computer Science 15827, Proceedings of
 <A HREF="https://acns2025.fordaysec.de/">
 2025 International Conference on Applied Cryptography and Network Security</A>,
@@ -705,7 +715,7 @@ pages 83--109, Munich, Germany, June 2025, Springer. <br><br>
 
 <li>Ruonan Chen, Ye Dong, Yizhong Liu, Tingyu Fan, Dawei Li, Zhenyu Guan, Jianwei Liu, and Jianying Zhou.
 "<i>FLock: Robust and Privacy-Preserving Federated Learning based on Practical Blockchain State Channels</i>". <b>(WWW'25)</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="https://www2025.thewebconf.org/">
 2025 ACM Web Conference</A>,
@@ -713,7 +723,7 @@ pages 884--895, Sydney, Australia, April 2025, ACM Press. <br><br>
 
 <li>Fuyi Wang, Zekai Chen, Mingyuan Fan, Jianying Zhou, Lei Pan, and Leo Yu Zhang.
 "<i>PrivGNN: High-Performance Secure Inference for Cryptographic Graph Neural Networks</i>". <b>(FC'25)</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Lecture Notes in Computer Science 15752, Proceedings of
 <A HREF="https://fc25.ifca.ai/">
 2025 International Conference on Financial Cryptography and Data Security</A>,
@@ -732,7 +742,7 @@ pages 133--144, Honolulu, USA, December 2024, IEEE Computer Society Press. <br><
 
 <li>Zeyu Yang, Hongyi Pu, Liang He, Chengtao Yao, Jianying Zhou, Peng Cheng, and Jiming Chen.
 "<i>Deception-Resistant Stochastic Manufacturing for Automated Production Lines</i>". <b>(RAID'24)</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of 
 <A HREF="https://raid2024.github.io/">
 2024 International Symposium on Research in Attacks, Intrusions and Defenses</A>,
@@ -747,7 +757,7 @@ pages 92--100, San Jose, USA, July 2024, Springer. <br><br>
 
 <li>Fuyi Wang, Zekai Chen, Lei Pan, Leo Yu Zhang, and Jianying Zhou.
 "<i>CryptGraph: An Efficient Privacy-Enhancing Solution for Accurate Shortest Path Retrieval in Cloud Environments</i>". <b>(AsiaCCS'24)</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="https://asiaccs2024.sutd.edu.sg/">
 2024 ACM Asia Conference on Computer and Communications Security</A>,
@@ -755,7 +765,7 @@ pages 1660--1674, Singapore, July 2024, ACM Press. <br><br>
 
 <li>Qian Chen, Zilong Wang, Jiaqi Hu, Haonan Yan, Jianying Zhou, and Xiaodong Lin.
 "<i>PAGE: Equilibrate Personalization and Generalization in Federated Learning</i>". <b>(WWW'24)</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="https://www2024.thewebconf.org/">
 2024 ACM Web Conference</A>,
@@ -789,7 +799,7 @@ pages 215--234, Abu Dhabi, UAE, March 2024, Springer. <br><br>
 <li>Jie Meng, Zeyu Yang, Zhenyong Zhang, Yangyang Geng, Ruilong Deng, Peng Cheng, Jiming Chen, and Jianying Zhou.
 "<i>SePanner: Analyzing Semantics of Controller Variables in Industrial Control Systems based on Network Traffic</i>". <b>(ACSAC'23)</b>
 <b>[<font color="red">Distinguished Paper Award</font>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="https://www.acsac.org/2023/">
 2023 Annual Computer Security Applications Conference</A>,
@@ -811,7 +821,7 @@ pages 225--243, Hong Kong, China, October 2023, Springer. <br><br>
 
 <li>Andrei Bytes, Prashant Hari Narayan Rajput, Constantine Doumanidis, Nils Ole Tippenhauer, Michail Maniatakos, and Jianying Zhou.
 "<i>FieldFuzz: In Situ Blackbox Fuzzing of Proprietary Industrial Automation Runtimes via the Network</i>". <b>(RAID'23)</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="https://raid2023.org/">
 2023 International Symposium on Research in Attacks, Intrusions and Defenses</A>,
@@ -819,7 +829,7 @@ pages 499--512, Hong Kong, China, October 2023, ACM Press. <br><br>
 
 <li>Daniel Reijsbergen, Aung Maw, Zheng Yang, Tien Tuan Anh Dinh, and Jianying Zhou.
 "<i>TAP: Transparent and Privacy-Preserving Data Services</i>". <b>(Security'23)</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="https://www.usenix.org/conference/usenixsecurity23">
 2023 USENIX Security Symposium</A>,
@@ -835,7 +845,7 @@ pages 3--13, Melbourne, Australia, July 2023, ACM Press. <br><br>
 
 <li>John Castellanos, Mohamed Maghenem, Alvaro Cardenas, Ricardo Sanfelice, and Jianying Zhou.
 "<i>Provable Adversarial Safety in Cyber-Physical Systems</i>". <b>(EuroS&P'23)</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="https://www.ieee-security.org/TC/EuroSP2023/">
 2023 IEEE European Symposium on Security and Privacy</A>,
@@ -864,7 +874,7 @@ pages 245--265, Kyoto, Japan, June 2023, Springer. <br><br>
 
 <li>Yaxi Yang, Jian Weng, Yufeng Yi, Changyu Dong, Leo Yu Zhang, and Jianying Zhou.
 "<i>Predicate Private Set Intersection with Linear Complexity</i>". <b>(ACNS'23)</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Lecture Notes in Computer Science 13906, Proceedings of
 <A HREF="https://sulab-sever.u-aizu.ac.jp/ACNS2023/">
 2023 International Conference on Applied Cryptography and Network Security</A>,
@@ -883,7 +893,7 @@ pages 319--338, Bali, Indonesia, December 2022, Springer. <br><br>
 
 <li>Zheng Yang, Chao Yin, Junming Ke, Tien Tuan Anh Dinh, and Jianying Zhou.
 "<i>If You Can't Beat Them, Pay Them: Bitcoin Protection Racket is Profitable</i>". <b>(ACSAC'22)</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="https://www.acsac.org/2022/">
 2022 Annual Computer Security Applications Conference</A>,
@@ -891,7 +901,7 @@ pages 727--741, Austin, USA, December 2022, ACM Press. <br><br>
 
 <li>Flavio Toffalini, Mathias Payer, Jianying Zhou, and Lorenzo Cavallaro.
 "<i>Designing a Provenance Analysis for SGX Enclaves</i>". <b>(ACSAC'22)</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="https://www.acsac.org/2022/">
 2022 Annual Computer Security Applications Conference</A>,
@@ -973,7 +983,7 @@ pages 49--60, New York, USA, June 2022, ACM Press. <br><br>
 
 <li>Vishal Sharma, Pawel Szalachowski, and Jianying Zhou.
 "<i>Evaluating Blockchain Protocols with Abusive Modeling</i>". <b>(AsiaCCS'22)</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="https://asiaccs2022.conferenceservice.jp/">
 2022 ACM Asia Conference on Computer and Communications Security</A>,
@@ -988,7 +998,7 @@ Shanghai, China, May 2022, IEEE Communications Society Process. <br><br>
 
 <li>Zheng Yang, Zhiting Bao, Chenglu Jin, Zhe Liu, and Jianying Zhou.
 "<i>PLCrypto: A Symmetric Cryptographic Library for Programmable Logic Controllers</i>". <b>(FSE'22)</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="https://fse.iacr.org/2022/">
 2022 Fast Software Encryption Conference</A>,
 Athens, Greece, March 2022.
@@ -1007,7 +1017,7 @@ pages 667--674, Beijing, China, December 2021, IEEE Computer Society Press. <br>
 
 <li>Zheng Yang, Chenglu Jin, Jianting Ning, Zengpeng Li, Tien Tuan Anh Dinh, and Jianying Zhou.
 "<i>Group Time-based One-time Passwords and its Application to Efficient Privacy-Preserving Proof of Location</i>". <b>(ACSAC'21)</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of 
 <A HREF="https://www.acsac.org/2021/">
 2021 Annual Computer Security Applications Conference</A>,
@@ -1022,8 +1032,8 @@ pages 95--116, Bali, Indonesia, November 2021, Springer. <br><br>
 
 <li>Teik-Guan Tan and Jianying Zhou.
 "<i>Layering Quantum-Resistance into Classical Digital Signature Algorithms</i>". (ISC'21)
-<b>[<A HREF="https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2023080842">
-PCT/SG2022/050769</A>]</b> <br>
+<b>[
+PCT/SG2022/050769]</b> <br>
 Lecture Notes in Computer Science 13118, Proceedings of
 <A HREF="http://isc2021.petra.ac.id/">
 2021 Information Security Conference</A>,
@@ -1038,7 +1048,7 @@ pages 164--181, Copenhagen, Denmark, November 2021, Springer. <br><br>
 
 <li>John Castellanos, Martin Ochoa, Alvaro Cardenas, Owen Arden, and Jianying Zhou.
 "<i>AttkFinder: Discovering Attack Vectors in PLC Programs using Information Flow Analysis</i>". <b>(RAID'21)</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="https://raid2021.org/">
 2021 International Symposium on Research in Attacks, Intrusions and Defenses</A>,
@@ -1046,7 +1056,7 @@ pages 235--250, San Sebastian, Spain, October 2021, ACM Press. <br><br>
 
 <li>Daniel Reijsbergen, Zheng Yang, Aung Maw, Tien Tuan Anh Dinh, and Jianying Zhou.
 "<i>Transparent Electricity Pricing with Privacy</i>". <b>(ESORICS'21)</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Lecture Notes in Computer Science 12973, Proceedings of
 <A HREF="https://www.esorics2021.org/">
 2021 European Symposium on Research in Computer Security</A>,
@@ -1062,8 +1072,8 @@ pages 3--23, Lausanne, Switzerland, September 2021, Springer. <br><br>
 <li>Jay Prakash, Clarice Chua, Tanvi Thombre, Andrei Bytes, Mohammed Jubur, Nitesh Saxena, Lucienne Blessing, Jianying Zhou, and Tony Quek. 
 "<i>Countering Concurrent Login Attacks in Just Tap Push-based Authentication: A Redesign and Usability Evaluations</i>". <b>(EuroS&P'21)</b>
 <b>[<A HREF="https://www.youtube.com/watch?v=ogRXD7U9lwo">video</A>]</b>
-<b>[<A HREF="https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2022031231">PCT/SG2021/050454</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<b>[PCT/SG2021/050454]</b>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="http://www.ieee-security.org/TC/EuroSP2021/">
 2021 IEEE European Symposium on Security and Privacy</A>,
@@ -1095,7 +1105,7 @@ pages 3--18, Kamakura, Japan, June 2021, Springer. <br><br>
 
 <li>Flavio Toffalini, Mariano Graziano, Mauro Conti, and Jianying Zhou.
 "<i>SnakeGX: A Sneaky Attack against SGX Enclaves</i>". <b>(ACNS'21)</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Lecture Notes in Computer Science 12726, Proceedings of
 <A HREF="http://sulab-sever.u-aizu.ac.jp/ACNS2021/">
 2021 International Conference on Applied Cryptography and Network Security</A>,
@@ -1110,8 +1120,8 @@ pages 17--28, Hong Kong, China, June 2021, ACM Press. <br><br>
 
 <li>Chuadhry Mujeeb Ahmed, Martin Ochoa, Jianying Zhou, and Aditya Mathur.
 "<i>Scanning the Cycle: Timing-based Authentication on PLCs</i>". <b>(AsiaCCS'21)</b>
-<b>[<A HREF="https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2022015246">PCT/SG2021/050415</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<b>[PCT/SG2021/050415]</b>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="https://asiaccs2021.comp.polyu.edu.hk/">
 2021 ACM Asia Conference on Computer and Communications Security</A>,
@@ -1120,7 +1130,7 @@ pages 886--900, Hong Kong, China, June 2021, ACM Press. <br><br>
 <li>Daniel Reijsbergen, Pawel Szalachowski, Junming Ke, Zengpeng Li, and Jianying Zhou.
 "<i>LaKSA: A Probabilistic Proof-of-Stake Protocol</i>". <b>(NDSS'21)</b>
 <b>[<A HREF="https://www.youtube.com/watch?v=a1OxS9zvwIc">video</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="https://www.ndss-symposium.org/ndss2021/">
 2021 Network and Distributed System Security Symposium</A>,
@@ -1156,7 +1166,7 @@ pages 21--30, Austin, USA, December 2020, ACM Press. <br><br>
 "<i>Policy-based Chameleon Hash for Blockchain Rewriting with Black-box Accountability</i>". <b>(ACSAC'20)</b>
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=Policy-based+Chameleon+Hash+for+Blockchain+Rewriting+with+Black-box+Accountability&btnG=Search">citation</A>]</b>
 <b>[<A HREF="https://www.youtube.com/watch?v=54pIbhTSv5Y">video</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="https://www.acsac.org/2020/">
 2020 Annual Computer Security Applications Conference</A>,
@@ -1187,9 +1197,9 @@ pages 42--53, Taipei, Taiwan, October 2020, ACM Press. <br><br>
 
 <li>Zheng Yang, Chenglu Jin, Yangguang Tian, Junyu Lai, and Jianying Zhou.
 "<i>LiS: Lightweight Signature Schemes for Continuous Message Authentication in Cyber-Physical Systems</i>". <b>(AsiaCCS'20)</b>
-<b>[<A HREF="https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2022071889">PCT/SG2021/050594</A>]</b>
+<b>[PCT/SG2021/050594]</b>
 <!--<b>[<A HREF="https://youtu.be/fv9spcPVWY4">video</A>]</b>-->
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="https://asiaccs2020.cs.nthu.edu.tw/">
 2020 ACM Asia Conference on Computer and Communications Security</A>,
@@ -1204,8 +1214,8 @@ pages 17--30, Bristol, UK, September 2020, Springer. <br><br>
 
 <li> Chuadhry Mujeeb Ahmed, Jay Prakash, Rizwan Qadeer, Anand Agrawal, and Jianying Zhou.
 "<i>Process Skew: Fingerprinting the Process for Anomaly Detection in Industrial Control Systems</i>". <b>(WiSec'20)</b>
-<b>[<A HREF="https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2021251906">PCT/SG2021/050340</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<b>[PCT/SG2021/050340]</b>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="https://wisec2020.ins.jku.at/">
 2020 ACM Conference on Security and Privacy in Wireless and Mobile Networks</A>,
@@ -1225,8 +1235,8 @@ Toronto, Canada, May 2020, IEEE Communications Society Process. <br><br>
 
 <li>Chenglu Jin, Zheng Yang, Marten van Dijk, and Jianying Zhou.
 "<i>Proof of Aliveness</i>". <b>(ACSAC'19)</b>
-<b>[<A HREF="https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2021086267">PCT/SG2020/050619</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<b>[PCT/SG2020/050619]</b>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="https://www.acsac.org/2019/">
 2019 Annual Computer Security Applications Conference</A>,
@@ -1235,7 +1245,7 @@ pages 1--16, San Juan, Puerto Rico, December 2019, ACM Press. <br><br>
 <li>Hamid Reza Ghaeini, Matthew Chan, Raad Bahmani, Ferdinand Brasser, Luis Garcia, Jianying Zhou, Ahmad-Reza Sadeghi, Nils Ole Tippenhauer, and Saman Zonouz.
 "<i>PAtt: Physics-based Attestation of Control Systems</i>". <b>(RAID'19)</b>
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=PAtt:+Physics-based+Attestation+of+Control+Systems&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="http://www.raid-2019.org/">
 2019 International Symposium on Research in Attacks, Intrusions and Defenses</A>,
@@ -1244,7 +1254,7 @@ pages 165--180, Beijing, China, September 2019, USENIX. <br><br>
 <li>Flavio Toffalini, Eleonora Losiouk, Andrea Biondo, Jianying Zhou, and Mauro Conti.
 "<i>ScaRR: Scalable Runtime Remote Attestation for Complex Systems</i>". <b>(RAID'19)</b>
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=ScaRR:+Scalable+Runtime+Remote+Attestation+for+Complex+Systems&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="http://www.raid-2019.org/">
 2019 International Symposium on Research in Attacks, Intrusions and Defenses</A>,
@@ -1287,8 +1297,8 @@ pages 156--171, Bogota, Colombia, June 2019, Springer. <br><br>
 
 <li>John Castellanos and Jianying Zhou.
 "<i>A Modular Hybrid Learning Approach for Black-Box Security Testing of CPS</i>". <b>(ACNS'19)</b>
-<b>[<A HREF="https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2020231334">PCT/SG2020/050271</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<b>[PCT/SG2020/050271]</b>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Lecture Notes in Computer Science 11464, Proceedings of
 <A HREF="https://www.acns19.com/">
 2019 International Conference on Applied Cryptography and Network Security</A>,
@@ -1308,7 +1318,7 @@ pages 231--242, Dallas, USA, March 2019, ACM Press. <br><br>
 <li>John Castellanos, Martin Ochoa, and Jianying Zhou.
 "<i>Finding Dependencies between Cyber-Physical Domains for Security Testing of Industrial Control Systems</i>". <b>(ACSAC'18)</b>
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=Finding+Dependencies+between+Cyber-Physical+Domains+for+Security+Testing+of+Industrial+Control+Systems&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="https://www.acsac.org/2018/">
 2018 Annual Computer Security Applications Conference</A>,
@@ -1317,7 +1327,7 @@ pages 582--594, San Juan, Puerto Rico, December 2018, ACM Press. <br><br>
 <li>Chuadhry Mujeeb Ahmed, Jianying Zhou, and Aditya Mathur.
 "<i>Noise Matters: Using Sensor and Process Noise Fingerprint to Detect Stealthy Cyber Attacks and Authenticate Sensors in CPS</i>". <b>(ACSAC'18)</b>
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=Noise+Matters%3A+Using+Sensor+and+Process+Noise+Fingerprint+to+Detect+Stealthy+Cyber+Attacks+and+Authenticate+Sensors+in+CPS&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="https://www.acsac.org/2018/">
 2018 Annual Computer Security Applications Conference</A>,
@@ -1356,7 +1366,7 @@ pages 299--311, Bergamo, Italy, July 2018, Springer. <br><br>
 <li>Chuadhry Mujeeb Ahmed, Martin Ochoa, Jianying Zhou, Aditya Mathur, Rizwan Qadeer, Carlos Murguia, and Justin Ruths. 
 "<i>NoisePrint: Attack Detection Using Sensor and Process Noise Fingerprint in Cyber Physical Systems</i>". <b>(AsiaCCS'18)</b>
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=NoisePrint%3A+Attack+Detection+Using+Sensor+and+Process+Noise+Fingerprint+in+Cyber+Physical+Systems&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="http://asiaccs2018.org/">
 2018 ACM Asia Conference on Computer and Communications Security</A>,
@@ -1390,7 +1400,7 @@ pages 398--403, Perth, Australia, December 2017. <br><br>
 
 <li>Weizhi Meng, Wenjuan Li, Wang-Hao Lee, Lijun Jiang, and Jianying Zhou.
 "<i>A Pilot Study of Multiple Password Interference between Text and Map-based Passwords</i>". <b>(ACNS'17)</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Lecture Notes in Computer Science 10355, Proceedings of
 <A HREF="https://cy2sec.comm.eng.osaka-u.ac.jp/acns2017/">
 2017 International Conference on Applied Cryptography and Network Security</A>,
@@ -1409,7 +1419,7 @@ pages 70--85, Singapore, February 2017, IOS Press. <br><br>
 
 <li>Jia Xu, Anjia Yang, Jianying Zhou, and Duncan Wong.
 "<i>Lightweight Delegatable Proofs of Storage</i>". <b>(ESORICS'16)</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Lecture Notes in Computer Science 9878, Proceedings of
 <A HREF="http://www.ics.forth.gr/esorics2016/">
 2016 European Symposium on Research in Computer Security</A>,
@@ -1420,7 +1430,7 @@ pages 324--343, Heraklion, Greece, September 2016, Springer. <br><br>
 <b>[<A HREF="https://patents.google.com/patent/US10230532">US Patent 10230532</A>]</b>
 <b>[<A HREF="https://research.a-star.edu.sg/articles/highlights/historical-data-helps-internet-of-things-resist-hacks/">A*STAR Research</A>]</b>
 <b>[<A HREF="http://www.straitstimes.com/tech/smart-inventions-driverless-car">Straits Times</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Lecture Notes in Computer Science 9878, Proceedings of
 <A HREF="http://www.ics.forth.gr/esorics2016/">
 2016 European Symposium on Research in Computer Security</A>,
@@ -1436,7 +1446,7 @@ pages 181--197, Melbourne, Australia, July 2016, Springer. <br><br>
 <li>Weizhi Meng, Wenjuan Li, Duncan Wong, and Jianying Zhou.
 "<i>TMGuard: A Touch Movement-based Security Mechanism for Screen Unlock Patterns on Smartphones</i>". <b>(ACNS'16)</b>
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=TMGuard%3A+A+Touch+Movement-based+Security+Mechanism+for+Screen+Unlock+Patterns+on+Smartphones&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Lecture Notes in Computer Science 9696, Proceedings of
 <A HREF="http://acns2016.sccs.surrey.ac.uk/">
 2016 International Conference on Applied Cryptography and Network Security</A>,
@@ -1444,7 +1454,7 @@ pages 629--647, London, UK, June 2016, Springer. <br><br>
 
 <li>Yanjiang Yang, Haibing Lu, Joseph Liu, Jian Weng, Youcheng Zhang, and Jianying Zhou.
 "<i>Credential Wrapping: From Anonymous Password Authentication to Anonymous Biometric Authentication</i>". <b>(AsiaCCS'16)</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="http://meeting.xidian.edu.cn/conference/AsiaCCS2016/">
 2016 ACM Asia Conference on Computer and Communications Security</A>,
@@ -1474,7 +1484,7 @@ pages 27--42, Singapore, January 2016, IOS Press. <br><br>
 <b>[<font color="red">Best Paper Award</font>]</b>
 <b>[<A HREF="https://research.a-star.edu.sg/articles/highlights/taking-control-back-from-the-cloud/">A*STAR Research</A>]</b>
 <b>[<A HREF="https://www.sciencedaily.com/releases/2017/05/170529142439.htm">Science Daily</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Lecture Notes in Computer Science 9327, Proceedings of
 <A HREF="http://esorics2015.sba-research.org/">
 2015 European Symposium on Research in Computer Security</A>,
@@ -1493,7 +1503,7 @@ pages 227--243, Trondheim, Norway, September 2015, Springer. <br><br>
 
 <li>Joseph Liu, Man-Ho Au, Xinyi Huang, Willy Susilo, Jianying Zhou, and Yong Yu.
 "<i>New Insight to Preserve Online Survey Accuracy and Privacy in Big Data Era</i>". <b>(ESORICS'14)</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Lecture Notes in Computer Science 8713, Proceedings of
 <A HREF="http://esorics2014.pwr.wroc.pl/">
 2014 European Symposium on Research in Computer Security</A>,
@@ -1502,7 +1512,7 @@ pages 182--199, Wroclaw, Poland, September 2014, Springer. <br><br>
 <li>Jinguang Han, Willy Susilo, Yi Mu, Jianying Zhou, and Man-Ho Au.
 "<i>PPDCP-ABE: Privacy-Preserving Decentralized Cipher-Policy Attribute-Based Encryption</i>". <b>(ESORICS'14)</b>
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=PPDCP-ABE%3A+Privacy-Preserving+Decentralized+Cipher-Policy+Attribute-Based+Encryption&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Lecture Notes in Computer Science 8713, Proceedings of
 <A HREF="http://esorics2014.pwr.wroc.pl/">
 2014 European Symposium on Research in Computer Security</A>,
@@ -1511,7 +1521,7 @@ pages 73--90, Wroclaw, Poland, September 2014, Springer. <br><br>
 <li>Jia Xu and Jianying Zhou.
 "<i>Leakage Resilient Proofs of Ownership in Cloud Storage, Revisited</i>". <b>(ACNS'14)</b>
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=Leakage+Resilient+Proofs+of+Ownership+in+Cloud+Storage%2C+Revisited&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Lecture Notes in Computer Science 8479, Proceedings of
 <A HREF="http://acns2014.epfl.ch/">
 2014 International Conference on Applied Cryptography and Network Security</A>,
@@ -1544,7 +1554,7 @@ pages 238--247, Dallas, USA, November 2013, Springer. <br><br>
 <b>[<A HREF="https://cacm.acm.org/news/169644-enhancing-security-in-apple-devices/">Communications of the ACM</A>]</b>
 <b>[<A HREF="http://www.computerworld.com.sg/resource/applications/researchers-from-singapore-help-fortify-ios-platform/">Computer World</A>]</b>
 <b>[<A HREF="http://www.sciencedaily.com/releases/2013/12/131204090800.htm">Science Daily</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Lecture Notes in Computer Science 7954, Proceedings of
 <A HREF="http://acns2013.cpsc.ucalgary.ca/">
 2013 International Conference on Applied Cryptography and Network Security</A>,
@@ -1553,7 +1563,7 @@ pages 272--289, Banff, Canada, June 2013, Springer. <br><br>
 <li>Yi-Ruei Chen, Cheng-Kang Chu, Wen-Guey Tzeng, and Jianying Zhou.
 "<i>CloudHKA: A Cryptographic Approach for Hierarchical Access Control in Cloud Computing</i>". <b>(ACNS'13)</b>
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=CloudHKA%3A+A+Cryptographic+Approach+for+Hierarchical+Access+Control+in+Cloud+Computing&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Lecture Notes in Computer Science 7954, Proceedings of
 <A HREF="http://acns2013.cpsc.ucalgary.ca/">
 2013 International Conference on Applied Cryptography and Network Security</A>,
@@ -1562,7 +1572,7 @@ pages 37--52, Banff, Canada, June 2013, Springer. <br><br>
 <li>Cheng-Kang Chu, Joseph Liu, Jun-Wen Wong, Yunlei Zhao, and Jianying Zhou.
 "<i>Privacy-Preserving Smart Metering with Regional Statistics and Personal Enquiry Services</i>". <b>(AsiaCCS'13)</b>
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=Privacy-Preserving+Smart+Metering+with+Regional+Statistics+and+Personal+Enquiry+Services&btnG=Search">citation</A>] </b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="http://hise.hznu.edu.cn/asiaccs/">
 2013 ACM Symposium on Information, Computer and Communications Security</A>,
@@ -1571,7 +1581,7 @@ pages 369--379, Hangzhou, China, May 2013, ACM Press. <br><br>
 <li>Jia Xu, Ee-Chien Chang, and Jianying Zhou.
 "<i>Weak Leakage-Resilient Client-side Deduplication of Encrypted Data in Cloud Storage</i>". <b>(AsiaCCS'13)</b>
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=Weak+Leakage-Resilient+Client-side+Deduplication+of+Encrypted+Data+in+Cloud+Storage&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="http://hise.hznu.edu.cn/asiaccs/">
 2013 ACM Symposium on Information, Computer and Communications Security</A>,
@@ -1580,7 +1590,7 @@ pages 195--206, Hangzhou, China, May 2013, ACM Press. <br><br>
 <li>Qiang Yan, Jin Han, Yingjiu Li, Jianying Zhou, and Robert Deng.
 "<i>Designing Leakage-Resilient Password Entry on Touchscreen Mobile Devices</i>". <b>(AsiaCCS'13)</b>
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=Designing+Leakage-Resilient+Password+Entry+on+Touchscreen+Mobile+Devices&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="http://hise.hznu.edu.cn/asiaccs/">
 2013 ACM Symposium on Information, Computer and Communications Security</A>,
@@ -1590,7 +1600,7 @@ pages 37--48, Hangzhou, China, May 2013, ACM Press. <br><br>
 "<i>Comparing Mobile Privacy Protection through Cross-Platform Applications</i>". <b>(NDSS'13)</b>
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=Comparing+Mobile+Privacy+Protection+through+Cross-Platform+Applications&btnG=Search">citation</A>]</b>
 <b>[<A HREF="https://research.a-star.edu.sg/articles/highlights/android-versus-apple/">A*STAR Research</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="http://www.internetsociety.org/events/ndss-symposium-2013">
 2013 Network and Distributed System Security Symposium</A>,
@@ -1617,7 +1627,7 @@ pages 167--177, Hong Kong, China, October 2012, Springer. <br><br>
 <li>Joseph Liu, Man-Ho Au, Willy Susilo, and Jianying Zhou.
 "<i>Enhancing Location Privacy for Electric Vehicles (at the right time)</i>". <b>(ESORICS'12)</b>
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=Enhancing+Location+Privacy+for+Electric+Vehicles+%28at+the+right+time%29&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Lecture Notes in Computer Science 7459, Proceedings of
 <A HREF="http://www.iit.cnr.it/esorics2012/">
 2012 European Symposium on Research in Computer Security</A>,
@@ -1626,7 +1636,7 @@ pages 397--414, Pisa, Italy, September 2012, Springer. <br><br>
 <li>Cheng-Kang Chu, Joseph Liu, Xinyi Huang, and Jianying Zhou.
 "<i>Verifier-Local Revocation Group Signatures with Time-Bound Keys</i>". <b>(AsiaCCS'12)</b>
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=Verifier-Local+Revocation+Group+Signatures+with+Time-Bound+Keys&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="http://elec.sch.ac.kr/asiaccs/">
 2012 ACM Symposium on Information, Computer and Communications Security</A>,
@@ -1669,7 +1679,7 @@ pages 167--178, Valencia, Spain, May 2011, Springer. <br><br>
 <li>Tze-Hon Yuen, Joseph Liu, Man-Ho Au, Willy Susilo, and Jianying Zhou.
 "<i>Threshold Ring Signature without Random Oracles</i>". <b>(AsiaCCS'11)</b>
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=Threshold+Ring+Signature+without+Random+Oracles&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="http://i.cs.hku.hk/~asiaccs/">
 2011 ACM Symposium on Information, Computer and Communications Security</A>,
@@ -1677,7 +1687,7 @@ pages 261--267, Hong Kong, China, March 2011, ACM Press. <br><br>
 
 <li>Cheng-Kang Chu, Wentao Zhu, Sherman Chow, Jianying Zhou, and Robert Deng.
 "<i>Secure Mobile Subscription of Sensor-Encrypted Data</i>". <b>(AsiaCCS'11)</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="http://i.cs.hku.hk/~asiaccs/">
 2011 ACM Symposium on Information, Computer and Communications Security</A>,
@@ -1685,7 +1695,7 @@ pages 228--237, Hong Kong, China, March 2011, ACM Press. <br><br>
 
 <li>Joonsang Baek and Jianying Zhou.
 "<i>Compact Identity-Based Encryption without Strong Symmetric Cipher</i>". <b>(AsiaCCS'11)</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="http://i.cs.hku.hk/~asiaccs/">
 2011 ACM Symposium on Information, Computer and Communications Security</A>,
@@ -1694,7 +1704,7 @@ pages 61--70, Hong Kong, China, March 2011, ACM Press. <br><br>
 <li>Sherman Chow, Joseph Liu, and Jianying Zhou.
 "<i>Identity-Based Online/Offline Key Encapsulation and Encryption</i>". <b>(AsiaCCS'11)</b>
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=Identity-Based+Online%2FOffline+Key+Encapsulation+and+Encryption&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="http://i.cs.hku.hk/~asiaccs/">
 2011 ACM Symposium on Information, Computer and Communications Security</A>,
@@ -1702,7 +1712,7 @@ pages 52--60, Hong Kong, China, March 2011, ACM Press. <br><br>
 
 <li>Joonsang Baek, Cheng-Kang Chu, and Jianying Zhou.
 "<i>On Shortening Ciphertexts: New Constructions for Compact Public Key and Stateful Encryption Schemes</i>". <b>(CT-RSA'11)</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Lecture Notes in Computer Science 6558, Proceedings of
 <A HREF="http://ct-rsa2011.di.uoa.gr/CT-RSA_2011/Welcome___CT-RSA_2011.html">
 2011 Cryptographers' Track at the RSA Conference</A>,
@@ -1722,7 +1732,7 @@ pages 235--250, Barcelona, Spain, December 2010, Springer. <br><br>
 <li>Yanjiang Yang, Jianying Zhou, Jun-Wen Wong, and Feng Bao.
 "<i>Towards Practical Anonymous Password Authentication</i>". <b>(ACSAC'10)</b>
 <b>[<A HREF="http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=64288">ISO/IEC 20009-4</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="http://www.acsac.org/2010/">
 2010 Annual Computer Security Applications Conference</A>,
@@ -1745,7 +1755,7 @@ pages 45--60, Athens, Greece, September 2010, Springer. <br><br>
 
 <li>Joseph Liu, Man-Ho Au, Willy Susilo, and Jianying Zhou.
 "<i>Short Generic Transformation to Strongly Unforgeable Signature in the Standard Model</i>". <b>(ESORICS'10)</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Lecture Notes in Computer Science 6345, Proceedings of
 <A HREF="http://www.esorics2010.org/">
 2010 European Symposium on Research in Computer Security</A>,
@@ -1754,7 +1764,7 @@ pages 168--181, Athens, Greece, September 2010, Springer. <br><br>
 <li>Cheng-Kang Chu, Joseph Liu, Jianying Zhou, Feng Bao, and Robert Deng.
 "<i>Practical ID-based Encryption for Wireless Sensor Network</i>". <b>(AsiaCCS'10)</b>
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=Practical+ID-based+Encryption+for+Wireless+Sensor+Network&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="http://www.dacas.cn/asiaccs2010/">
 2010 ACM Symposium on Information, Computer and Communications Security</A>,
@@ -1788,7 +1798,7 @@ pages 164--178, Beijing, China, December 2009, Springer. <br><br>
 <li>Yanjiang Yang, Jianying Zhou, Jian Weng, and Feng Bao.
 "<i>A New Approach for Anonymous Password Authentication</i>". <b>(ACSAC'09)</b>
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=A+New+Approach+for+Anonymous+Password+Authentication&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="http://www.acsac.org/2009/">
 2009 Annual Computer Security Applications Conference</A>,
@@ -1819,7 +1829,7 @@ pages 327--342, Brisbane, Australia, July 2009, Springer. <br><br>
 <li>Joseph Liu and Jianying Zhou.
 "<i>An Efficient Identity-Based Online/Offline Encryption Scheme</i>". <b>(ACNS'09)</b>
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=An+Efficient+Identity-Based+Online%2FOffline+Encryption&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Lecture Notes in Computer Science 5536, Proceedings of
 <A HREF="http://acns09.di.ens.fr/">
 2009 International Conference on Applied Cryptography and Network Security</A>,
@@ -1827,7 +1837,7 @@ pages 156--167, Paris, France, June 2009, Springer. <br><br>
 
 <li>Joonsang Baek, Willy Susilo, Joseph Liu, and Jianying Zhou.
 "<i>A New Variant of the Cramer-Shoup KEM Secure against Chosen Ciphertext Attack</i>". <b>(ACNS'09)</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Lecture Notes in Computer Science 5536, Proceedings of
 <A HREF="http://acns09.di.ens.fr/">
 2009 International Conference on Applied Cryptography and Network Security</A>,
@@ -1843,7 +1853,7 @@ pages 384--395, Xian, China, April 2009, Springer. <br><br>
 <li>Joseph Liu, Joonsang Baek, and Jianying Zhou.
 "<i>Certificate-Based Sequential Aggregate Signature</i>". <b>(WiSec'09)</b>
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=Certificate-Based+Sequential+Aggregate+Signature&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="http://www.sigsac.org/wisec/WiSec2009/">
 2009 ACM Conference on Wireless Network Security</A>,
@@ -1870,7 +1880,7 @@ pages 43--52, Yangtze River, China, October 2008, IEEE Computer Society Press. <
 <li>Jung-Hoon Ha, Sang-Jae Moon, Jianying Zhou, and Jae-Cheol Ha.
 "<i>A New Formal Proof Model for RFID Location Privacy</i>". <b>(ESORICS'08)</b>
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=A+New+Formal+Proof+Model+for+RFID+Location+Privacy&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Lecture Notes in Computer Science 5283, Proceedings of
 <A HREF="http://www.isac.uma.es/esorics08/">
 2008 European Symposium on Research in Computer Security</A>,
@@ -1922,7 +1932,7 @@ Article No. 61, Dublin, Ireland, July 2008, ACM Press. <br><br>
 
 <li>Joonsang Baek, Jianying Zhou, and Feng Bao.
 "<i>Generic Constructions of Stateful Public Key Encryption and Their Applications</i>". <b>(ACNS'08)</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Lecture Notes in Computer Science 5037, Proceedings of
 <A HREF="http://acns2008.cs.columbia.edu/">
 2008 International Conference on Applied Cryptography and Network Security</A>,
@@ -2007,7 +2017,7 @@ pages 193--208, Hong Kong, China, May 2007, Springer. <br><br>
 <li>Joonsang Baek, Willy Susilo, and Jianying Zhou.
 "<i>New Constructions of Fuzzy Identity-Based Encryption</i>". <b>(AsiaCCS'07)</b>
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&q=New+Constructions+of+Fuzzy+Identity-Based+Encryption&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="http://asiaccs07.i2r.a-star.edu.sg/">
 2007 ACM Symposium on Information, Computer and Communications Security</A>,
@@ -2187,7 +2197,7 @@ pages 184--192, New York, USA, June 2005, IEEE Systems, Man, and Cybernetics Soc
 
 <li>Zhuowei Li, Amitabha Das, and Jianying Zhou.
 "<i>Model Generalization and its Implications on Intrusion Detection</i>". <b>(ACNS'05)</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Lecture Notes in Computer Science 3531, Proceedings of
 <A HREF="http://acns2005.cs.columbia.edu/">
 2005 International Conference on Applied Cryptography and Network Security</A>,
@@ -2416,7 +2426,7 @@ pages 37--48, Athens, Greece, May 2003, Kluwer. <br><br>
 "<i>Defending against Redirect Attacks in Mobile IP</i>". <b>(CCS'02)</b>
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=Defending+against+Redirect+Attacks+in+Mobil+IP&btnG=Search">citation</A>]</b>
 <b>[<A HREF="http://www.google.com/patents/US7233782">US Patent 7233782</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="http://www.acm.org/sigs/sigsac/ccs/">
 2002 ACM Conference on Computer and Communications Security</A>,
@@ -2458,7 +2468,7 @@ pages 451--460, Beijing, China, August 2000, Kluwer. <br><br>
 <li>Jianying Zhou, Robert Deng, and Feng Bao.
 "<i>Some Remarks on a Fair Exchange Protocol</i>". <b>(PKC'00)</b>
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=Some+Remarks+on+a+Fair+Exchange+Protocol&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Lecture Notes in Computer Science 1751, Proceedings of
 <A HREF="http://www.pscit.monash.edu.au/pkc2k/pkc2000/">
 2000 International Workshop on Practice and Theory in Public Key Cryptography</A>,
@@ -2474,7 +2484,7 @@ pages 258--269, Wollongong, Australia, April 1999, Springer. <br><br>
 
 <li>Jianying Zhou and Kwok-Yan Lam.
 "<i>A Secure Pay-per-view Scheme for Web-based Video Service</i>". <b>(PKC'99)</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Lecture Notes in Computer Science 1560, Proceedings of
 <A HREF="http://www.pscit.monash.edu.au/pkc2k/pkc1999/">
 1999 International Workshop on Practice and Theory in Public Key Cryptography</A>,
@@ -2487,7 +2497,7 @@ pages 315--326, Kamakura, Japan, March 1999, Springer. <br><br>
 <li>Jianying Zhou and Kwok-Yan Lam.
 "<i>Undeniable Billing in Mobile Communication</i>". <b>(MobiCom'98)</b>
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=Undeniable+Billing+in+Mobile+Communication&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="http://www.sigmobile.org/mobicom/1998/">
 1998 ACM/IEEE International Conference on Mobile Computing and Networking</A>,
@@ -2504,7 +2514,7 @@ pages 370--380, Canberra, Australia, September 1998, Springer. <br><br>
 <li>Jianying Zhou and Dieter Gollmann.
 "<i>An Efficient Non-repudiation Protocol</i>". <b>(CSFW'97)</b>
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=An+Efficient+Non-repudiation+Protocol&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="http://www.ieee-security.org/CSFWweb/Programs/program_csfw10.txt">
 1997 IEEE Computer Security Foundations Workshop</A>,
@@ -2513,7 +2523,7 @@ pages 126--132, Rockport, USA, June 1997, IEEE Computer Society Press. <br><br>
 <li>Jianying Zhou and Dieter Gollmann.
 "<i>Observations on Non-repudiation</i>". <b>(Asiacrypt'96)</b>
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=Observations+on+Non-repudiation&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Lecture Notes in Computer Science 1163, Proceedings of
 <A HREF="http://dblp.uni-trier.de/db/conf/asiacrypt/asiacrypt96.html">
 Asiacrypt'96</A>,
@@ -2522,7 +2532,7 @@ pages 133--144, Kyongju, Korea, November 1996, Springer. <br><br>
 <li>Jianying Zhou and Dieter Gollmann.
 "<i>Certified Electronic Mail</i>". <b>(ESORICS'96)</b>
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=Certified+Electronic+Mail&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Lecture Notes in Computer Science 1146, Proceedings of
 <A HREF="http://www.laas.fr/~esorics/esorics_96/esorics_96.html">
 1996 European Symposium on Research in Computer Security</A>,
@@ -2531,7 +2541,7 @@ pages 160--171, Rome, Italy, September 1996, Springer. <br><br>
 <li>Jianying Zhou and Dieter Gollmann.
 "<i>A Fair Non-repudiation Protocol</i>". <b>(S&P'96)</b>
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=A+Fair+Non-repudiation+Protocol&btnG=Search">citation</A> >500]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Proceedings of
 <A HREF="http://dblp.uni-trier.de/db/conf/sp/sp1996.html">
 1996 IEEE Symposium on Security and Privacy</A>,
@@ -2558,21 +2568,21 @@ pages 55--61, Oakland, USA, May 1996, IEEE Computer Society Press. <br><br>
 
 <li>Alessandro Brighente, Mauro Conti, Denis Donadel, Raadha Poovendran, Federico Turrin, and Jianying Zhou.
 "<i>Electric Vehicles Security and Privacy: Challenges, Solutions, and Future Needs</i>".
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="https://dl.acm.org/journal/tcps">
 ACM Transactions on Cyber-Physical Systems</A>, ACM Press.
 <br><br>
 
 <li>Jie Meng, Zeyu Yang, Zhenyong Zhang, Yangyang Geng, Ruilong Deng, Peng Cheng, Jiming Chen, and Jianying Zhou.
  "<i>An Automated Semantic Analysis Framework for Controller Variables based on Network Traffic</i>".
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="https://www.computer.org/csdl/journal/tq">
 IEEE Transactions on Dependable and Secure Computing</A>, IEEE Computer Society Press.
 <br><br>
 
 <li> Xuelian Cao, Zheng Yang, Jianting Ning, Chenglu Jin, Zhiming Liu, and Jianying Zhou.
 "<i>Proof of Persistent Aliveness</i>".
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="https://www.computer.org/csdl/journal/tq">
 IEEE Transactions on Dependable and Secure Computing</A>, IEEE Computer Society Press.
 <br><br>
@@ -2583,7 +2593,7 @@ IEEE Transactions on Dependable and Secure Computing</A>, IEEE Computer Society 
 
 <li>Awais Yousaf, Jianying Zhou, and Sudipta Chattopadhyay. 
 "<i>Maritime Operational Technology Shipboard Testbed for Cybersecurity Research, Training, Exercises and Education</i>".
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="https://www.computer.org/csdl/magazine/sp">
 IEEE Security & Privacy</A>, 24(2):13--22, IEEE Computer Society Press,
 March/April 2026. <br><br>
@@ -2608,7 +2618,7 @@ January 2026. <br><br>
 
 <li>Ye Dong, Xudong Chen, Xiangfu Song, Yaxi Yang, Wenjie Lu, Tianwei Zhang, Jianying Zhou, and Jin-Song Dong.
 "<i>ALKAID: Accelerating Three-Party Boolean Circuits by Mixing Correlations and Redundancy</i>".
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="http://www.signalprocessingsociety.org/publications/periodicals/forensics/">
 IEEE Transactions on Information Forensics and Security</A>, 21:640--654, IEEE Signal Processing Society Press,
 January 2026. <br><br>
@@ -2619,21 +2629,21 @@ January 2026. <br><br>
 
 <li>Zeyu Yang, Liang He, Yujiao Hu, Peng Cheng, Jiming Chen, and Jianying Zhou.
 "<i>ADIS: Detecting and Identifying Manipulated PLC Program Variables Using State-Aware Dependency Graph</i>".
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="http://www.signalprocessingsociety.org/publications/periodicals/forensics/">
 IEEE Transactions on Information Forensics and Security</A>, 20:12445--12459, IEEE Signal Processing Society Press,
 November 2025. <br><br>
 
 <li>Xiaoyuan Liu, Hongwei Li, Guowen Xu, Shengmin Xu, Xinyi Huang, Tianwei Zhang, Yijing Lin, and Jianying Zhou.
 "<i>Antelope: Fast and Secure Neural Network Inference</i>".
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="https://www.computer.org/csdl/journal/tq">
 IEEE Transactions on Dependable and Secure Computing</A>, 22(6):7334 --7347, IEEE Computer Society Press,
 November 2025. <br><br>
 
 <li>Kok Wee Ang, Eyasu Getahun Chekole, and Jianying Zhou.
 "<i>Unveiling the Covert Vulnerabilities in Multi-Factor Authentication Protocols: A Systematic Review and Security Analysis</i>".
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="https://dl.acm.org/journal/csur">
 ACM Computing Surveys</A>, 57(11), ACM Press,
 November 2025. <br><br>
@@ -2647,56 +2657,56 @@ October 2025. <br><br>
 
 <li>Awais Yousaf, Sean Gunawan, Sunil Basnet, Victor Bolbot, Jianying Zhou, and Osiris Valdez Banda.
 "<i>STPA-Cyber: A Semi-automated Cyber Risk Assessment Framework for Maritime Cybersecurity</i>".
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="http://www.elsevier.com/locate/cose/">
 Computers & Security</A>, 157:104559, Elsevier,
 October 2025. <br><br>
 
 <li>Ruonan Chen, Dawei Li, Yang Zhang, Yizhong Liu, Jianwei Liu, Zhenyu Guan, Min Xie, Qianhong Wu, Jianying Zhou, and Willy Susilo.
 "<i>Dissecting Blockchain Network Partitioning Attacks and Novel Defense for Bitcoin and Ethereum</i>".
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="http://www.signalprocessingsociety.org/publications/periodicals/forensics/">
 IEEE Transactions on Information Forensics and Security</A>, 20:8613--8627, IEEE Signal Processing Society Press,
 August 2025. <br><br>
 
 <li>Jianying Zhou.
 "<i>Maritime Cybersecurity: A Big Change Ahead</i>".
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="https://www.computer.org/csdl/magazine/sp">
 IEEE Security & Privacy</A>, 23(4):4--7, IEEE Computer Society Press,
 July/August 2025. <br><br>
 
 <li>Jie Meng, Zhenyong Zhang, Hengye Zhu, Zeyu Yang, Ruilong Deng, Peng Cheng, and Jianying Zhou.
 "<i>SSTAF: Security Settings-based Threat Assessment Framework of Programmable Logic Controllers</i>".
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="http://www.signalprocessingsociety.org/publications/periodicals/forensics/">
 IEEE Transactions on Information Forensics and Security</A>, 20:7512--7527, IEEE Signal Processing Society Press,
 July 2025. <br><br>
 
 <li>Jie Yin, Yang Xiao, Qian Chen, Yong-Zhi Lim, Xuefeng Liu, Qingqi Pei, and Jianying Zhou.
 "<i>DP-DID: A Dynamic and Proactive Decentralized Identity System</i>".
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="http://www.signalprocessingsociety.org/publications/periodicals/forensics/">
 IEEE Transactions on Information Forensics and Security</A>, 20:4999--5014, IEEE Signal Processing Society Press,
 April 2025. <br><br>
 
 <li>Qian Chen, Zilong Wang, Mengqing Yan, Haonan Yan, Xiaodong Lin, and Jianying Zhou.
 "<i>DeFedGCN: Privacy-preserving Decentralized Federated GCN for Recommender System</i>".
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="https://www.computer.org/csdl/journal/sc">
 IEEE Transactions on Services Computing</A>, 18(2):729--742, IEEE Computer Society Press,
 March/April 2025. <br><br>
 
 <li>Ruonan Chen, Yang Zhang, Dawei Li, Yizhong Liu, Jianwei Liu, Qianhong Wu, Jianying Zhou, and Willy Susilo.
 "<i>Bitcoin-Compatible Privacy-Preserving Multi-Party Payment Channels Supporting Variable Amounts</i>".
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="http://www.signalprocessingsociety.org/publications/periodicals/forensics/">
 IEEE Transactions on Information Forensics and Security</A>, 20:2984--2998, IEEE Signal Processing Society Press,
 March 2025. <br><br>
 
 <li>Xiaoyuan Liu, Hongwei Li, Guowen Xu, Xilin Zhang, Tianwei Zhang, and Jianying Zhou.
 "<i>Secure and Lightweight Feature Selection for Horizontal Federated Learning</i>".
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="http://www.signalprocessingsociety.org/publications/periodicals/forensics/">
 IEEE Transactions on Information Forensics and Security</A>, 20:1487--1502, IEEE Signal Processing Society Press,
 February 2025. <br><br>
@@ -2721,14 +2731,14 @@ August 2024. <br><br>
 
 <li>Jianying Zhou.
 "<i>The Need of Testbeds for Cyber-Physical System Security</i>".
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="https://www.computer.org/csdl/magazine/sp">
 IEEE Security & Privacy</A>, 22(4):4--6, IEEE Computer Society Press,
 July/August 2024. <br><br>
 
 <li>Zheng Yang, Chenglu Jin, Xuelian Cao, Marten van Dijk, and Jianying Zhou.
 "<i>Optimizing Proof of Aliveness in Cyber-Physical Systems</i>".
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="https://www.computer.org/csdl/journal/tq">
 IEEE Transactions on Dependable and Secure Computing</A>, 21(4):3610--3628, IEEE Computer Society Press,
 July 2024. <br><br>
@@ -2743,7 +2753,7 @@ June 2024. <br><br>
 "<i>Dynamic Group Time-based One-time Passwords</i>".
 <b>[<A HREF="https://www.sutd.edu.sg/technical-release-listing/enhancing-cybersecurity-with-moving-trees/">SUTD Research News</A>]</b>
 <b>[<A HREF="https://www.asiaresearchnews.com/content/enhancing-cybersecurity-%E2%80%9Cmoving-trees%E2%80%9D">Asia Research News</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="http://www.signalprocessingsociety.org/publications/periodicals/forensics/">
 IEEE Transactions on Information Forensics and Security</A>, 19:4897--4913, IEEE Signal Processing Society Press,
 April 2024. <br><br>
@@ -2756,14 +2766,14 @@ March 2024. <br><br>
 
 <li>Rui Zhang, Lei Zhang, Qian Wu, and Jianying Zhou.
 "<i>Secure Channel Establishment Scheme for Task Delivery in Vehicular Cloud Computing</i>".
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="http://www.signalprocessingsociety.org/publications/periodicals/forensics/">
 IEEE Transactions on Information Forensics and Security</A>, 19:2865--2880, IEEE Signal Processing Society Press,
 January 2024. <br><br>
 
 <li>Yangguang Tian, Bowen Liu, Yingjiu Li, Pawel Szalachowski, and Jianying Zhou.
 "<i>Accountable Fine-Grained Blockchain Rewriting in the Permissionless Setting</i>".
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="http://www.signalprocessingsociety.org/publications/periodicals/forensics/">
 IEEE Transactions on Information Forensics and Security</A>, 19:1756--1766, IEEE Signal Processing Society Press,
 January 2024. <br><br>
@@ -2787,7 +2797,7 @@ August 2023. <br><br>
 
 <li>Boyu Kuang, Anmin Fu, Yansong Gao, Yuqing Zhang, Jianying Zhou, and Robert Deng.
 "<i>FeSA: Automatic Federated Swarm Attestation on Dynamic Large-Scale IoT Devices</i>".
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="https://www.computer.org/csdl/journal/tq">
 IEEE Transactions on Dependable and Secure Computing</A>, 20(4):2954--2969, IEEE Computer Society Press,
 July 2023. <br><br>
@@ -2801,14 +2811,14 @@ June 2023. <br><br>
 <li>Ann-Yi Wong, Eyasu Getahun Chekole, Martin Ochoa, and Jianying Zhou.
 "<i>On the Security of Containers: Threat Modeling, Attack Analysis, and Mitigation Strategies</i>".
 <b>[<A HREF="https://scholar.google.com/scholar?hl=en&lr=&q=On+the+Security+of+Containers%3A+Threat+Modeling%2C+Attack+Analysis%2C+and+Mitigation+Strategies&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="http://www.elsevier.com/locate/cose/">
 Computers & Security</A>, 128:103140, Elsevier,
 May 2023. <br><br>
 
 <li>Chenglu Jin, Zheng Yang, Tao Xiang, Sridhar Adepu, and Jianying Zhou.
 "<i>HMACCE: Establishing Authenticated and Confidential Channel from Historical Data for Industrial Internet of Things</i>".
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="http://www.signalprocessingsociety.org/publications/periodicals/forensics/">
 IEEE Transactions on Information Forensics and Security</A>, 18:1080--1094, IEEE Signal Processing Society Press,
 January 2023. <br><br>
@@ -2826,7 +2836,7 @@ October 2022. <br><br>
 
 <li>Shanshan Li, Chunxiang Xu, Yuan Zhang, and Jianying Zhou.
 "<i>A Secure Two-factor Authentication Scheme from Password-Protected Hardware Tokens</i>".
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="http://www.signalprocessingsociety.org/publications/periodicals/forensics/">
 IEEE Transactions on Information Forensics and Security</A>, 17:3525--3538, IEEE Signal Processing Society Press,
 September 2022.
@@ -2877,21 +2887,21 @@ December 2021. <br><br>
 
 <li>Zheng Yang, Sridhar Adepu, and Jianying Zhou.
 "<i>Opportunities and Challenges in Securing Critical Infrastructures through Cryptography</i>".
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="https://www.computer.org/csdl/magazine/sp">
 IEEE Security & Privacy</A>, 19(5):57--65, IEEE Computer Society Press,
 September/October 2021. <br><br>
 
 <li>Shengmin Xu, Jianting Ning, Xinyi Huang, Jianying Zhou, and Robert Deng.
 "<i>Server-Aided Bilateral Access Control for Secure Data Sharing with Dynamic User Groups</i>".
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="http://www.signalprocessingsociety.org/publications/periodicals/forensics/">
 IEEE Transactions on Information Forensics and Security</A>, 16:4746--4761, IEEE Signal Processing Society Press,
 September 2021. <br><br>
 
 <li>Peng Zhou, Xiaojing Gu, Surya Nepal, and Jianying Zhou.
 "<i>Modeling Social Worm Propagation for Advanced Persistent Threats</i>".
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="http://www.elsevier.com/locate/cose/">
 Computers & Security</A>, 108:102321, Elsevier,
 September 2021. <br><br>
@@ -2924,7 +2934,7 @@ January 2021. <br><br>
 <li>Anjia Yang, Jia Xu, Jian Weng, Jianying Zhou, and Duncan Wong.
 "<i>Lightweight and Privacy-Preserving Delegatable Proofs of Storage with Data Dynamics in Cloud Storage</i>".
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=Lightweight+and+Privacy-Preserving+Delegatable+Proofs+of+Storage+with+Data+Dynamics+in+Cloud+Storage&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="https://www.computer.org/web/tcc">
 IEEE Transactions on Cloud Computing</A>, 9(1):212--225, IEEE Computer Society Press,
 January 2021. <br><br>
@@ -2937,7 +2947,7 @@ January 2021. <br><br>
 "<i>Challenges and Opportunities in Cyber-Physical Systems Security: A Physics-based Perspective</i>".
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=
 Challenges+and+Opportunities+in+Cyber-Physical+Systems+Security%3A+A+Physics-based+Perspective&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="https://www.computer.org/csdl/magazine/sp">
 IEEE Security & Privacy</A>, 18(6):14--22, IEEE Computer Society Press,
 November/December 2020. <br><br>
@@ -2945,7 +2955,7 @@ November/December 2020. <br><br>
 <li>Zheng Yang, Jun He, Yangguang Tian, and Jianying Zhou.
 "<i>Faster Authenticated Key Agreement with Perfect Forward Secrecy for Industrial Internet-of-Things</i>".
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=Faster+Authenticated+Key+Agreement+with+Perfect+Forward+Secrecy+for+Industrial+Internet-of-Things&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="http://www.ieee-ies.org/pubs/transactions-on-industrial-informatics">
 IEEE Transactions on Industrial Informatics</A>, 16(10):6584--6596, IEEE Industrial Electronics Society Press,
 October 2020. <br><br>
@@ -2953,7 +2963,7 @@ October 2020. <br><br>
 <li>Tanmoy Kanti Das, Sridhar Adepu, and Jianying Zhou.
 "<i>Anomaly Detection in Industrial Control Systems using Logical Analysis of Data</i>".
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=Anomaly+Detection+in+Industrial+Control+Systems+using+Logical+Analysis+of+Data&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="http://www.elsevier.com/locate/cose/">
 Computers & Security</A>, 96:101935, Elsevier,
 September 2020. <br><br>
@@ -2977,7 +2987,7 @@ December 2019. <br><br>
 
 <li>Hoon-Wei Lim, William Temple, Bao Anh Tran, Binbin Chen, Zbigniew Kalbarczyk, and Jianying Zhou.
 "<i>Data Integrity Threats and Countermeasures in Railway Spot Transmission Systems</i>".
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="https://tcps.acm.org/">
 ACM Transactions on Cyber-Physical Systems</A>, 4(1), ACM Press, 
 November 2019. <br><br>
@@ -2991,7 +3001,7 @@ October 2019. <br><br>
 <li>Zheng Yang, Junyu Lai, Yingbing Sun, and Jianying Zhou.
 "<i>A Novel Authenticated Key Agreement Protocol with Dynamic Credential for WSNs</i>".
 <b>[<A HREF="https://scholar.google.com/scholar?hl=en&lr=&q=A+Novel+Authenticated+Key+Agreement+Protocol+with+Dynamic+Credential+for+WSNs&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="https://tosn.acm.org/">
 ACM Transactions on Sensor Networks</A>, 15(2), ACM Press,
 February 2019. <br><br>
@@ -3000,7 +3010,7 @@ February 2019. <br><br>
 "<i>SCADAWall: A CPI-Enabled Firewall Model for SCADA Security</i>".
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=SCADAWall%3A+A+CPI-Enabled+Firewall+Model+for+SCADA+Security&btnG=Search">citation</A>]</b>
 <b>[<A HREF="https://patents.google.com/patent/US11546295">US Patent 11546295</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="http://www.elsevier.com/locate/cose/">
 Computers & Security</A>, 80:134--154, Elsevier,
 January 2019. <br><br>
@@ -3012,7 +3022,7 @@ January 2019. <br><br>
 <li>Yuan Zhang, Chunxiang Xu, Hongwei Li, Kan Yang, Jianying Zhou, and Xiaodong Lin.
 "<i>HealthDep: An Efficient and Secure Deduplication Scheme for Cloud-Assisted eHealth Systems</i>".
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=HealthDep%3A+An+Efficient+and+Secure+Deduplication+Scheme+for+Cloud-Assisted+eHealth+Systems&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="http://www.ieee-ies.org/pubs/transactions-on-industrial-informatics">
 IEEE Transactions on Industrial Informatics</A>, 14(9):4101--4112, IEEE Industrial Electronics Society Press,
 September 2018. <br><br>
@@ -3026,7 +3036,7 @@ March 2018. <br><br>
 
 <li>Peng Zhou, Rocky Chang, Xiaojing Gu, Minrui Fei, and Jianying Zhou.
 "<i>Magic Train: Design of Measurement Methods against Bandwidth Inflation Attacks</i>".
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="https://www.computer.org/csdl/journal/tq">
 IEEE Transactions on Dependable and Secure Computing</A>, 15(1):98--111, IEEE Computer Society Press,
 January 2018. <br><br>
@@ -3037,7 +3047,7 @@ January 2018. <br><br>
 
 <li>Rui Xu, Kirill Morozov, Yanjiang Yang, Jianying Zhou, and Tsuyoshi Takagi.
 "<i>Efficient Outsourcing of Secure k-Nearest Neighbour Query over Encrypted Database</i>".
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="http://www.elsevier.com/locate/cose/">
 Computers & Security</A>, 69:65--83, Elsevier,
 August 2017. <br><br>
@@ -3071,7 +3081,7 @@ May 2016. <br><br>
 <li>Aldar Chan and Jianying Zhou.
 "<i>A Secure, Intelligent Electric Vehicle Ecosystem for Safe Integration with the Smart Grid</i>".
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=A+Secure%2C+Intelligent+Electric+Vehicle+Ecosystem+for+Safe+Integration+with+the+Smart+Grid&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="http://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6979">
 IEEE Transactions on Intelligent Transportation Systems</A>, 16(6):3367--3376, IEEE Intelligent Transportation Systems Society Press,
 December 2015. <br><br>
@@ -3079,7 +3089,7 @@ December 2015. <br><br>
 <li>Tsz-Hon Yuen, Joseph Liu, Man-Ho Au, Xinyi Huang, Willy Susilo, and Jianying Zhou. 
 "<i>K-times Attribute-based Anonymous Access Control for Cloud Computing</i>".
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=K-times+Attribute-based+Anonymous+Access+Control+for+Cloud+Computing&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="http://www.computer.org/tc/">
 IEEE Transactions on Computers</A>, 64(9):2595--2608, IEEE Computer Society Press,
 September 2015. <br><br>
@@ -3093,7 +3103,7 @@ September 2015. <br><br>
 <li>Weizhi Meng, Duncan Wong, Steven Furnell, and Jianying Zhou.
 "<i>Surveying the Development of Biometric User Authentication on Mobile Phones</i>".
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=Surveying+the+Development+of+Biometric+User+Authentication+on+Mobile+Phone&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="http://www.comsoc.org/cst">
 IEEE Communications Surveys & Tutorials</A>, 17(3):1268--1293, IEEE Communications Society Press,
 July 2015. <br><br>
@@ -3107,7 +3117,7 @@ April 2015. <br><br>
 <li>Xinyi Huang, Joseph Liu, Shaohua Tang, Yang Xiang, Kaitai Liang, Li Xu, and Jianying Zhou.
 "<i>Cost-Effective Authentic and Anonymous Data Sharing with Forward Security</i>".
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=Cost-Effective+Authentic+and+Anonymous+Data+Sharing+with+Forward+Security&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="http://www.computer.org/tc/">
 IEEE Transactions on Computers</A>, 64(4):971--983, IEEE Computer Society Press,
 April 2015. <br><br>
@@ -3115,7 +3125,7 @@ April 2015. <br><br>
 <li>Jinguang Han, Willy Susilo, Yi Mu, Jianying Zhou, and Man-Ho Au.
 "<i>Improving Privacy and Security in Decentralized Ciphertext-Policy Attribute-based Encryption</i>".
 <b>[<A HREF="https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=Improving+Privacy+and+Security+in+Decentralized+Ciphertext-Policy+Attribute-based+Encryption&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="http://www.signalprocessingsociety.org/publications/periodicals/forensics/">
 IEEE Transactions on Information Forensics and Security</A>, 10(3):665--678, IEEE Signal Processing Society Press,
 March 2015. <br><br>
@@ -3123,14 +3133,14 @@ March 2015. <br><br>
 <li>Peng Zhou, Siwei Jiang, Athirai Aravazhi Irissappane, Jie Zhang, Jianying Zhou, and Joseph Teo.
 "<i>Towards Energy-Efficient Trust System through Watchdog Optimization for WSNs</i>".
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=Toward+Energy-Efficient+Trust+System+through+Watchdog+Optimization+for+WSNs&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="http://www.signalprocessingsociety.org/publications/periodicals/forensics/">
 IEEE Transactions on Information Forensics and Security</A>, 10(3):613--625, IEEE Signal Processing Society Press,
 March 2015. <br><br>
 
 <li>Qiang Yan, Jin Han, Yingjiu Li, Jianying Zhou, and Robert Deng.
 "<i>Leakage-Resilient Password Entry: Challenges, Design, and Evaluation</i>".
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="http://www.elsevier.com/locate/cose/">
 Computers & Security</A>, 48:196--211, Elsevier,
 February 2015. <br><br>
@@ -3138,7 +3148,7 @@ February 2015. <br><br>
 <li>Joseph Liu, Cheng-Kang Chu, Sherman Chow, Xinyi Huang, Man-Ho Au, and Jianying Zhou.
 "<i>Time-Bound Anonymous Authentication for Roaming Networks</i>".
 <b>[<A HREF="https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=Time-Bound+Anonymous+Authentication+for+Roaming+Networks&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="http://www.signalprocessingsociety.org/publications/periodicals/forensics/">
 IEEE Transactions on Information Forensics and Security</A>, 10(1):178--189, IEEE Signal Processing Society Press,
 January 2015. <br><br>
@@ -3150,7 +3160,7 @@ January 2015. <br><br>
 <li>Xinyi Huang, Yang Xiang, Elisa Bertino, Jianying Zhou, and Li Xu.
 "<i>Robust Multi-Factor Authentication for Fragile Communications</i>".
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=Robust+Multi-Factor+Authentication+for+Fragile+Communications&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="https://www.computer.org/csdl/journal/tq">
 IEEE Transactions on Dependable and Secure Computing</A>, 11(6):568--581, IEEE Computer Society Press,
 November 2014. <br><br>
@@ -3162,7 +3172,7 @@ November 2014. <br><br>
 <b>[<A HREF="http://www.sciencedaily.com/releases/2015/02/150204090103.htm">Science Daily</A>]</b>
 <b>[<A HREF="http://www.technology.org/2015/02/06/combined-cyber-physical-security-system-will-protect-customers-charging-electric-vehicles-smart-electricity-grids/">Technology.Org</A>]</b>
 <b>[<A HREF="http://chargedevs.com/newswire/new-security-system-protects-grid-connected-evs-from-cyberattacks/">Charged EV Magazine</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="http://www.comsoc.org/jsac">
 IEEE Journal on Selected Areas in Communications</A>, 32(7):1509--1517, IEEE Communications Society Press,
 July 2014. <br><br>
@@ -3177,7 +3187,7 @@ June 2014. <br><br>
 <li>Cheng-Kang Chu, Sherman Chow, Wen-Guey Tzeng, Jianying Zhou, and Robert Deng.
 "<i>Key-Aggregate Cryptosystem for Scalable Data Sharing in Cloud Storage</i>".
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=Key-Aggregate+Cryptosystem+for+Scalable+Data+Sharing+in+Cloud+Storage&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="http://www.computer.org/portal/web/tpds/">
 IEEE Transactions on Parallel and Distributed Systems</A>, 25(2):468--477, IEEE Computer Society Press,
 February 2014. <br><br>
@@ -3193,7 +3203,7 @@ January 2014. <br><br>
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=A+New+Payment+System+for+Enhancing+Location+Privacy+of+Electric+Vehicles&btnG=Search">citation</A>]</b>
 <b>[<A HREF="https://research.a-star.edu.sg/articles/highlights/recharging-in-private/">A*STAR Research</A>]</b>
 <b>[<A HREF="http://www.sciencedaily.com/releases/2015/05/150527133850.htm">Science Daily</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="http://winet.ece.ufl.edu/tvt/">
 IEEE Transactions on Vehicular Technology</A>, 63(1):3--18, IEEE Vehicular Technology Society Press,
 January 2014. <br><br>
@@ -3201,7 +3211,7 @@ January 2014. <br><br>
 <li>Joseph Liu, Man-Ho Au, Willy Susilo, and Jianying Zhou.
 "<i>Linkable Ring Signature with Unconditional Anonymity</i>".
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=Linkable+Ring+Signature+with+Unconditional+Anonymity&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="http://www.computer.org/portal/web/tkde">
 IEEE Transactions on Knowledge and Data Engineering</A>, 26(1):157--165, IEEE Computer Society Press,
 January 2014. <br><br>
@@ -3214,7 +3224,7 @@ January 2014. <br><br>
 "<i>Realizing Fully Secure Unrestricted ID-based Ring Signature in the Standard Model based on HIBE</i>".
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=
 Realizing+Fully+Secure+Unrestricted+ID-based+Ring+Signature+in+the+Standard+Model+based+on+HIBE&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="http://www.signalprocessingsociety.org/publications/periodicals/forensics/">
 IEEE Transactions on Information Forensics and Security</A>, 8(12):1909--1922, IEEE Signal Processing Society Press,
 December 2013. <br><br>
@@ -3231,7 +3241,7 @@ December 2013. <br><br>
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=Security+Concerns+in+Popular+Cloud+Storage+Services&btnG=Search">citation</A>]</b>
 <b>[<A HREF="https://research.a-star.edu.sg/articles/highlights/cracks-emerge-in-the-cloud/">A*STAR Research</A>]</b>
 <b>[<A HREF="http://www.sciencedaily.com/releases/2014/06/140619145926.htm">Science Daily</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="https://www.computer.org/csdl/magazine/pc">
 IEEE Pervasive Computing</A>, 12(4):50--57, IEEE Computer Society Press,
 October 2013. <br><br>
@@ -3251,7 +3261,7 @@ August 2013. <br><br>
 <li>Abror Abduvaliyev, Al-Sakib Khan Pathan, Jianying Zhou, Rodrigo Roman, and Lawrence Wong.
 "<i>On the Vital Areas of Intrusion Detection Systems in Wireless Sensor Networks</i>".
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=On+the+Vital+Areas+of+Intrusion+Detection+Systems+in+Wireless+Sensor+Networks&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="http://www.comsoc.org/cst">
 IEEE Communications Surveys & Tutorials</A>, 15(3):1223--1237, IEEE Communications Society Press,
 July 2013. <br><br>
@@ -3259,7 +3269,7 @@ July 2013. <br><br>
 <li>Rodrigo Roman, Jianying Zhou, and Javier Lopez.
 "<i>On the Features and Challenges of Security & Privacy in Distributed Internet of Things</i>".
 <b>[<A HREF="http://scholar.google.com/scholar?q=On+the+Features+and+Challenges+of+Security+%26+Privacy+in+Distributed+Internet+of+Things&btnG=Search">citation</A> >2000]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="http://www.elsevier.com/locate/comnet/">
 Computer Networks</A>, 57(10):2266--2279, Elsevier,
 July 2013. <br><br>
@@ -3275,7 +3285,7 @@ April 2013. <br><br>
 "<i>On Smart Grid Cybersecurity Standardization: Issues of Designing with the NISTIR 7628</i>".
 <b>[<A HREF="http://scholar.google.com/scholar?q=On+Smart+Grid+Cybersecurity+Standardization%3A+Issues+of+Designing+with+the+NISTIR+7628&btnG=Search">citation</A>]</b> 
 <b>[<A HREF="https://research.a-star.edu.sg/articles/highlights/plugging-smart-grid-weaknesses/">A*STAR Research</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="http://www.comsoc.org/commag/">
 IEEE Communications Magazine</A>, 51(1):58--65, IEEE Communications Society Press,
 January 2013. <br><br>
@@ -3330,7 +3340,7 @@ August 2011. <br><br>
 <li>Xinyi Huang, Yang Xiang, Ashley Chonka, Jianying Zhou, and Robert Deng.
 "<i>A Generic Framework for Three-Factor Authentication: Preserving Security and Privacy in Distributed Systems</i>".
 <b>[<A HREF="http://scholar.google.com/scholar?q=A+Generic+Framework+for+Three-Factor+Authentication%3A+Preserving+Security+and+Privacy+in+Distributed+Systems&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="http://www.computer.org/portal/web/tpds/">
 IEEE Transactions on Parallel and Distributed Systems</A>, 22(8):1390--1397, IEEE Computer Society Press,
 August 2011. <br><br>
@@ -3338,7 +3348,7 @@ August 2011. <br><br>
 <li>Xinyi Huang, Yi Mu, Willy Susilo, Wei Wu, Jianying Zhou, and Robert Deng.
 "<i>Preserving Transparency and Accountability in Optimistic Fair Exchange of Digital Signatures</i>".
 <b>[<A HREF="http://scholar.google.com/scholar?q=Preserving+Transparency+and+Accountability+in+Optimistic+Fair+Exchange+of+Digital+Signatures&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="http://www.signalprocessingsociety.org/publications/periodicals/forensics/">
 IEEE Transactions on Information Forensics and Security</A>, 6(2):498--512, IEEE Signal Processing Society Press,
 June 2011. <br><br>
@@ -3364,7 +3374,7 @@ January 2011. <br><br>
 "<i>Efficient Online/Offline Identity-Based Signature for Wireless Sensor Network</i>".
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=Efficient+Online%2FOffline+Identity-Based+Signature+for+Wireless+Sensor+Network&btnG=Search">citation</A>]</b>
 <b>[<A HREF="http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=56427">ISO/IEC 29192-4</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="https://www.springer.com/journal/10207">
 International Journal of Information Security</A>, 9(4):287--296, Springer,
 August 2010. <br><br>
@@ -3408,7 +3418,7 @@ April 2009. <br><br>
 <li>Jose Onieva, Jianying Zhou, and Javier Lopez.
 "<i>Multi-Party Non-repudiation: A Survey</i>".
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=Multiparty+nonrepudiation%3A+A+survey&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="https://dl.acm.org/journal/csur">
 ACM Computing Surveys</A>, 41(1), ACM Press,
 January 2009. <br><br>
@@ -3558,7 +3568,7 @@ Summer 2004. <br><br>
 <li>Steve Kremer, Olivier Markowitch, and Jianying Zhou.
 "<i>An Intensive Survey of Fair Non-repudiation Protocols</i>".
 <b>[<A HREF="http://scholar.google.com/scholar?hl=en&lr=&q=An+Intensive+Survey+of+Fair+Non-repudiation+Protocols&btnG=Search">citation</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 <A HREF="http://www.elsevier.com/locate/comcom/">
 Computer Communications</A>, 25(17):1606--1621, Elsevier,
 November 2002. <br><br>
@@ -3630,15 +3640,15 @@ Singapore Patent Application No. 10202502007V, filed on 22 July 2025. <br><br>
 
 <li>Jay Prakash, Tony Quek, Andrei Bytes, Jianying Zhou, and Jemin Lee.
 "<i>Device-to-Device Wireless Communication</i>".
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 US Patent No.
 <A HREF="https://patents.google.com/patent/US12317342">12317342</A>, granted on 27 May 2025.
-[<A HREF="https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2021096433">WO2021096433</A>] <br><br>
+[WO2021096433] <br><br>
 
 <li>Jay Prakash, Tony Quek, Andrei Bytes, Jianying Zhou, and Lucienne Blessing.
 "<i>Method and System for Authenticating a User in a Session Initiated on a Computing Device</i>". <br>
 Singapore Patent No. 11202300778Q, granted on 22 October 2024.
-[<A HREF="https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2022031231">WO2022031231</A>] <br><br>
+[WO2022031231] <br><br>
 
 <li>Ye Dong, Yan Lin Aung, Jianying Zhou, and Sudipta Chattopadhyay.
 "<i>ChatIoT: Large Language Model-Enabled Internet of Things Security Assistant</i>". <br>
@@ -3647,46 +3657,46 @@ Singapore Patent Application No. 10202402752Q, filed on 4 September 2024. <br><b
 <li>Zheng Yang and Jianying Zhou.
 "<i>Method and System for Generating Time-based One Time Passwords</i>". <br>
 Singapore Patent No. 11202204615T, granted on 25 June 2024.
-[<A HREF="https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2021086267">WO2021086267</A>] <br><br>
+[WO2021086267] <br><br>
 
 <li>Dong Li, Huaqun Guo, Jianying Zhou, Luying Zhou, and Jun-Wen Wong.
 "<i>Industrial Control System Firewall Module</i>".
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 US Patent No.
 <A HREF="https://patents.google.com/patent/US11546295">11546295</A>, granted on 3 January 2023.
-[<A HREF="https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2019190403">WO2019190403</A>] <br><br>
+[WO2019190403] <br><br>
 
 <li>Teik-Guan Tan and Jianying Zhou.
 "<i>Method and System for Protecting Digital Signatures</i>". <br>
 PCT Patent Application No. PCT/SG2022/050769, filed on 26 October 2022.
-[<A HREF="https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2023080842">WO2023080842</A>] <br><br>
+[WO2023080842] <br><br>
 
 <li>Zheng Yang and Jianying Zhou.
 "<i>Methods and Apparatus for Message Authentication</i>". <br>
 PCT Patent Application No. PCT/SG2021/050594, filed on 1 October 2021.
-[<A HREF="https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2022071889">WO2022071889</A>] <br><br>
+[WO2022071889] <br><br>
 
 <li>Chuadhry Mujeeb Ahmed and Jianying Zhou.
 "<i>Method and System for Characterising a Programmable Logic Controller and/or Attack Detection in a Networked Control System</i>". <br>
 PCT Patent Application No. PCT/SG2021/050415, filed on 15 July 2021.
-[<A HREF="https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2022015246">WO2022015246</A>] <br><br>
+[WO2022015246] <br><br>
 
 <li>Chuadhry Mujeeb Ahmed and Jianying Zhou.
 "<i>Method and System for Detecting Anomaly in a Physical Process Associated with a Networked Control System</i>". <br>
 PCT Patent Application No. PCT/SG2021/050340, filed on 11 June 2021.
-[<A HREF="https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2021251906">WO2021251906</A>] <br><br>
+[WO2021251906] <br><br>
 
 <li>John Castellanos and Jianying Zhou.
 "<i>Modelling and Black-Box Security Testing of Cyber-Physical Systems</i>". <br>
 PCT Patent Application No. PCT/SG2020/050271, filed on 8 May 2020.
-[<A HREF="https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2020231334">WO2020231334</A>] <br><br>
+[WO2020231334] <br><br>
 
 <li>Aldar Chan, Jun-Wen Wong, Jianying Zhou, and Joseph Teo.
 "<i>Entity Authentication in Network</i>".
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 US Patent No.
 <A HREF="https://patents.google.com/patent/US10230532">10230532</A>, granted on 12 March 2019.
-[<A HREF="https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2015094114">WO2015094114</A>] <br><br>
+[WO2015094114] <br><br>
 
 <!--<li>Joseph Liu, Cheng-Kang Chu, and Jianying Zhou. 
 "<i>Identity-Based Server-Aided Decryption</i>". <br>
@@ -3695,7 +3705,7 @@ US Provisional Patent No. 61/430569, filed on 7 January 2011. <br><br>-->
 <li>Joseph Liu, Joonsang Baek, and Jianying Zhou.
 "<i>A Method of Signing a Message</i>".
 <b>[<A HREF="http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=56427">ISO/IEC 29192-4</A>]</b>
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 Singapore Patent No. 167062, granted on 15 December 2011.
 <!--(2) US Provisional Patent No. 61/057043, filed on 29 May 2008.--> <br><br>
 
@@ -3711,10 +3721,10 @@ Singapore Patent No. 110701, granted on 30 April 2007. <br><br>
 <li>Feng Bao, Jianying Zhou, and Robert Deng.
 "<i>Method of Generating an Authentication</i>".
 <!--<b>[<A HREF="https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=Method+of+Generating+an+Authentication&btnG=Search">citation</A>]</b>-->
-<img src="cool.gif" style="border: 0px solid"> <br>
+<img src="assets/cool.gif" style="border: 0px solid"> <br>
 (1) Singapore Patent No. 110390, granted on 28 February 2007. <br>
 (2) US Patent No. <A HREF="http://www.google.com/patents/US7233782">7233782</A>, granted on 19 June 2007.
-[<A HREF="https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2004021719">WO2004021719</A>] <br><br>
+[WO2004021719] <br><br>
 </ul>
 
 
@@ -3737,13 +3747,31 @@ Information Technology - Security Techniques - Lightweight Cryptography - Part 4
 <A HREF="biography.html">Biography</A> |
    Publications |
 <A HREF="professional.html">Professional Activities</A> |
-<A HREF="academic.html">Academic Links</A> |
-<A HREF="other.html">Other Links</A>
+Academic Links |
+Other Links
 </b><hr>
 Last updated: March 2026
 </small>
 </section>
   </main>
 </div>
+<button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+</button>
+
+<script>
+  const themeToggle = document.getElementById('theme-toggle');
+  themeToggle.addEventListener('click', () => {
+    let currentTheme = document.documentElement.getAttribute('data-theme');
+    if (!currentTheme) {
+      currentTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  });
+</script>
 </body>
 </html>

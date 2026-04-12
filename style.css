@@ -2,7 +2,37 @@
    TOKENS
 ───────────────────────────────────────────────────── */
 :root {
-  /* palette - Deep premium dark mode */
+  /* palette - Light mode default */
+  --paper:      #ffffff;
+  --paper-2:    #f6f8fa;
+  --paper-3:    #d0d7de;
+  --ink:        #24292f;
+  --ink-2:      #57606a;
+  --ink-3:      #8c959f;
+  --ink-4:      #afb8c1;
+  --accent:     #0969da;
+  --accent-2:   #8250df;
+  --accent-gradient: linear-gradient(135deg, #0969da 0%, #8250df 100%);
+  --accent-lt:  rgba(9, 105, 218, 0.1);
+  --red:        #cf222e;
+  --green:      #1a7f37;
+  --glass:      rgba(255, 255, 255, 0.7);
+  --ink-strong: #000000;
+  --link-hover-glow: rgba(9, 105, 218, 0.4);
+
+  /* layout */
+  --sidebar:    260px;
+  --gap:        60px;
+  --page:       1120px;
+  --r:          16px;
+
+  /* type */
+  --serif:      'Outfit', system-ui, sans-serif;
+  --sans:       'Inter', system-ui, sans-serif;
+}
+
+/* Base dark variables block definition */
+:root[data-theme="dark"] {
   --paper:      #0a0c10;
   --paper-2:    #11141a;
   --paper-3:    #222733;
@@ -17,16 +47,29 @@
   --red:        #ff7b72;
   --green:      #3fb950;
   --glass:      rgba(17, 20, 26, 0.7);
+  --ink-strong: #ffffff;
+  --link-hover-glow: rgba(88, 166, 255, 0.4);
+}
 
-  /* layout */
-  --sidebar:    260px;
-  --gap:        60px;
-  --page:       1120px;
-  --r:          16px;
-
-  /* type */
-  --serif:      'Outfit', system-ui, sans-serif;
-  --sans:       'Inter', system-ui, sans-serif;
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper:      #0a0c10;
+    --paper-2:    #11141a;
+    --paper-3:    #222733;
+    --ink:        #f0f6fc;
+    --ink-2:      #b1bac4;
+    --ink-3:      #8b949e;
+    --ink-4:      #484f58;
+    --accent:     #58a6ff;
+    --accent-2:   #bc8cff;
+    --accent-gradient: linear-gradient(135deg, #58a6ff 0%, #bc8cff 100%);
+    --accent-lt:  rgba(88, 166, 255, 0.1);
+    --red:        #ff7b72;
+    --green:      #3fb950;
+    --glass:      rgba(17, 20, 26, 0.7);
+    --ink-strong: #ffffff;
+    --link-hover-glow: rgba(88, 166, 255, 0.4);
+  }
 }
 
 /* ─────────────────────────────────────────────────────
@@ -61,10 +104,10 @@ a {
 }
 a:hover { 
   opacity: .85; 
-  text-shadow: 0 0 8px rgba(88, 166, 255, 0.4);
+  text-shadow: 0 0 8px var(--link-hover-glow);
 }
 
-strong, b { font-weight: 500; color: #ffffff; }
+strong, b { font-weight: 500; color: var(--ink-strong); }
 
 /* ─────────────────────────────────────────────────────
    TOP STRIPE
@@ -445,7 +488,7 @@ header {
 }
 .pub-authors { font-size: .85rem; color: var(--ink-3); margin-bottom: 4px; }
 .pub-where { font-size: .85rem; color: var(--ink-2); }
-.pub-where em { font-family: var(--serif); font-style: italic; color: #fff; }
+.pub-where em { font-family: var(--serif); font-style: italic; color: var(--ink-strong); }
 .pub-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
 
 .chip {
@@ -711,5 +754,36 @@ header { animation: fadeY .6s cubic-bezier(0.4, 0, 0.2, 1) both; }
 }
 .content b, .content strong, body b, body strong {
   font-weight: 500;
-  color: #fff;
+  color: var(--ink-strong);
+}
+
+/* ─────────────────────────────────────────────────────
+   THEME TOGGLE
+───────────────────────────────────────────────────── */
+.theme-toggle {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--paper-2);
+  border: 1px solid var(--paper-3);
+  color: var(--ink);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all 0.2s;
+}
+.theme-toggle:hover {
+  transform: translateY(-2px);
+  background: var(--glass);
+  border-color: var(--accent);
+}
+.theme-toggle svg {
+  width: 20px;
+  height: 20px;
 }

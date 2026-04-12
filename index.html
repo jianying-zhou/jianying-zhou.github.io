@@ -7,6 +7,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script>
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  }
+</script>
 </head>
 <body>
 
@@ -132,7 +138,7 @@
     <div class="notice">
       <strong>Open Positions —</strong>
       I am looking for PhD students, PhD interns &amp; Postdocs with interest or expertise in cybersecurity.
-      <a href="https://jianying-zhou.github.io/recruitment.pdf" target="_blank">View details →</a>
+      <a href="assets/recruitment.pdf" target="_blank">View details →</a>
       &nbsp; <a href="https://itrust.sutd.edu.sg/itrust-labs_overview/" target="_blank">iTrust CPS testbeds</a> available as a service (TaaS) with remote access.
     </div>
 
@@ -587,6 +593,24 @@ const onScroll = () => {
 };
 window.addEventListener('scroll', onScroll, { passive: true });
 onScroll();
+</script>
+<button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+</button>
+
+<script>
+  const themeToggle = document.getElementById('theme-toggle');
+  themeToggle.addEventListener('click', () => {
+    let currentTheme = document.documentElement.getAttribute('data-theme');
+    if (!currentTheme) {
+      currentTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  });
 </script>
 </body>
 </html>

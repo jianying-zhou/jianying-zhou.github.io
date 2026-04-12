@@ -7,6 +7,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script>
+  (function() {
+    var savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  })();
+</script>
 </head>
 <body>
 
@@ -152,12 +162,12 @@
 <ul>
 <li><A HREF="https://jianying-zhou.github.io/acns/">ACNS</A>
     - International Conference on Applied Cryptography and Network Security
-    <b>(Co-founder & SC Co-chair, 2003 - )</b><img src="cool.gif" style="border: 0px solid"><br>
+    <b>(Co-founder & SC Co-chair, 2003 - )</b><img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="https://jianying-zhou.github.io/asiaccs/">AsiaCCS</A>
     - ACM Asia Conference on Computer and Communications Security
-    <b>(</b>2015 - ; <b>SC Chair, 2017 - )</b><img src="cool.gif" style="border: 0px solid"><br>
+    <b>(</b>2015 - ; <b>SC Chair, 2017 - )</b><img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="http://www.iacr.org/meetings/asiacrypt/">Asiacrypt</A>
-    (2008 - )<img src="cool.gif" style="border: 0px solid"><br>
+    (2008 - )<img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="https://jianying-zhou.github.io/cpss/">CPSS</A>
     - ACM Cyber-Physical System Security Workshop
     <b>(Founder & SC Chair, 2015 - )</b><br>
@@ -177,7 +187,7 @@
 <li><A HREF="https://asiaccs2024.sutd.edu.sg/">AsiaCCS'24</A>
     - 19th ACM Asia Conference on Computer and Communications Security (Singapore, July 2024)
     [<span style="color: rgb(255,0,0);">AR=22%</span> (129/585)]
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="http://icics2020.compute.dtu.dk/">ICICS'20</A>
     - 22nd International Conference on Information and Communications Security (Copenhagen, Denmark, August 2020)<br>
 <li><A HREF="http://www.inscrypt.cn/2015/">Inscrypt'15</A>
@@ -185,11 +195,11 @@
 <li><A HREF="http://www.i2r.a-star.edu.sg/icsd/acns2012/">ACNS'12</A>
     - 10th International Conference on Applied Cryptography and Network Security (Singapore, June 2012)
     [<span style="color: rgb(255,0,0);">AR=17%</span> (33/192)]
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="https://jianying-zhou.github.io/acns/ACNS2004/">ACNS'04</A>
     - 2nd International Conference on Applied Cryptography and Network Security (Yellow Mountain, China, June 2004)
     [<span style="color: rgb(255,0,0);">AR=12%</span> (36/297)]
-    <img src="cool.gif" style="border: 0px solid"><br><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br><br>
 </ul>
 
 
@@ -204,7 +214,7 @@
 <li><A HREF="https://sites.google.com/di.uniroma1.it/ACNS2020">ACNS'20</A>
     - 18th International Conference on Applied Cryptography and Network Security (Rome, Italy, October 2020)
     [<span style="color: rgb(255,0,0);">AR=21%</span> (46/214)]
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="http://icics.cn/">ICICS'19</A>
     - 21st International Conference on Information and Communications Security (Beijing, China, December 2019)<br>
 <li><A HREF="https://jianying-zhou.github.io/cpss/CPSS2019/">CPSS'19</A>
@@ -212,7 +222,7 @@
 <li><A HREF="http://esorics2018.upc.edu/">ESORICS'18</A>
     - 23rd European Symposium on Research in Computer Security (Barcelona, Spain, September 2018)
     [<span style="color: rgb(255,0,0);">AR=20%</span> (56/283)]
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="https://jianying-zhou.github.io/cpss/CPSS2018/">CPSS'18</A>
     - 4th ACM Cyber-Physical System Security Workshop (Incheon, Korea, June 2018)<br>
 <li><A HREF="http://isc2017.vgu.edu.vn/">ISC'17</A>
@@ -226,7 +236,7 @@
 <li><A HREF="http://www.i2r.a-star.edu.sg/icsd/asiaccs15/">AsiaCCS'15</A>
     - 10th ACM Symposium on Information, Computer and Communications Security (Singapore, April 2015)
     [<span style="color: rgb(255,0,0);">AR=23%</span> (62/269)]
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="https://jianying-zhou.github.io/cpss/CPSS2015/">CPSS'15</A>
     - 1st ACM Cyber-Physical System Security Workshop (Singapore, April 2015)<br>
 <li><A HREF="http://www.inscrypt.cn/2014/">Inscrypt'14</A>
@@ -260,14 +270,14 @@
 <li><A HREF="http://www.tcgchina.org/acns2010/">ACNS'10</A>
     - 8th International Conference on Applied Cryptography and Network Security (Beijing, China, June 2010)
     [<span style="color: rgb(255,0,0);">AR=18%</span> (32/178)]
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="http://rfidsec2010.i2r.a-star.edu.sg/">RFIDsec-Asia'10</A>
     - 2nd Asia Workshop on RFID Security (Singapore, February 2010)
     [Special Issue in  <A HREF="http://www.iospress.nl/loadtop/load.php?isbn=0926227x">JCS</A> (Vol 19, No 2, 2011)]<br>
 <li><A HREF="http://acns2006.i2r.a-star.edu.sg/">ACNS'06</A>
     - 4th International Conference on Applied Cryptography and Network Security (Singapore, June 2006)
     [<span style="color: rgb(255,0,0);">AR=15%</span> (33/218)]
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="http://iwap05.i2r.a-star.edu.sg/">IWAP'05</A>
     - 4th International Workshop for Applied PKI (Singapore, September 2005)
     [Special Issue in  <A HREF="http://www.iospress.nl/loadtop/load.php?isbn=0926227x">JCS</A> (Vol 14, No 5, 2006)]<br>
@@ -278,7 +288,7 @@
 <li><A HREF="https://jianying-zhou.github.io/acns/ACNS2003/">ACNS'03</A>
     - 1st International Conference on Applied Cryptography and Network Security (Kunming, China, October 2003)
     [<span style="color: rgb(255,0,0);">AR=17%</span> (32/191)]
-    <img src="cool.gif" style="border: 0px solid"><br><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br><br>
 </ul>
 
 
@@ -292,7 +302,7 @@
     - 1st Information Security Practice and Experience Conference (Singapore, April 2005)<br>
 <li><A HREF="http://pkc2004.i2r.a-star.edu.sg/">PKC'04</A>
     - 7th International Workshop on Practice and Theory in Public Key Cryptography (Singapore, March 2004)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="http://www.cstnet.net.cn/icics2003/">ICICS'03</A>
     - 5th International Conference on Information and Communications Security (Huhehaote, China, October 2003)<br>
 <li><A HREF="http://icisa.freewebtools.com/icics2002/">ICICS'02</A>
@@ -306,13 +316,13 @@
 <ul>
 <li><A HREF="http://acns2008.cs.columbia.edu/">ACNS'08</A>
     - 6th International Conference on Applied Cryptography and Network Security (New York, USA, June 2008)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="http://icsd.i2r.a-star.edu.sg/staff/jianying/acns_home/ACNS2007/">ACNS'07</A>
     - 5th International Conference on Applied Cryptography and Network Security (Zhuhai, China, June 2007)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="http://www.sigsac.org/ccs/ccshistory/ccs1999cfp.html">CCS'99</A>
     - 6th ACM Conference on Computer and Communications Security (Singapore, November 1999)
-    <img src="cool.gif" style="border: 0px solid"><br><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br><br>
 </ul>-->
 
 
@@ -344,7 +354,7 @@ SecureComm, SPACE, SSR, STM, SVI, TrustBus, WDFIA, WISA, WISTP, WPES,
     - 28th Information Security Conference (Seoul, Korea, October 2025)<br>
 <li><A HREF="https://esorics2025.sciencesconf.org/">ESORICS'25</A>
     - 30th European Symposium on Research in Computer Security (Toulouse, France, September 2025)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="https://uow-ic2.github.io/acisp2025/">ACISP'25</A>
     - 30th Australasian Conference on Information Security and Privacy (Wollongong, Australia, July 2025)<br>
 <li><A HREF="https://www.codaspy.org/2025/">CODASPY'25</A>
@@ -356,26 +366,26 @@ SecureComm, SPACE, SSR, STM, SVI, TrustBus, WDFIA, WISA, WISTP, WPES,
     - 14th ACM Conference on Data and Application Security and Privacy (Porto, Portugal, June 2024)<br>
 <li><A HREF="https://wp.nyu.edu/acns2024/">ACNS'24</A>
     - 22nd International Conference on Applied Cryptography and Network Security (Abu Dhabi, UAE, March 2024)
-    <img src="cool.gif" style="border: 0px solid"><br><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br><br>
 
 <li><A HREF="https://isc23.cs.rug.nl/">ISC'23</A>
     - 26th Information Security Conference (Groningen, Netherlands, November 2023)<br>
 <li><A HREF="https://sulab-sever.u-aizu.ac.jp/ACNS2023/">ACNS'23</A>
     - 21st International Conference on Applied Cryptography and Network Security (Kyoto, Japan, June 2023)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF=https://www2023.thewebconf.org/">WWW'23-SPT</A>
     - 32nd ACM Web Conference [Security, Privacy, and Trust Track] (Austin, USA, May 2023)
-    <img src="cool.gif" style="border: 0px solid"><br><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br><br>
 <li><A HREF="https://isc2022.petra.ac.id/">ISC'22</A>
     - 25th Information Security Conference (Bali, Indonesia, December 2022)<br>
 <li><A HREF="https://esorics2022.compute.dtu.dk/">ESORICS'22</A>
     - 27th European Symposium on Research in Computer Security (Copenhagen, Denmark, September 2022)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="https://critis2022.comtessa.org/">CRITIS'22</A>
     - 17th International Conference on Critical Information Infrastructures Security (Munich, Germany, September 2022)<br>
 <li><A HREF="https://sites.google.com/di.uniroma1.it/acns2022/">ACNS'22</A>
     - 20th International Conference on Applied Cryptography and Network Security (Rome, Italy, June 2022)
-    <img src="cool.gif" style="border: 0px solid"><br><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br><br>
 
 <li><A HREF="https://data61dsslab.github.io/acisp2021/">ACISP'21</A>
     - 26th Australasian Conference on Information Security and Privacy (Perth, Australia, December 2021)<br>
@@ -383,14 +393,14 @@ SecureComm, SPACE, SSR, STM, SVI, TrustBus, WDFIA, WISA, WISTP, WPES,
     - 24th Information Security Conference (Bali, Indonesia, November 2021)<br>
 <li><A HREF="https://www.esorics2021.org/">ESORICS'21</A>
     - 26th European Symposium on Research in Computer Security (Darmstadt, Germany, October 2021)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="https://cns2021.ieee-cns.org/">CNS'21</A>
     - 9th IEEE Conference on Communications and Network Security (Virtual, October 2021)<br>
 <li><A HREF="https://critis2021.org/">CRITIS'21</A>
     - 16th International Conference on Critical Information Infrastructures Security (Lausanne, Switzerland, September 2021)<br>
 <li><A HREF="https://asiaccs2021.comp.polyu.edu.hk/">AsiaCCS'21</A>
     - 16th ACM Asia Conference on Computer and Communications Security (Hong Kong, China, June 2021)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="http://nsclab.org/dsc2020/">DSC'21</A>
     - 4th IEEE Conference on Dependable and Secure Computing (Aizuwakamatsu, Japan, January 2021)<br><br>
 
@@ -400,15 +410,15 @@ SecureComm, SPACE, SSR, STM, SVI, TrustBus, WDFIA, WISA, WISTP, WPES,
     - 6th Industrial Control System Security Workshop (Austin, USA, December 2020)<br>
 <li><A HREF="https://icdcs2020.sg/">ICDCS'20-SPT</A>
    - 40th IEEE International Conference on Distributed Computing Systems [Security, Privacy, and Trust Track] (Singapore, November 2020)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="https://asiaccs2020.cs.nthu.edu.tw/">AsiaCCS'20</A> 
     - 15th ACM Asia Conference on Computer and Communications Security (Taipei, Taiwan, October 2020)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="https://www.nics.uma.es/pub/CPSS2020/">CPSS'20</A>
     - 6th ACM Cyber-Physical System Security Workshop (Taipei, Taiwan, October 2020)<br>
 <li><A HREF="http://esorics2020.sccs.surrey.ac.uk/">ESORICS'20</A>
     - 25th European Symposium on Research in Computer Security (Guildford, UK, September 2020)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="https://critis2020.blogs.bristol.ac.uk/">CRITIS'20</A>
     - 15th International Conference on Critical Information Infrastructures Security (Bristol, UK, September 2020)<br>
 <li><A HREF="https://cns2020.ieee-cns.org/">CNS'20</A>
@@ -420,17 +430,17 @@ SecureComm, SPACE, SSR, STM, SVI, TrustBus, WDFIA, WISA, WISTP, WPES,
    - 5th ACM Workshop on Cyber-Physical Systems Security and Privacy (London, UK, November 2019)<br>
 <li><A HREF="https://www.sigsac.org/ccs/CCS2019/">CCS'19</A>
     - 26th ACM Conference on Computer and Communications Security (London, UK, November 2019)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="https://critis2019.on.liu.se/">CRITIS'19</A>
     - 14th International Conference on Critical Information Infrastructures Security (Link ping, Sweden, September 2019)<br>
 <li><A HREF="https://isc2019.cs.stonybrook.edu/">ISC'19</A>
     - 22nd Information Security Conference (New York, USA, September 2019)<br>
 <li><A HREF="https://asiaccs2019.blogs.auckland.ac.nz/">AsiaCCS'19</A>
     - 14th ACM Asia Conference on Computer and Communications Security (Auckland, New Zealand, July 2019)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="http://www.acns19.com/">ACNS'19</A>
     - 17th International Conference on Applied Cryptography and Network Security (Bogota, Colombia, June 2019)
-    <img src="cool.gif" style="border: 0px solid"><br><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br><br>
 
 <li><A HREF="http://dsc2018.nsysu.edu.tw/">DSC'18</A>
     - 2nd IEEE Conference on Dependable and Secure Computing (Kaohsiung, Taiwan, December 2018)<br>
@@ -442,10 +452,10 @@ SecureComm, SPACE, SSR, STM, SVI, TrustBus, WDFIA, WISA, WISTP, WPES,
     - 21st Information Security Conference (London, UK, September 2018)<br>
 <li><A HREF="https://www.cosic.esat.kuleuven.be/events/acns2018/">ACNS'18</A>
     - 16th International Conference on Applied Cryptography and Network Security (Leuven, Belgium, July 2018)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="http://asiaccs2018.org/">AsiaCCS'18</A>
     - 13th ACM Asia Conference on Computer and Communications Security (Incheon, Korea, June 2018)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="http://cns2018.ieee-cns.org/">CNS'18</A>
     - 6th IEEE Conference on Communications and Network Security (Beijing, China, May 2018)<br><br>
 
@@ -455,7 +465,7 @@ SecureComm, SPACE, SSR, STM, SVI, TrustBus, WDFIA, WISA, WISTP, WPES,
     - 5th IEEE Conference on Communications and Network Security (Las Vegas, USA, October 2017)<br>
 <li><A HREF="https://www.ntnu.edu/esorics2017">ESORICS'17</A>
     - 22nd European Symposium on Research in Computer Security (Oslo, Norway, September 2017)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="http://www.ucalgary.ca/pst2017/">PST'17</A>
     - 15th Annual Conference on Privacy, Security and Trust (Calgary, Canada, August 2017)<br>
 <li><A HREF="http://dsc17.cs.nctu.edu.tw/">DSC'17</A>
@@ -464,12 +474,12 @@ SecureComm, SPACE, SSR, STM, SVI, TrustBus, WDFIA, WISA, WISTP, WPES,
     - 14th International Conference on Security and Cryptography (Madrid, Spain, July 2017)<br>
 <li><A HREF="https://cy2sec.comm.eng.osaka-u.ac.jp/acns2017/">ACNS'17</A>
     - 15th International Conference on Applied Cryptography and Network Security (Kanazawa, Japan, July 2017)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="http://ifipsec.org/2017/">SEC'17</A>
     - 32nd IFIP International Information Security and Privacy Conference (Rome, Italy, May 2017)<br>
 <li><A HREF="http://asiaccs2017.com/">AsiaCCS'17</A>
     - 12th ACM Asia Conference on Computer and Communications Security (Abu Dhabi, UAE, April 2017)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <!--<li><A HREF="http://www.comp.nus.edu.sg/~tsunami/sg-crc17/">SG-CRC'17</A>
     - 2nd Singapore Cyber Security R&D Conference (Singapore, February 2017)<br>-->
 <li><A HREF="http://itrust.sutd.edu.sg/hase2017/">HASE'17</A>
@@ -483,15 +493,15 @@ SecureComm, SPACE, SSR, STM, SVI, TrustBus, WDFIA, WISA, WISTP, WPES,
     - 15th Workshop on Privacy in the Electronic Society (Vienna, Austria, October 2016)<br>
 <li><A HREF="http://www.ics.forth.gr/esorics2016/">ESORICS'16</A>
     - 21st European Symposium on Research in Computer Security (Heraklion, Greece, September 2016)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="http://manoa.hawaii.edu/isc2016/">ISC'16</A>
     - 19th Information Security Conference (Honolulu, USA, September 2016)<br>
 <li><A HREF="http://acns2016.sccs.surrey.ac.uk/">ACNS'16</A>
     - 14th International Conference on Applied Cryptography and Network Security (London, UK, June 2016)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="http://meeting.xidian.edu.cn/conference/AsiaCCS2016/">AsiaCCS'16</A>
     - 11th ACM Asia Conference on Computer and Communications Security (Xian, China, June 2016)
-    <img src="cool.gif" style="border: 0px solid"><br><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br><br>
 <!--<li><A HREF="http://itrust.sutd.edu.sg/sg-crc-2016/">SG-CRC'16</A>
     - 1st Singapore Cyber Security R&D Conference (Singapore, January 2016)<br><br>-->
 
@@ -501,7 +511,7 @@ SecureComm, SPACE, SSR, STM, SVI, TrustBus, WDFIA, WISA, WISTP, WPES,
     - 3rd IEEE Conference on Communications and Network Security (Florence, Italy, September 2015)<br>
 <li><A HREF="http://esorics2015.sba-research.org/">ESORICS'15</A>
     - 20th European Symposium on Research in Computer Security (Vienna, Austria, September 2015)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="http://isc2015.item.ntnu.no/">ISC'15</A>
     - 18th Information Security Conference (Trondheim, Norway, September 2015)<br>
 <li><A HREF="http://www.secrypt.icete.org/?y=2015">SECRYPT'15</A>
@@ -510,15 +520,15 @@ SecureComm, SPACE, SSR, STM, SVI, TrustBus, WDFIA, WISA, WISTP, WPES,
     - 10th International Conference on Risks and Security of Internet and Systems (Lesvos Island, Greece, July 2015)<br>
 <li><A HREF="http://csf2015.di.univr.it/">CSF'15</A>
     - 28th IEEE Computer Security Foundations Symposium (Verona, Italy, July 2015)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="http://acisp2015.qut.edu.au/">ACISP'15</A>
     - 20th Australasian Conference on Information Security and Privacy (Brisbane, Australia, June 2015)<br>
 <li><A HREF="http://acns2015.cs.columbia.edu/">ACNS'15</A>
     - 13th International Conference on Applied Cryptography and Network Security (New York, USA, June 2015)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="http://fc15.ifca.ai/">FC'15</A>
     - 19th International Conference on Financial Cryptography and Data Security (Isla Verde, Puerto Rico, January 2015)
-    <img src="cool.gif" style="border: 0px solid"><br><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br><br>
 
 <li><A HREF="http://www.ssr2014.com/">SSR'14</A>
     - 1st International Conference on Security Standardisation Research (London, UK, December 2014)<br>
@@ -528,7 +538,7 @@ SecureComm, SPACE, SSR, STM, SVI, TrustBus, WDFIA, WISA, WISTP, WPES,
     - 17th Information Security Conference (Hong Kong, China, October 2014)<br>
 <li><A HREF="http://esorics2014.pwr.wroc.pl">ESORICS'14</A>
     - 19th European Symposium on Research in Computer Security (Wroclaw, Poland, September 2014)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="http://titan.disi.unitn.it/crisis2014/">CRiSIS'14</A>
     - 9th International Conference on Risks and Security of Internet and Systems (Trento, Italy, August 2014)<br>
 <li><A HREF="https://ssl.informatics.uow.edu.au/acisp2014/">ACISP'14</A>
@@ -537,13 +547,13 @@ SecureComm, SPACE, SSR, STM, SVI, TrustBus, WDFIA, WISA, WISTP, WPES,
     - 8th Workshop on Information Security Theory and Practice (Heraklion, Greece, June 2014)<br>
 <li><A HREF="http://acns2014.epfl.ch/">ACNS'14</A>
     - 12th International Conference on Applied Cryptography and Network Security (Lausanne, Switzerland, June 2014)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="http://www2.nict.go.jp/nsri/fund/asiaccs2014/">AsiaCCS'14</A>
     - 9th ACM Symposium on Information, Computer and Communications Security (Kyoto, Japan, June 2014)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="http://www.ifca.ai/fc14/">FC'14</A>
     - 18th International Conference on Financial Cryptography and Data Security (Barbados, March 2014)
-    <img src="cool.gif" style="border: 0px solid"><br><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br><br>
 
 <li><A HREF="http://www.ic.unicamp.br/cans2013/">CANS'13</A>
     - 12th International Conference on Cryptology and Network Security (Paraty, Brazil, November 2013)<br>
@@ -557,7 +567,7 @@ SecureComm, SPACE, SSR, STM, SVI, TrustBus, WDFIA, WISA, WISTP, WPES,
     - 27th IFIP Conference on Data and Applications Security and Privacy (Newark, USA July 2013)<br>
 <li><A HREF="http://acns2013.cpsc.ucalgary.ca/">ACNS'13</A>
     - 11th International Conference on Applied Cryptography and Network Security (Banff, Canada, June 2013)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="http://conf2013.ifiptm.org/">IFIPTM'13</A>
     - 7th IFIP International Conference on Trust Management (Malaga, Spain, June 2013)<br>
 <li><A HREF="http://anss.org.au/nss2013/">NSS 13</A>
@@ -583,14 +593,14 @@ SecureComm, SPACE, SSR, STM, SVI, TrustBus, WDFIA, WISA, WISTP, WPES,
     - 2nd International Symposium on Secure Virtual Infrastructures (Rome, Italy, September 2012)<br>
 <li><A HREF="http://www.iit.cnr.it/esorics2012/">ESORICS'12</A>
     - 17th European Symposium on Research in Computer Security (Pisa, Italy, September 2012)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="http://conferences.telecom-bretagne.eu/dbsec2012/">DBSEC'12</A>
     - 26th IFIP Conference on Data and Applications Security and Privacy (Paris, France, July 2012)<br>
 <li><A HREF="http://2012.pairing-conference.org/">Pairing'12</A>
     - 5th International Conference on Pairing-based Cryptography (Cologne, Germany, May 2012)<br>
 <li><A HREF="http://elec.sch.ac.kr/asiaccs/">AsiaCCS'12</A>
     - 7th ACM Symposium on Information, Computer and Communications Security (Seoul, Korea, May 2012)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="http://hise.hznu.edu.cn/ispec/">ISPEC'12</A>
     - 8th Information Security Practice and Experience Conference (Hangzhou, China, April 2012)<br>
 <li><A HREF="http://distrinet.cs.kuleuven.be/events/essos/2012/">ESSoS'12</A>
@@ -612,14 +622,14 @@ SecureComm, SPACE, SSR, STM, SVI, TrustBus, WDFIA, WISA, WISTP, WPES,
     - 25th IFIP Conference on Data and Applications Security and Privacy (Richmond, USA, July 2011)<br>
 <li><A HREF="http://www.isac.uma.es/acns2011/">ACNS'11</A>
     - 9th International Conference on Applied Cryptography and Network Security (Malaga, Spain, June 2011)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="http://sec2011.org/">SEC'11</A>
     - 26th IFIP International Information Security Conference (Lucerne, Switzerland, June 2011)<br>
 <li><A HREF="http://ispec2011.jnu.edu.cn/">ISPEC'11</A>
     - 7th Information Security Practice and Experience Conference (Guangzhou, China, May 2011)<br>
 <li><A HREF="http://i.cs.hku.hk/~asiaccs/">AsiaCCS'11</A>
     - 6th ACM Symposium on Information, Computer and Communications Security (Hong Kong, China, March 2011)
-    <img src="cool.gif" style="border: 0px solid"><br><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br><br>
 
 <li><A HREF="http://www.icics2010.org/">ICICS'10</A>
     - 12th International Conference on Information and Communications Security (Barcelona, Spain, December 2010)<br>
@@ -647,7 +657,7 @@ SecureComm, SPACE, SSR, STM, SVI, TrustBus, WDFIA, WISA, WISTP, WPES,
     - 4th International Information Security and Cryptology Conference (Ankara, Turkey, May 2010)<br>
 <li><A HREF="http://www.dacas.cn/asiaccs2010/">AsiaCCS'10</A>
     - 5th ACM Symposium on Information, Computer and Communications Security (Beijing, China, April 2010)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="http://www.dmi.unict.it/~giamp/sac/10cfp.html">SAC'10-CS</A>
     - 25th ACM Symposium on Applied Computing [Computer Security Track] (Lausanne, Switzerland, March 2010)<br><br>
 
@@ -679,14 +689,14 @@ SecureComm, SPACE, SSR, STM, SVI, TrustBus, WDFIA, WISA, WISTP, WPES,
     - 4th Annual Workshop on Digital Forensics and Incident Analysis (Athens, Greece, June 2009)<br>
 <li><A HREF="http://acns09.di.ens.fr">ACNS'09</A>
     - 7th International Conference on Applied Cryptography and Network Security (Paris, France, June 2009)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="http://www.iaria.org/conferences2009/ICIMP09.html">ICIMP'09</A>
     - 4th International Conference on Internet Monitoring and Protection (Venice, Italy, May 2009)<br>
 <li><A HREF="http://www.sec2009.org/">SEC'09</A>
     - 24th IFIP International Information Security Conference (Pafos, Cyprus, May 2009)<br>
 <li><A HREF="http://comp.mq.edu.au/conferences/asiaccs2009/">AsiaCCS'09</A>
     - 4th ACM Symposium on Information, Computer and Communications Security (Sydney, Australia, March 2009)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="http://www.ares-conference.eu/ares2009/">AReS'09</A>
     - 4th International Conference on Availability, Reliability and Security (Fukuoka, Japan, March 2009)<br>
 <li><A HREF="http://www.dmi.unict.it/~giamp/sac/09cfp.html">SAC'09-CS</A>
@@ -700,7 +710,7 @@ SecureComm, SPACE, SSR, STM, SVI, TrustBus, WDFIA, WISA, WISTP, WPES,
     - 3rd International Workshop on Security (Kagawa, Japan, November 2008)<br>
 <li><A HREF="http://www.acm.org/sigs/sigsac/ccs/CCS2008/">CCS'08</A>
     - 15th ACM Conference on Computer and Communications Security (Alexandria, USA, October 2008)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="http://events.cs.bham.ac.uk/icics08/">ICICS'08</A>
     - 10th International Conference on Information and Communications Security (Birmingham, UK, October 2008)<br>
 <!--<li><A HREF="http://grid.hust.edu.cn/aptc08/">APTC'08</A>
@@ -711,12 +721,12 @@ SecureComm, SPACE, SSR, STM, SVI, TrustBus, WDFIA, WISA, WISTP, WPES,
     - 3rd Annual Workshop on Digital Forensics and Incident Analysis (Malaga, Spain, October 2008)<br>
 <li><A HREF="http://www.isac.uma.es/esorics08/">ESORICS'08</A>
     - 13th European Symposium on Research in Computer Security (Malaga, Spain, October 2008)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="http://www.wisa.or.kr/wisa2008/">WISA'08</A>
     - 9th Workshop on Information Security Applications (Jeju Island, Korea, September 2008)<br>
 <li><A HREF="http://www.ll.mit.edu/IST/RAID2008/">RAID'08</A>
     - 11th International Symposium on Recent Advances in Intrusion Detection (Boston, USA, September 2008)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="http://www.ted.unipi.gr/trustbus08/">TrustBus'08</A>
     - 7th DEXA International Conference on Trust and Privacy in Digital Business (Turin, Italy, September 2008)<br>
 <li><A HREF="http://www.uow.edu.au/conferences/acisp%202008/">ACISP'08</A>
@@ -725,7 +735,7 @@ SecureComm, SPACE, SSR, STM, SVI, TrustBus, WDFIA, WISA, WISTP, WPES,
     - 5th European PKI Workshop: Theory and Practice (Trondheim, Norway, June 2008)<br>
 <li><A HREF="http://acns2008.cs.columbia.edu/">ACNS'08</A>
     - 6th International Conference on Applied Cryptography and Network Security (New York, USA, June 2008)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="http://www.uow.edu.au/conferences/ISPEC%202008/">ISPEC'08</A>
     - 4th Information Security Practice and Experience Conference (Sydney, Australia, April 2008)<br>
 <li><A HREF="http://www.dmi.unict.it/~giamp/sac/08cfp.html">SAC'08-CS</A>
@@ -741,7 +751,7 @@ SecureComm, SPACE, SSR, STM, SVI, TrustBus, WDFIA, WISA, WISTP, WPES,
     - 6th International Conference on Cryptology and Network Security (Singapore, December 2007)<br>
 <li><A HREF="http://www.acm.org/sigs/sigsac/ccs/CCS2007/">CCS'07</A>
     - 14th ACM Conference on Computer and Communications Security (Alexandria, USA, October 2007)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="http://www.iwsec.org/2007/">IWSEC'07</A>
     - 2nd International Workshop on Security (Nara, Japan, October 2007)<br>
 <li><A HREF="http://critis07.lcc.uma.es/">CRITIS'07</A>
@@ -750,10 +760,10 @@ SecureComm, SPACE, SSR, STM, SVI, TrustBus, WDFIA, WISA, WISTP, WPES,
     - 3rd Workshop on Security and Trust Management (Dresden, Germany, September 2007)<br>
 <li> <A HREF="http://esorics2007.inf.tu-dresden.de/">ESORICS'07</A>
     - 12th European Symposium on Research in Computer Security (Dresden, Germany, September 2007)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li> <A HREF="http://www.isi.qut.edu.au/events/conferences/raid07/">RAID'07</A>
     - 10th International Symposium on Recent Advances in Intrusion Detection (Queensland, Australia, September 2007)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="http://www.icsd.aegean.gr/trustbus07/">TrustBus'07</A>
     - 6th DEXA International Conference on Trust and Privacy in Digital Business (Regensburg, Germany, September 2007)<br>
 <li><A HREF="http://www.wisa.or.kr/wisa2007/">WISA'07</A>
@@ -764,14 +774,14 @@ SecureComm, SPACE, SSR, STM, SVI, TrustBus, WDFIA, WISA, WISTP, WPES,
     - 4th European PKI Workshop: Theory and Practice (Mallorca, Spain, June 2007)<br>
 <li><A HREF="http://icsd.i2r.a-star.edu.sg/acns2007/">ACNS'07</A>
     - 5th International Conference on Applied Cryptography and Network Security (Zhuhai, China, June 2007)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="http://www.cs.cityu.edu.hk/~ispec2007/">ISPEC'07</A>
     - 3rd Information Security Practice and Experience Conference (Hong Kong, China, May 2007)<br>
 <li><A HREF="http://www.ares-conference.eu/ares2007/">AReS'07</A>
     - 2nd International Conference on Availability, Reliability and Security (Vienna, Austria, April 2007)<br>
 <li><A HREF="http://asiaccs07.i2r.a-star.edu.sg/">AsiaCCS'07</A>
     - 2nd ACM Symposium on Information, Computer and Communications Security (Singapore, March 2007)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="http://www.dmi.unict.it/~giamp/sac/07cfp.html">SAC'07-CS</A>
     - 22nd ACM Symposium on Applied Computing [Computer Security Track] (Seoul, Korea, March 2007)<br><br>
 
@@ -780,14 +790,14 @@ SecureComm, SPACE, SSR, STM, SVI, TrustBus, WDFIA, WISA, WISTP, WPES,
 <li><A HREF="http://discovery.csc.ncsu.edu/ICICS06/">ICICS'06</A>
     - 8th International Conference on Information and Communications Security (Raleigh, USA, December 2006)<br>
 <li><A HREF="http://www.lois.cn/Asiacrypt2006/">Asiacrypt'06</A> (Shanghai, China, December 2006)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <!--<li><A HREF="http://www.chinacom.org/2006/">CHINACOM'06</A>
     - 1st International Conference on Communications and Networking in China (Beijing, China, October 2006)<br>-->
 <li><A HREF="http://www.iwsec.org/2006/">IWSEC'06</A>
     - 1st International Workshop on Security (Kyoto, Japan, October 2006)<br>
 <li><A HREF="http://www.raid06.tu-harburg.de/">RAID'06</A>
     - 9th International Symposium on Recent Advances in Intrusion Detection (Hamburg, Germany, September 2006)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="http://www.icsd.aegean.gr/trustbus06/">TrustBus'06</A>
     - 5th DEXA International Conference on Trust and Privacy in Digital Business (Krakov, Poland, September 2006)<br>
 <li><A HREF="http://critis06.lcc.uma.es">CRITIS'06</A>
@@ -817,7 +827,7 @@ SecureComm, SPACE, SSR, STM, SVI, TrustBus, WDFIA, WISA, WISTP, WPES,
     - 2nd European PKI Workshop: Research and Applications (Kent, UK, June 2005)<br>
 <li><A HREF="http://acns2005.cs.columbia.edu/">ACNS'05</A>
     - 3rd International Conference on Applied Cryptography and Network Security (New York, USA, June 2005)
-    <img src="cool.gif" style="border: 0px solid"><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="http://ispec2005.i2r.a-star.edu.sg/">ISPEC'05</A>
     - 1st Information Security Practice and Experience Conference (Singapore, April 2005)<br><br>
 
@@ -831,7 +841,7 @@ SecureComm, SPACE, SSR, STM, SVI, TrustBus, WDFIA, WISA, WISTP, WPES,
     - 1st European PKI Workshop: Research and Applications (Samos Island, Greece, June 2004)<br>
 <li><A HREF="http://pkc2004.i2r.a-star.edu.sg/">PKC'04</A>
     - 7th International Workshop on Practice and Theory in Public Key Cryptography (Singapore, March 2004)
-    <img src="cool.gif" style="border: 0px solid"><br><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br><br>
 
 <li><A HREF="http://www.cstnet.net.cn/icics2003/">ICICS'03</A>
     - 5th International Conference on Information and Communications Security (Huhehaote, China, October 2003)<br>
@@ -844,7 +854,7 @@ SecureComm, SPACE, SSR, STM, SVI, TrustBus, WDFIA, WISA, WISTP, WPES,
     - 1st DEXA International Workshop on Trust and Privacy in Digital Business (Aix-en-Provence, France, September 2002)<br>
 <li><A HREF="http://www.novamedia.fr/conferences/conferences/confpkc.html">PKC'02</A>
     - 5th International Workshop on Practice and Theory in Public Key Cryptography (Paris, France, February 2002)
-    <img src="cool.gif" style="border: 0px solid"><br><br>
+    <img src="assets/cool.gif" style="border: 0px solid"><br><br>
 
 <li><A HREF="http://icisa.freewebtools.com/icics2001/">ICICS'01</A>
     - 3rd International Conference on Information and Communications Security (Xian, China, November 2001)<br>
@@ -871,7 +881,7 @@ SecureComm, SPACE, SSR, STM, SVI, TrustBus, WDFIA, WISA, WISTP, WPES,
 <li><A HREF="https://cybersecurity.springeropen.com/">
     Cybersecurity</A>, Springer (2017 - )<br>
 <li><A HREF="https://www.computer.org/csdl/magazine/sp">
-    IEEE Security & Privacy</A> <b>(</b>2018 - 2023; <b>Associate Editor-in-Chief, 2023 - )</b><img src="cool.gif" style="border: 0px solid"><br>
+    IEEE Security & Privacy</A> <b>(</b>2018 - 2023; <b>Associate Editor-in-Chief, 2023 - )</b><img src="assets/cool.gif" style="border: 0px solid"><br>
 <li><A HREF="https://www.computer.org/csdl/journal/tq">
     IEEE Transactions on Dependable and Secure Computing</A> (2018 - 2023)<br>
 <li><A HREF="http://www.signalprocessingsociety.org/publications/periodicals/forensics/">
@@ -908,7 +918,7 @@ SecureComm, SPACE, SSR, STM, SVI, TrustBus, WDFIA, WISA, WISTP, WPES,
 <!--<li>"Cybersecurity and Privacy in Global Conflict and Disaster Regions" Special Issue
     [<A HREF="https://www.computer.org/digital-library/magazines/sp/cfp-cybersecurity-and-privacy-in-global-conflict-and-disaster-regions">cfp</A>]
     <font color="red">- submission due Oct 14, 2024</font>
-    <img src="new.gif"><br>-->
+    <img src="assets/new.gif"><br>-->
 </ul>
 
 <li style='margin-bottom:6.0pt'><A HREF="http://www.ieee-ies.org/pubs/transactions-on-industrial-informatics">
@@ -921,7 +931,7 @@ SecureComm, SPACE, SSR, STM, SVI, TrustBus, WDFIA, WISA, WISTP, WPES,
     International Journal of Information Security</A>, Springer
 <ul>
 <li><A HREF="https://www.springer.com/journal/10207/updates/19086130">"Cyber-Physical Systems and Industry 4.0: Security and Privacy Challenges and Solutions"</A> Special Issue (Vol 22, No 3, 2023)<br>
-<li><A HREF="cfp_IJIS_2012.pdf">"Security in Cloud Computing"</A> Special Issue (Vol 13, No 2, 2014)<br>
+<li>"Security in Cloud Computing" Special Issue (Vol 13, No 2, 2014)<br>
 <li><A HREF="http://ste.xidian.edu.cn/isc2011/">ISC'11</A> Special Issue (Vol 11, No 5, 2012)<br>
 <li><A HREF="http://www.securecomm.org/2010/">SecureComm'10</A> Special Issue (Vol 10, No 5, 2011)<br>
 <li><A HREF="http://isc05.i2r.a-star.edu.sg/">ISC'05</A> Special Issue (Vol 5, No 2, 2006)<br>
@@ -931,7 +941,7 @@ SecureComm, SPACE, SSR, STM, SVI, TrustBus, WDFIA, WISA, WISTP, WPES,
     Journal of Computer Security</A>, IOS Press
 <ul>
 <li><A HREF="http://rfidsec2010.i2r.a-star.edu.sg/">RFIDsec-Asia'10</A>
-   (<A HREF="cfp_JCS_2010.pdf">RFID System Security</A>)
+   (RFID System Security)
     Special Issue (Vol 19, No 2, 2011)<br>
 <li><A HREF="http://iwap05.i2r.a-star.edu.sg/">IWAP'05</A> Special Issue (Vol 14, No 5, 2006)<br>
 </ul>
@@ -939,7 +949,7 @@ SecureComm, SPACE, SSR, STM, SVI, TrustBus, WDFIA, WISA, WISTP, WPES,
 <li><A HREF="https://www.hindawi.com/journals/scn/">
     Security and Communication Networks</A>, Wiley
 <ul>
-<li><A HREF="cfp_SCN_2012.pdf">"Security in a Completely Interconnected World"</A> Special Issue (Vol 7, No 12, 2014)<br><br>
+<li>"Security in a Completely Interconnected World" Special Issue (Vol 7, No 12, 2014)<br><br>
 </ul>
 </ul>
 
@@ -1206,13 +1216,31 @@ SecureComm, SPACE, SSR, STM, SVI, TrustBus, WDFIA, WISA, WISTP, WPES,
 <A HREF="biography.html">Biography</A> |
 <A HREF="publications.html">Publications</A> |
    Professional Activities |
-<A HREF="academic.html">Academic Links</A> |
-<A HREF="other.html">Other Links</A>
+Academic Links |
+Other Links
 </b><hr>
 Last updated: February 2026
 </small>
 </section>
   </main>
 </div>
+<button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+</button>
+
+<script>
+  const themeToggle = document.getElementById('theme-toggle');
+  themeToggle.addEventListener('click', () => {
+    let currentTheme = document.documentElement.getAttribute('data-theme');
+    if (!currentTheme) {
+      currentTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  });
+</script>
 </body>
 </html>
