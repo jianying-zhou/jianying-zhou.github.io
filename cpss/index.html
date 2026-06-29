@@ -68,8 +68,26 @@ ul
 	{margin-bottom:0in;}
 -->
   </style>
+<script>
+  (function() {
+    var savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  })();
+</script>
 </head>
-<body style="" lang="EN-US" link="blue" vlink="purple">
+<body lang="EN-US">
+<div class="top-stripe"></div>
+<nav class="legacy-nav">
+  <a href="../">&#8592; Home</a>
+  <span class="sep">//</span>
+  <span class="current">CPSS</span>
+</nav>
+<div class="legacy-page">
+
 <div class="WordSection1">
 <p class="MsoNormal"
  style="margin-bottom: 0in; text-align: center; line-height: normal;"
@@ -97,7 +115,7 @@ academia,
 government, and industry to discuss novel ways to address the
 ever-present
 security challenges in CPS. ACM CPSS is held in conjunction with ACM <a
- href="https://jianying-zhou.github.io/asiaccs/">AsiaCCS</a>.&nbsp;</span></p>
+ href="../asiaccs/">AsiaCCS</a>.&nbsp;</span></p>
 <p class="MsoNormal" style="margin-bottom: 0in; line-height: normal;"><b>&nbsp;</b></p>
 <p class="MsoNormal" style="margin-bottom: 0in; line-height: normal;"><b>&nbsp;</b></p>
 <p class="MsoNormal" style="margin-bottom: 6pt; line-height: normal;"><b>Steering
@@ -126,7 +144,7 @@ Committee</b></p>
  style="margin-bottom: 0in; text-indent: -0.25in; line-height: normal;"><span
  style="font-family: Symbol;">·</span><span
  style="font-size: 7pt; font-family: &quot;Times New Roman&quot;,serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span><span lang="EN-SG"><a href="https://jianying-zhou.github.io/"><span
+</span><span lang="EN-SG"><a href="../"><span
  lang="EN-US">Jianying
 Zhou</span></a></span> (SUTD, Singapore)  <b>Chair</b></p>
 <p class="MsoNormal" style="margin-bottom: 0in; line-height: normal;">&nbsp;</p>
@@ -137,7 +155,7 @@ Series</b></p>
  style="font-family: Symbol;">·<span
  style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span><span lang="EN-SG"><a
- href="https://jianying-zhou.github.io/cpss/CPSS2015/" target="_blank"><span
+ href="../cpss/CPSS2015/" target="_blank"><span
  lang="EN-US">CPSS15</span></a></span> &nbsp;Singapore, April
 14, 2015&nbsp; [<span lang="EN-SG"><a
  href="https://dl.acm.org/doi/proceedings/10.1145/2732198"
@@ -158,7 +176,7 @@ Chairs:&nbsp; Jianying Zhou, Douglas Jones</span></p>
  style="font-family: Symbol;">·<span
  style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span><span lang="EN-SG"><a
- href="https://jianying-zhou.github.io/cpss/CPSS2016/"><span lang="EN-US">CPSS16</span></a></span>&nbsp;
+ href="../cpss/CPSS2016/"><span lang="EN-US">CPSS16</span></a></span>&nbsp;
 Xian, China, May 30, 2016 &nbsp;[<span lang="EN-SG"><a
  href="https://dl.acm.org/doi/proceedings/10.1145/2899015"
  target="_blank"><span lang="EN-US">proceedings</span></a></span>]  AR
@@ -173,7 +191,7 @@ Chairs: &nbsp;Jianying Zhou, Javier Lopez</p>
  style="font-family: Symbol;">·<span
  style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span><span lang="EN-SG"><a
- href="https://jianying-zhou.github.io/cpss/CPSS2017/"><span lang="EN-US">CPSS'17</span></a></span>
+ href="../cpss/CPSS2017/"><span lang="EN-US">CPSS'17</span></a></span>
  Abu Dhabi, UAE, April 2, 2017 &nbsp;[<span lang="EN-SG"><a
  href="https://dl.acm.org/doi/proceedings/10.1145/3055186"><span
  lang="EN-US">proceedings</span></a></span>] <a name="_Hlk515528242">
@@ -187,7 +205,7 @@ Chairs:&nbsp; Jianying Zhou, Ernesto Damiani</p>
  style="margin-bottom: 0in; text-indent: -0.25in; line-height: normal;"><a
  name="_Hlk526798746"><span style="font-family: Symbol;">·<span
  style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></a><a href="https://jianying-zhou.github.io/cpss/CPSS2018/">CPSS18</a>
+</span></span></a><a href="../cpss/CPSS2018/">CPSS18</a>
  Incheon, Korea, June
 4, 2018 &nbsp;[<a
  href="https://dl.acm.org/doi/proceedings/10.1145/3198458">proceedings</a>]
@@ -202,7 +220,7 @@ Chairs:&nbsp; Dieter Gollmann, Jianying Zhou</p>
  style="font-family: Symbol;">·<span
  style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span><span lang="EN-SG"><a
- href="https://jianying-zhou.github.io/cpss/CPSS2019/"><span lang="EN-US">CPSS19</span></a></span>
+ href="../cpss/CPSS2019/"><span lang="EN-US">CPSS19</span></a></span>
  Auckland, New Zealand, July 8, 2019 &nbsp;[<span lang="EN-SG"><a
  href="https://dl.acm.org/doi/proceedings/10.1145/3327961"><span
  lang="EN-US">proceedings</span></a></span>]  AR = 36%</p>
@@ -295,7 +313,7 @@ Chattopadhyay</p>
  style="font-family: Symbol;">·<span
  style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span><span lang="EN-SG"><a
- href="https://jianying-zhou.github.io/cpss/CPSS2025/"><span lang="EN-US">CPSS25</span></a></span>
+ href="../cpss/CPSS2025/"><span lang="EN-US">CPSS25</span></a></span>
  Hanoi, Vietnam, 26 August 2025 &nbsp;[<span lang="EN-SG"><a
  href="https://dl.acm.org/doi/proceedings/10.1145/3709017"><span
  lang="EN-US">proceedings</span></a></span>]  AR = 40%</p>
@@ -984,7 +1002,7 @@ Forum</b></a></span></p>
 </div>
 <p class="MsoNormal"
  style="margin-bottom: 6pt; text-align: justify; line-height: normal;"><span
- lang="EN-SG">Maintained by <a href="https://jianying-zhou.github.io/"><span
+ lang="EN-SG">Maintained by <a href="../"><span
  lang="EN-US">Jianying Zhou</span></a></span></p>
 <p class="MsoNormal"
  style="margin-bottom: 6pt; text-align: justify; line-height: normal;"><span
@@ -993,5 +1011,26 @@ Forum</b></a></span></p>
  style="margin-bottom: 6pt; text-align: justify; line-height: normal;"><span
  lang="EN-SG">&nbsp;</span></p>
 </div>
+
+</div><!-- /legacy-page -->
+
+<button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+</button>
+<script>
+  var themeToggle = document.getElementById('theme-toggle');
+  themeToggle.addEventListener('click', function() {
+    var currentTheme = document.documentElement.getAttribute('data-theme');
+    if (!currentTheme) {
+      currentTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    var newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  });
+</script>
+
 </body>
 </html>
