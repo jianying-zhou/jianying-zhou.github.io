@@ -1,7 +1,39 @@
-<HTML>
-<TITLE> Jianying Zhou's Biography </TITLE>
-<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
-<BODY>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jianying Zhou's Biography</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+<script>
+  (function() {
+    var savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  })();
+</script>
+</head>
+
+
+
+<body>
+<div class="top-stripe"></div>
+<nav class="legacy-nav">
+  <a href="./">&#8592; Home</a>
+  <span class="sep">//</span>
+  <span class="current">Biography</span>
+</nav>
+<div class="legacy-page">
+
+
+
+
+
 
 <font face="Arial, sans-serif"><small>
 <h2>Biography</h2>
@@ -76,12 +108,33 @@ in 2020, in recognition of his contributions to the community. <br><br>
    Biography |
 <A HREF="publications.html">Publications</A> |
 <A HREF="professional.html">Professional Activities</A> |
-<A HREF="academic.html">Academic Links</A> |
-<A HREF="other.html">Other Links</A>
+Academic Links |
+Other Links
 </b><hr>
 Last updated: November 2025
 </small></font>
 
 
-</BODY>
-</HTML>
+
+</div><!-- /legacy-page -->
+
+<button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+</button>
+<script>
+  var themeToggle = document.getElementById('theme-toggle');
+  themeToggle.addEventListener('click', function() {
+    var currentTheme = document.documentElement.getAttribute('data-theme');
+    if (!currentTheme) {
+      currentTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    var newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  });
+</script>
+
+</body>
+</html>

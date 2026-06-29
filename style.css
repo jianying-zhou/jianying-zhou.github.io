@@ -88,23 +88,89 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* LEGACY OVERRIDES FOR SUB-FOLDERS */
+/* LEGACY OVERRIDES FOR SUB-FOLDERS
+   Handles Word-exported HTML with inline styles, <font> tags,
+   body link/vlink attributes, and <style> blocks.            */
 body[style], table[style], td[style], p[style], div[style], center[style], font[color], font[face] {
   color: inherit !important;
   font-family: var(--sans) !important;
   background-color: transparent !important;
 }
+/* Override inline span colors (rgb(0,0,0) etc.) */
+span[style*="color: rgb(0, 0, 0)"],
+span[style*="color: rgb(0,0,0)"],
+span[style*="color:rgb(0,0,0)"],
+span[style*="color: black"] {
+  color: var(--ink) !important;
+}
+/* Preserve red highlights but make them theme-aware */
+span[style*="color: rgb(255, 0, 0)"],
+span[style*="color: rgb(255,0,0)"],
+span[style*="color:#ff0000"],
+font[color="#ff0000"],
+font[color="red"] {
+  color: var(--red) !important;
+}
+/* Preserve blue title text but make it theme-aware */
+span[style*="color: rgb(0, 0, 153)"],
+span[style*="color: blue"],
+span[style*="color:blue"] {
+  color: var(--accent) !important;
+}
+/* Override white backgrounds forced inline */
+span[style*="background-color: rgb(255, 255, 255)"],
+span[style*="background-color:#fff"],
+div[style*="background-color: rgb(255, 255, 255)"] {
+  background-color: transparent !important;
+}
+/* Force all links to use theme colors (overrides <body link=>, <style> a:link, etc.) */
+a:link, a:visited { color: var(--accent) !important; text-decoration: none !important; }
+a:hover { color: var(--accent) !important; opacity: .85; text-shadow: 0 0 8px var(--link-hover-glow); }
+/* Override Word font families */
+.WordSection1, .WordSection1 p, .WordSection1 span,
+.MsoNormal, .MsoListParagraph,
+p[style*="Calibri"], span[style*="Calibri"],
+p[style*="Verdana"], span[style*="Verdana"] {
+  font-family: var(--sans) !important;
+}
 table, td { border-color: var(--paper-3) !important; }
 ul, li { list-style-position: inside; }
+/* Horizontal rules in legacy pages */
+hr { border: none; border-top: 1px solid var(--paper-3); margin: 16px 0; }
+/* Images in legacy pages — prevent overflow */
+img { max-width: 100%; height: auto; }
+
+/* ── Legacy Page Wrapper ─────────────────────────── */
+.legacy-page {
+  max-width: var(--page);
+  margin: 0 auto;
+  padding: 20px 44px 60px;
+}
+
+/* ── Legacy Back-Nav Bar ─────────────────────────── */
+.legacy-nav {
+  max-width: var(--page);
+  margin: 0 auto;
+  padding: 12px 44px;
+  font-family: var(--sans);
+  font-size: .85rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.legacy-nav a {
+  color: var(--accent) !important;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.legacy-nav a:hover { opacity: .85; }
+.legacy-nav .sep { color: var(--ink-3); }
+.legacy-nav .current { color: var(--ink-2); font-weight: 400; }
 
 a {
-  color: var(--accent);
-  text-decoration: none;
   transition: all .25s cubic-bezier(0.4, 0, 0.2, 1);
-}
-a:hover { 
-  opacity: .85; 
-  text-shadow: 0 0 8px var(--link-hover-glow);
 }
 
 strong, b { font-weight: 500; color: var(--ink-strong); }
@@ -525,6 +591,8 @@ header {
   color: var(--accent-2);
   padding-top: 2px;
 }
+.act-key a { color: inherit; text-decoration: none; }
+.act-key a:hover { text-decoration: underline; }
 .act-name { font-size: .9rem; color: var(--ink); font-weight: 500; margin-bottom: 4px; }
 .act-detail { font-size: .85rem; color: var(--ink-3); line-height: 1.6; }
 
