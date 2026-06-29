@@ -10,9 +10,27 @@
   <meta name="GENERATOR"
  content="Mozilla/4.76 [en] (WinNT; U) [Netscape]">
   <title>ACNS - List of Test-of-Time Award Papers</title>
+<script>
+  (function() {
+    var savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  })();
+</script>
 </head>
-<body style="color: rgb(0, 0, 0);" alink="#0000ee" link="#0000ee"
- vlink="#551a8b">
+<body
+>
+<div class="top-stripe"></div>
+<nav class="legacy-nav">
+  <a href="./">&#8592; Home</a>
+  <span class="sep">//</span>
+  <span class="current">ACNS — Tot</span>
+</nav>
+<div class="legacy-page">
+
 <div align="center">
 <table style="width: 100%;" border="0" cellpadding="2" cellspacing="2">
   <tbody>
@@ -101,8 +119,7 @@ Dusart, Gilles Letourneux, Olivier Vivolo<br>
 Conjunctive Keyword Search over Encrypted Data</a><br>
       </small></td>
       <td
- style="font-family: helvetica,arial,sans-serif; width: 30%; vertical-align: middle;"><small><span
- style="color: rgb(0, 0, 0);">Philippe Golle, Jessica Staddon, Brent
+ style="font-family: helvetica,arial,sans-serif; width: 30%; vertical-align: middle;"><small><span>Philippe Golle, Jessica Staddon, Brent
 Waters</span><br>
       </small></td>
       <td
@@ -117,8 +134,7 @@ Waters</span><br>
 Preserving Keyword Searches on Remote Encrypted Data</a><br>
       </small></td>
       <td
- style="font-family: helvetica,arial,sans-serif; width: 30%; vertical-align: middle;"><small><span
- style="color: rgb(0, 0, 0);">Yan-Cheng Chang, Michael Mitzenmacher</span><br>
+ style="font-family: helvetica,arial,sans-serif; width: 30%; vertical-align: middle;"><small><span>Yan-Cheng Chang, Michael Mitzenmacher</span><br>
       </small></td>
       <td
  style="font-family: helvetica,arial,sans-serif; width: 5px; vertical-align: middle;"><small>2005<br>
@@ -132,8 +148,7 @@ Preserving Keyword Searches on Remote Encrypted Data</a><br>
 Proxy Re-encryption</a><br>
       </small></td>
       <td
- style="font-family: helvetica,arial,sans-serif; width: 30%; vertical-align: middle;"><small
- style="color: rgb(0, 0, 0);">Matthew Green, Giuseppe Ateniese</small><small><br>
+ style="font-family: helvetica,arial,sans-serif; width: 30%; vertical-align: middle;"><small>Matthew Green, Giuseppe Ateniese</small><small><br>
       </small></td>
       <td
  style="font-family: helvetica,arial,sans-serif; width: 5px; vertical-align: middle;"><small>2007<br>
@@ -210,5 +225,26 @@ Zhou</a></small></font><br>
 <font face="Helvetica, Arial, sans-serif"><small> Last updated in June
 2025</small><br>
 </font><br>
+
+</div><!-- /legacy-page -->
+
+<button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+</button>
+<script>
+  var themeToggle = document.getElementById('theme-toggle');
+  themeToggle.addEventListener('click', function() {
+    var currentTheme = document.documentElement.getAttribute('data-theme');
+    if (!currentTheme) {
+      currentTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    var newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  });
+</script>
+
 </body>
 </html>

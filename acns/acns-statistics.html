@@ -10,8 +10,26 @@
   <meta name="GENERATOR"
  content="Mozilla/4.76 [en] (WinNT; U) [Netscape]">
   <title>ACNS - Statistics of Accepted Papers</title>
+<script>
+  (function() {
+    var savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  })();
+</script>
 </head>
-<body alink="#0000ee" link="#0000ee" text="#000000" vlink="#551a8b">
+<body text="#000000">
+<div class="top-stripe"></div>
+<nav class="legacy-nav">
+  <a href="./">&#8592; Home</a>
+  <span class="sep">//</span>
+  <span class="current">ACNS — Statistics</span>
+</nav>
+<div class="legacy-page">
+
 <div align="center">
 <table style="width: 100%;" border="0" cellpadding="2" cellspacing="2">
   <tbody>
@@ -3412,8 +3430,7 @@ Islands [1]<br>
  style="vertical-align: top; font-family: helvetica,arial,sans-serif; text-align: center; background-color: rgb(204, 204, 255);"><small>29<br>
       </small></td>
       <td
- style="vertical-align: top; font-family: helvetica,arial,sans-serif; text-align: center; background-color: rgb(204, 204, 255);"><small><span
- style="color: rgb(0, 0, 0);">46</span><br>
+ style="vertical-align: top; font-family: helvetica,arial,sans-serif; text-align: center; background-color: rgb(204, 204, 255);"><small><span>46</span><br>
       </small></td>
       <td
  style="vertical-align: top; font-family: helvetica,arial,sans-serif; text-align: center; background-color: rgb(204, 204, 255);"><small>37<br>
@@ -3422,12 +3439,10 @@ Islands [1]<br>
  style="vertical-align: top; font-family: helvetica,arial,sans-serif; text-align: center; background-color: rgb(204, 204, 255);"><small>44<br>
       </small></td>
       <td
- style="vertical-align: top; font-family: helvetica,arial,sans-serif; text-align: center; background-color: rgb(204, 204, 255);"><small><span
- style="color: rgb(0, 0, 0);">53</span><br>
+ style="vertical-align: top; font-family: helvetica,arial,sans-serif; text-align: center; background-color: rgb(204, 204, 255);"><small><span>53</span><br>
       </small></td>
       <td
- style="vertical-align: top; font-family: helvetica,arial,sans-serif; text-align: center; background-color: rgb(204, 204, 255);"><small><span
- style="color: rgb(0, 0, 0);">54</span><br>
+ style="vertical-align: top; font-family: helvetica,arial,sans-serif; text-align: center; background-color: rgb(204, 204, 255);"><small><span>54</span><br>
       </small></td>
       <td
  style="text-align: center; font-family: helvetica,arial,sans-serif; vertical-align: top; background-color: rgb(204, 204, 255);"><small><span
@@ -3618,5 +3633,26 @@ Zhou</a></small></font><br>
 <font face="Helvetica, Arial, sans-serif"><small> Last updated in June
 2025</small><br>
 </font><br>
+
+</div><!-- /legacy-page -->
+
+<button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+</button>
+<script>
+  var themeToggle = document.getElementById('theme-toggle');
+  themeToggle.addEventListener('click', function() {
+    var currentTheme = document.documentElement.getAttribute('data-theme');
+    if (!currentTheme) {
+      currentTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    var newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  });
+</script>
+
 </body>
 </html>

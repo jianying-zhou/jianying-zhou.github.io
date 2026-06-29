@@ -10,8 +10,26 @@
   <meta name="GENERATOR"
  content="Mozilla/4.76 [en] (WinNT; U) [Netscape]">
   <title>ACNS History</title>
+<script>
+  (function() {
+    var savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  })();
+</script>
 </head>
-<body alink="#0000ee" link="#0000ee" text="#000000" vlink="#551a8b">
+<body text="#000000">
+<div class="top-stripe"></div>
+<nav class="legacy-nav">
+  <a href="./">&#8592; Home</a>
+  <span class="sep">//</span>
+  <span class="current">ACNS — History</span>
+</nav>
+<div class="legacy-page">
+
 <div align="center">
 <table style="width: 100%;" border="0" cellpadding="2" cellspacing="2">
   <tbody>
@@ -667,18 +685,16 @@ Belgium</small></td>
  style="vertical-align: top; font-family: helvetica,arial,sans-serif;"><small>02-04/07/2018</small></td>
       <td
  style="vertical-align: top; font-family: helvetica,arial,sans-serif;"><span
- style="font-family: helvetica,arial,sans-serif;"><small><span
- style="color: rgb(0, 0, 0);"><span style="color: rgb(0, 0, 0);"><span
- style="color: rgb(255, 0, 0);"><span style="color: rgb(0, 0, 0);">Bart
+ style="font-family: helvetica,arial,sans-serif;"><small><span><span><span
+ style="color: rgb(255, 0, 0);"><span>Bart
 Preneel</span> </span></span></span></small></span></td>
       <td
  style="vertical-align: top; font-family: helvetica,arial,sans-serif;"><span
- style="font-family: helvetica,arial,sans-serif;"><small><span
- style="color: rgb(0, 0, 0);"><span style="color: rgb(0, 0, 0);"><span
- style="color: rgb(255, 0, 0);"><span style="color: rgb(0, 0, 0);">Bart
+ style="font-family: helvetica,arial,sans-serif;"><small><span><span><span
+ style="color: rgb(255, 0, 0);"><span>Bart
 Preneel<br>
       </span></span></span></span></small></span><span
- style="color: rgb(255, 0, 0);"><small style="color: rgb(0, 0, 0);">Frederik
+ style="color: rgb(255, 0, 0);"><small>Frederik
 Vercauteren</small> </span><br>
       </td>
       <td
@@ -1068,5 +1084,26 @@ Zhou</a></small></font><br>
 <font face="Helvetica, Arial, sans-serif"><small> Last updated in March
 2026</small><br>
 </font><br>
+
+</div><!-- /legacy-page -->
+
+<button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+</button>
+<script>
+  var themeToggle = document.getElementById('theme-toggle');
+  themeToggle.addEventListener('click', function() {
+    var currentTheme = document.documentElement.getAttribute('data-theme');
+    if (!currentTheme) {
+      currentTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    var newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  });
+</script>
+
 </body>
 </html>
