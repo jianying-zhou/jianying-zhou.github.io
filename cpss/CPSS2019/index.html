@@ -14,8 +14,26 @@
   <meta name="keywords" content="ASIACCS-cpss">
   <meta http-equiv="content-type" content="text/html;charset=utf-8">
   <title>CPSS 2019</title>
+<script>
+  (function() {
+    var savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  })();
+</script>
 </head>
 <body>
+<div class="top-stripe"></div>
+<nav class="legacy-nav">
+  <a href="../../">&#8592; Home</a>
+  <span class="sep">//</span>
+  <span class="current">CPSS2019</span>
+</nav>
+<div class="legacy-page">
+
 <center>
 <div id="container" style="width: 800px;">
 <table cellspacing="0" width="100%">
@@ -156,14 +174,13 @@ limited to:</span><br>
         <li>Authentication and access control for CPS</li>
         <li>Autonomous vehicle security</li>
         <li>Availability and auditing for CPS</li>
-        <li><span style="font-family: Symbol;"><span style=""></span></span><span
- style="">Blockchain for CPS security<o:p></o:p></span> </li>
+        <li><span style="font-family: Symbol;"><span ></span></span><span >Blockchain for CPS security<o:p></o:p></span> </li>
         <li>Data security and privacy for CPS</li>
         <li><span
  style="font-size: 11pt; line-height: 115%; font-family: &quot;Calibri&quot;,sans-serif;">Digital
 twins for CPS</span></li>
         <li>Embedded systems security</li>
-        <li><span style="">Formal methods in CPS<o:p></o:p></span> </li>
+        <li><span >Formal methods in CPS<o:p></o:p></span> </li>
         <li>Industrial control system security</li>
 <!-- li>Intrusion detection for CPS</li --> <li>IoT security</li>
         <li>Legacy CPS system protection</li>
@@ -1064,5 +1081,26 @@ Remark</span><br>
 </div>
 </div>
 </center>
+
+</div><!-- /legacy-page -->
+
+<button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+</button>
+<script>
+  var themeToggle = document.getElementById('theme-toggle');
+  themeToggle.addEventListener('click', function() {
+    var currentTheme = document.documentElement.getAttribute('data-theme');
+    if (!currentTheme) {
+      currentTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    var newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  });
+</script>
+
 </body>
 </html>

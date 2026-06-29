@@ -13,9 +13,27 @@
 <meta http-equiv="content-type" content="text/html;charset=utf-8" /> 
 
 <title>CPSS 2017</title> 
+<script>
+  (function() {
+    var savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  })();
+</script>
 </head>
 
 <body>
+<div class="top-stripe"></div>
+<nav class="legacy-nav">
+  <a href="../../">&#8592; Home</a>
+  <span class="sep">//</span>
+  <span class="current">CPSS2017</span>
+</nav>
+<div class="legacy-page">
+
 <center>
 
 <div id="container" style="width:800px">
@@ -300,7 +318,7 @@ Jianying Zhou (I2R, Singapore) - Chair<br />
 <div align="justify">
 <br>
 <p> 
-Martin Strohmeier, Vincent Lenders and Ivan Martinovic. “Lightweight Location Verification in Air Traffic Surveillance Networks”. </p> 
+Martin Strohmeier, Vincent Lenders and Ivan Martinovic. ï¿½Lightweight Location Verification in Air Traffic Surveillance Networksï¿½. </p> 
 <br>
 </div>
 
@@ -481,7 +499,7 @@ Prof. Michael R. Lyu (Chinese University of Hong Kong, China)</strong>
 
 <p> 
   <strong>Abstract: </strong><br>
-Software plays a key role in cyber-physical systems. Once their software integrity has been violated, cyber-physical systems would suffer security issues (e.g., system failures, backdoor attacks) because of executing unexpected instructions. Existing software integrity protection approaches for cyber-physical systems can be classified into circuit-assisted approach, and pure software approach. A circuit-assisted approach is known to be more secure, but it does not have general applicability. In fact, more and more cyber-physical systems are built upon open hardware architectures and operating systems, such as smartphones. These systems cannot rely on specific hardware to provide security due to usability constraints. Pure software approach is thus desired for these application scenarios. Obfuscation and self-checksumming are the two major tamper-resistant approaches that do not rely on circuits. However, none of them can achieve theoretically tamper-proof, as Collberg said, “Given enough time, effort and determination, a competent programmer will always be able to reverse engineer any application.” Recent investigations have made much theoretical progress that supports Collberg’s claim, e.g., Barak et al. have proved that obfuscation cannot achieve black-box security for some programs; Appel has proved that the hardness of de-obfuscation is NP-easy. Their results discourage researchers towards finding novel trustworthy obfuscation approaches, whose security strength can be guaranteed or quantified. <br> <br>
+Software plays a key role in cyber-physical systems. Once their software integrity has been violated, cyber-physical systems would suffer security issues (e.g., system failures, backdoor attacks) because of executing unexpected instructions. Existing software integrity protection approaches for cyber-physical systems can be classified into circuit-assisted approach, and pure software approach. A circuit-assisted approach is known to be more secure, but it does not have general applicability. In fact, more and more cyber-physical systems are built upon open hardware architectures and operating systems, such as smartphones. These systems cannot rely on specific hardware to provide security due to usability constraints. Pure software approach is thus desired for these application scenarios. Obfuscation and self-checksumming are the two major tamper-resistant approaches that do not rely on circuits. However, none of them can achieve theoretically tamper-proof, as Collberg said, ï¿½Given enough time, effort and determination, a competent programmer will always be able to reverse engineer any application.ï¿½ Recent investigations have made much theoretical progress that supports Collbergï¿½s claim, e.g., Barak et al. have proved that obfuscation cannot achieve black-box security for some programs; Appel has proved that the hardness of de-obfuscation is NP-easy. Their results discourage researchers towards finding novel trustworthy obfuscation approaches, whose security strength can be guaranteed or quantified. <br> <br>
 In this talk, we will first discuss several software threats faced by cyber-physical systems, and then introduce a new tamper-resistance idea, namely N-version obfuscation (NVO). Rather than proposing new tricks against tampering attack, NVO focuses on impeding the replication of software tampering via program diversification, and thus poses a scalability barrier against the attacks.  We propose a general framework for NVO, together with the associated mechanism, for a candidate solution to achieve integrity of cyber-physical systems. Implementation considerations, together with some preliminary results, will also be presented.
  </p> 
 
@@ -540,5 +558,26 @@ Michael Rung-Tsong Lyu is a Professor of Computer Science and Engineering Depart
 
 </div>
 </center>
+
+</div><!-- /legacy-page -->
+
+<button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+</button>
+<script>
+  var themeToggle = document.getElementById('theme-toggle');
+  themeToggle.addEventListener('click', function() {
+    var currentTheme = document.documentElement.getAttribute('data-theme');
+    if (!currentTheme) {
+      currentTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    var newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  });
+</script>
+
 </body>
 </html>

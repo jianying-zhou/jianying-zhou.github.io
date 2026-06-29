@@ -14,8 +14,26 @@
   <meta name="keywords" content="ASIACCS-cpss">
   <meta http-equiv="content-type" content="text/html;charset=utf-8">
   <title>CPSS 2018</title>
+<script>
+  (function() {
+    var savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  })();
+</script>
 </head>
 <body>
+<div class="top-stripe"></div>
+<nav class="legacy-nav">
+  <a href="../../">&#8592; Home</a>
+  <span class="sep">//</span>
+  <span class="current">CPSS2018</span>
+</nav>
+<div class="legacy-page">
+
 <center>
 <div id="container" style="width: 800px;">
 <table cellspacing="0" width="100%">
@@ -68,7 +86,7 @@ Notification: <br>
 Camera-ready Due: <br>
 Workshop: <br>
         </td>
-        <td width="233"><span style="color: rgb(0, 0, 0);"> &nbsp;</span><b><font
+        <td width="233"><span> &nbsp;</span><b><font
  color="red"><span
  style="color: rgb(0, 0, 0); text-decoration: line-through;">Jan 20,
 2018 (GMT)</span> &nbsp; Feb 2, 2018 (23:59 GMT)</font></b><span
@@ -887,5 +905,26 @@ Security-Aware Virtual Environments for Digital Twins</strong></li>
 </div>
 </div>
 </center>
+
+</div><!-- /legacy-page -->
+
+<button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+</button>
+<script>
+  var themeToggle = document.getElementById('theme-toggle');
+  themeToggle.addEventListener('click', function() {
+    var currentTheme = document.documentElement.getAttribute('data-theme');
+    if (!currentTheme) {
+      currentTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    var newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  });
+</script>
+
 </body>
 </html>

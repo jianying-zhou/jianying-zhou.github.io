@@ -13,9 +13,27 @@
 <meta http-equiv="content-type" content="text/html;charset=utf-8" /> 
 
 <title>CPSS 2016</title> 
+<script>
+  (function() {
+    var savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  })();
+</script>
 </head>
 
 <body>
+<div class="top-stripe"></div>
+<nav class="legacy-nav">
+  <a href="../../">&#8592; Home</a>
+  <span class="sep">//</span>
+  <span class="current">CPSS2016</span>
+</nav>
+<div class="legacy-page">
+
 <center>
 
 <div id="container" style="width:800px">
@@ -302,7 +320,7 @@ Wanlei Zhou (Deakin University, Australia)<br>
 <div align="justify">
 <br>
 <p> 
-Martin Strohmeier, Vincent Lenders and Ivan Martinovic. “Lightweight Location Verification in Air Traffic Surveillance Networks”. </p> 
+Martin Strohmeier, Vincent Lenders and Ivan Martinovic. ï¿½Lightweight Location Verification in Air Traffic Surveillance Networksï¿½. </p> 
 <br>
 </div -->
 
@@ -540,5 +558,26 @@ Michael Rung-Tsong Lyu is a Professor of Computer Science and Engineering Depart
 
 </div>
 </center>
+
+</div><!-- /legacy-page -->
+
+<button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+</button>
+<script>
+  var themeToggle = document.getElementById('theme-toggle');
+  themeToggle.addEventListener('click', function() {
+    var currentTheme = document.documentElement.getAttribute('data-theme');
+    if (!currentTheme) {
+      currentTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    var newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  });
+</script>
+
 </body>
 </html>
